@@ -1,0 +1,49 @@
+.cardGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+  .playCard {
+    text-align: center;
+    color: white;
+    font-family: $sec-font;
+    border-radius: $card-border;
+    box-shadow: $card-shadow;
+    position: relative;
+    background: $dark-poster;
+    margin-top: 1rem;
+    padding-inline: 2rem;
+    // padding-bottom: 1rem;
+  
+    &:hover {
+      box-shadow: $hov-card-sh;
+    }
+  
+    .playTitle {
+      position: relative;
+      margin-top: -1rem;
+    }
+  
+    .gradientTxt {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      margin-top: 0.7rem;
+      max-width: 90%;
+
+    }
+  
+    .cardContent {
+      display: flex;
+      flex-direction: column;
+      font-style: italic;
+      color: $grey200;
+      margin-top: 0.5rem;
+    }
+  }

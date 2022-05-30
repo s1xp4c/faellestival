@@ -1,0 +1,45 @@
+.faq-content {
+  width: calc(100vw - 50vw);
+  margin: 0 auto;
+}
+
+.faq-section {
+  margin-bottom: 4vw;
+}
+
+.mainTitle {
+  text-align: center;
+  margin-bottom: 4vw;
+  font-size: 3vw;
+}
+
+.answer-span {
+  font-weight: 700;
+}
+
+.faq-question {
+  margin-bottom: 0.8vw;
+}
+
+//media queries
+
+@media screen and (min-width: 900px) {
+  .faq-content {
+    width: calc(100vw - 70vw);
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 600px) {
+  .faq-content {
+    width: calc(100vw - 60vw);
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 900px) {
+  .mainTitle {
+    text-align: center;
+    margin-bottom: 4vw;
+    font-size: 5vw;
+  }
+}

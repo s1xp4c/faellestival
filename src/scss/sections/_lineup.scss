@@ -1,0 +1,7 @@
+//  @import "../config";
+.lineupTxt {
+    font-family: $bodyFont;
+    background: $orangeGradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

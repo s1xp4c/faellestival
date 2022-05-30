@@ -1,0 +1,11 @@
+.artistGrid {
+    display: flex;
+    margin-inline: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: $dark-poster;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  

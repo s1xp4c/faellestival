@@ -1,0 +1,48 @@
+.artistCard {
+  background-color: rgb(0, 0, 0);
+  border: none;
+  border-radius: $card-border;
+  height: 40vh;
+  min-width: 20vw;
+  max-width: 20vw;
+  // text-overflow: ellipsis;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  // justify-content: flex-end;
+  box-shadow: $card-shadow;
+  position: relative;
+
+  h3 {
+    color: white;
+    text-transform: uppercase;
+    // text-align: center;
+    font-size: 1.5rem;
+    bottom: 3%;
+    opacity: 0;
+    transition: opacity 0.7s;
+    position: absolute;
+  }
+  .artistImg {
+    height: 100%;
+  }
+  .artistPng {
+    width: 100%;
+    background-color: white;
+  }
+  &:hover {
+    box-shadow: $hov-card-sh;
+  }
+  &:hover h3 {
+    opacity: 1;
+  }
+  &:hover img {
+    opacity: 0.4;
+  }
+}
+
+.bi {
+  cursor: pointer;
+}

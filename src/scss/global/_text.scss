@@ -1,0 +1,23 @@
+@import '~/config.scss';
+.text {
+    line-height: 1.5;
+    &--align-left {
+        text-align: left;
+    }
+    &--align-right {
+        text-align: right;
+    }
+    &--align-center {
+        text-align: center;
+    }
+    &--heading1 {
+        font-size: $fontSizeHeading1;
+        font-weight: $fontWeightHeading1;
+        color: $primaryColor;
+    }
+    &--bodytext {
+        font-size: $fontSizeBodyText;
+        font-weight: $fontWeightBodyText;
+        color: $primaryColor;
+    }
+}

@@ -1,0 +1,90 @@
+
+.primBtn {
+    border-radius: 50px;
+    padding: 1rem;
+    font-size: 1rem;
+    padding: 1rem 3rem;
+    color: white;
+    border: solid 3px transparent;
+    background-image: linear-gradient($dark-bg, $dark-bg), $orange-gradient;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px $dark-poster inset;
+    transition: all 0.5s;
+  
+    &:hover {
+      background-image: linear-gradient($dark-bg, $dark-bg), $hover-gradient;
+      color: $yellow;
+    }
+
+  }
+
+  
+  .secBtn {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    background: none;
+    border: none;
+    color: white;
+  
+    &::after {
+      max-width: 100%;
+      height: 0.5rem;
+      display: block;
+      content: "";
+      background: $orange-gradient;
+      opacity: 1;
+      margin-bottom: -6px;
+      margin-top: 1px;
+    }
+  
+    &:hover::after {
+      background: $hover-gradient;
+
+    }
+  }
+
+  #festApp{
+    position: fixed;
+    z-index: 100;
+    top: 1vw;
+    right: 1vw;
+  }
+
+  .prev{
+    transform: rotate(90deg);
+  }
+
+  .next{
+    transform: rotate(-90deg);
+  }
+
+  .down{
+    display: flex;
+    justify-content: center;
+  }
+
+  .burgerBtn{
+    display: none;
+  }
+  
+
+  @media only screen and (max-width: 800px) {
+    .burgerBtn {
+      display: block;
+      position: absolute;
+      z-index: 100;
+      top: 2vw;
+      right: 2vw;
+      width: 2rem;
+      height: 2rem;
+
+     
+    }
+
+
+  #festApp{
+    display: none;
+  }
+  }
+  

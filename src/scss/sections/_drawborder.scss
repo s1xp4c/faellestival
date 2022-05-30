@@ -1,0 +1,53 @@
+.ticket-form::before,
+.ticket-form::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.draw {
+    transition: color 0.25s;
+}
+
+.draw::before,
+.draw::after {
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+}
+
+.draw::before {
+    top: 0;
+    left: 0;
+}
+
+.draw::after {
+    bottom: 0;
+    right: 0;
+}
+
+.draw:hover {
+    color: 2px solid orange;
+}
+
+.draw:hover::before,
+.draw:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.draw:hover::before {
+    border-top-color: orange;
+    border-right-color: orange;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.draw:hover::after {
+    border-bottom-color: orange;
+    border-left-color: orange;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}

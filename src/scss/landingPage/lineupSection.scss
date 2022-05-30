@@ -1,0 +1,49 @@
+.lineupSection {
+  p {
+    padding-bottom: 2rem;
+  }
+
+  span:nth-child(-n + 3) {
+    font-size: clamp(3.5rem, 5.5vw, 5rem); 
+  }
+  span:nth-child(3)::after {
+    content: "\a";
+    white-space: pre;
+  }
+}
+
+span:nth-child(n + 4) {
+    font-size: clamp(2.5rem, 3.5vw, 3rem); 
+}
+
+span:nth-child(8)::after {
+  content: "\a";
+  white-space: pre;
+}
+
+span:nth-child(n + 9) {
+    font-size: clamp(1.5rem, 1.5vw, 2rem); 
+  // &::after {
+  //     content: "\a";
+  //     white-space: pre;
+  //   }
+}
+
+span:nth-child(29)::after {
+  content: "\a";
+  white-space: pre;
+}
+
+span:nth-child(n + 30) {
+  font-size: 1rem;
+  // &::after {
+  //     content: "\a";
+  //     white-space: pre;
+  //   }
+}
+// }
+
+.lineupSection {
+  text-align: center;
+  padding: 3vw;
+}

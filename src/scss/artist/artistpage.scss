@@ -1,0 +1,81 @@
+.artistHeader {
+  .artistPng,
+  .artistImg {
+    width: 100%;
+    background-color: white;
+    filter: opacity(40%);
+  }
+}
+.artistHeader {
+  position: relative;
+  overflow: hidden;
+  height: 40vw;
+}
+
+.breadCrumbs {
+  position: absolute;
+  z-index: 100;
+  color: white;
+  text-decoration: underline 1px solid white;
+  cursor: pointer;
+  margin-left: 1vw;
+  margin-top: 1vw;
+}
+
+.main-Title {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-family: $body-font;
+  font-size: 5vw;
+}
+
+.artist-genre {
+  position: absolute;
+  z-index: 100;
+  top: 60%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-family: $body-font;
+  font-size: 2vw;
+}
+
+.artist-container {
+  width: calc(100vw - 50vw);
+  margin: 0 auto;
+}
+
+.artist-list {
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  .members-name {
+    font-size: 1.9vw;
+    text-decoration: underline 1px solid white;
+  }
+  .artist {
+    list-style: none;
+  }
+}
+.artist-bio {
+  margin-bottom: 3vw;
+  .bio {
+    font-size: 1.9vw;
+    text-decoration: underline 1px solid white;
+  }
+}
+.logo-credits {
+  margin-bottom: 5vw;
+  font-size: 1.1vw;
+  color: grey;
+  .credits {
+    font-size: 1.4vw;
+    text-decoration: underline 1px solid grey;
+  }
+}
+.carousel-title {
+  margin-left: 2vw;
+}

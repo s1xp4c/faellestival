@@ -1,0 +1,17 @@
+[
+  {
+    "ticketOpt": "One Day Ticket",
+    "price": 799,
+    "specs": "It gives you access to the Festival for an specific date, from 10:00 until same day Closing Event."
+  },
+  {
+    "ticketOpt": "Weekend Ticket",
+    "price": 2397,
+    "specs": "It gives you access to the Festival from Friday 30 of July, 10:00am until Faellestival closing Event on Sunday."
+  },
+  {
+    "ticketOpt": "Full Festival Ticket",
+    "price": 3995,
+    "specs": "It gives you access to the full length, from Monday 25th of July 10:00am, until Faellestival closing Event on Sunday."
+  }
+]
