@@ -10,7 +10,7 @@
     content: "\a";
     white-space: pre;
   }
-}
+
 
 span:nth-child(n + 4) {
     font-size: clamp(2.5rem, 3.5vw, 3rem); 
@@ -42,8 +42,8 @@ span:nth-child(n + 30) {
   //   }
 }
 // }
-
+}
 .lineupSection {
   text-align: center;
-  padding: 3vw;
+  padding: 7.2vw;
 }

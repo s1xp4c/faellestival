@@ -86,6 +86,7 @@ function NavBar(props) {
           btn1action={openBurger}
           btn1content={user.name}
           btn1className="name"
+          id="userInfo"
           btn2content="☰"
           btn2action={openBurger}
           btn2className="festburgerBtn"

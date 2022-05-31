@@ -32,7 +32,6 @@
 @import "./UI/buttons";
 @import "./ticketPage/tickets";
 @import "./artist/artistcard";
-@import "./grids/artistgrid";
 @import "./artist/artistpage";
 @import "./header/header";
 @import "./festApp/cards";
@@ -45,6 +44,8 @@
 @import "./landingPage/faqSection";
 @import "./landingPage/faq-page";
 @import "./lineupPage/lineupCard";
+@import "./landingPage/bannerSection";
+
 @import "./footer";
 
 
@@ -142,11 +143,7 @@ button {
 //   padding-top: 5rem;
 //   padding-bottom: 5rem;
 // }
-.carrousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 // .artistCard {
 //   background-image: var(--img);

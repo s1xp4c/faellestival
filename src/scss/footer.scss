@@ -2,6 +2,8 @@ footer {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
   padding: 1rem;
   background-color: rgb(9, 9, 9);
   background-image: $grainy;
@@ -9,6 +11,7 @@ footer {
   .footerInfo,
   .footerLinks {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     font-family: $body-font;
     list-style: none;

@@ -1,3 +1,14 @@
+.artistGrid {
+  display: flex;
+  margin-inline: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: $dark-poster;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+
 .artistHeader {
   .artistPng,
   .artistImg {
@@ -78,4 +89,16 @@
 }
 .carousel-title {
   margin-left: 2vw;
+}
+
+.carrousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media  only screen and (max-width:600px){
+.carrousel{
+flex-direction: column;
+}
 }

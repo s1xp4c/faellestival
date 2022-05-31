@@ -3,7 +3,7 @@ import Btn from "./Btn";
 
 function BtnGrid(props) {
   return (
-    <div className={props.className}>
+    <div className={props.className} id={props.id}>
       <Btn
         content={props.btn1content}
         action={props.btn1action}
