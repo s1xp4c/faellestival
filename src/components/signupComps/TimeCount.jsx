@@ -1,21 +1,21 @@
 import React, { useState, useRef, useEffect } from "react";
 
 const TimeCount = ({ reservationTime }) => {
-  // const [timeToKill, setTimeToKill] = useState(0);
+  console.log(reservationTime);
+  // let timeToKill = reservationTime;
+  const [timeToKill, setTimeToKill] = useState(0);
+  // The state for our timer
+  const [timer, setTimer] = useState("00:00");
 
-  const timeToKill = 300000;
-
-  // useEffect(() => {
-  //    setTimeToKill(300000);
-  //   setTimeToKill(reservationTime);
-  // }, []);
   // We need ref in this, because we are dealing
   // with JS setInterval to keep track of it and
   // stop it when needed
   const Ref = useRef(null);
 
-  // The state for our timer
-  const [timer, setTimer] = useState("00:00");
+  useEffect(() => {
+    // setTimeToKill(300000);
+    setTimeToKill({ reservationTime });
+  }, []);
 
   const getTimeRemaining = (e) => {
     const total = Date.parse(e) - Date.parse(new Date());

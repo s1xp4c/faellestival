@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
-import ReservationRequest from "./ReservationRequest";
 
-function PersonalInfo({ formData, setFormData }) {
+function PersonalInfo({
+  formData,
+  setFormData,
+  reservationTime,
+  setReservationTime,
+}) {
   // const [reservationInfo, setReservationInfo] = useState({});
   const n = formData.ticketAmount;
   const [reserveRespons, setReserveRespons] = useState(0);
@@ -18,7 +22,7 @@ function PersonalInfo({ formData, setFormData }) {
   console.log("Putting area data", ENDPOINT_URL);
 
   useEffect(() => {
-    // PUT request using fetch inside useEffect React hook
+    // PUT request using fetch inside useEffect hook
     const requestOptions = {
       method: "PUT",
       headers: { "Content-Type": "application/json; charset=utf-8" },
@@ -26,21 +30,22 @@ function PersonalInfo({ formData, setFormData }) {
     };
     fetch(ENDPOINT_URL, requestOptions)
       .then((response) => response.json())
-      .then((data) => setReserveRespons(data));
+      .then(
+        (data) => setReserveRespons(data),
+        (data) => console.log(data)
+      );
   }, []);
 
+  console.log(reserveRespons);
   console.log(reserveRespons.id);
   let userKey = reserveRespons.id;
+  let userCountdown = reserveRespons.timeout;
+  let userReserved = reserveRespons.message;
   useEffect(() => {
+    console.log(reserveRespons.id);
     setFormData({ ...formData, authKey: userKey });
+    setReservationTime({ reservationTime: userCountdown });
   }, []);
-
-  // ReservationRequest(
-  //   (formData = { formData }),
-  //   (setFormData = { setFormData })
-  // );
-  // console.log(n);
-  // console.log(formData);
 
   const [guestArray, setGuestArray] = useState([]);
 
@@ -122,33 +127,6 @@ function PersonalInfo({ formData, setFormData }) {
         </div>
       ))}
     </div>
-
-    // <div className="personal-info-container">
-    //   <input
-    //     type="text"
-    //     placeholder="Guest First Name..."
-    //     value={formData.firstName}
-    //     onChange={(e) => {
-    //       setFormData({ ...formData, firstName: e.target.value });
-    //     }}
-    //   />
-    //   <input
-    //     type="text"
-    //     placeholder="Guest Last Name..."
-    //     value={formData.lastName}
-    //     onChange={(e) => {
-    //       setFormData({ ...formData, lastName: e.target.value });
-    //     }}
-    //   />
-    //   <input
-    //     type="email"
-    //     placeholder="Guest e-mail..."
-    //     value={formData.userEmail}
-    //     onChange={(e) => {
-    //       setFormData({ ...formData, userEmail: e.target.value });
-    //     }}
-    //   />
-    // </div>
   );
 }
 
