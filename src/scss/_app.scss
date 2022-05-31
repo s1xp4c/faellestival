@@ -43,16 +43,13 @@
 @import "./landingPage/lineupSection";
 @import "./landingPage/faqSection";
 @import "./landingPage/faq-page";
-<<<<<<< HEAD
-@import "./form.scss";
-=======
+@import "./form";
 @import "./lineupPage/lineupCard";
 @import "./landingPage/bannerSection";
 
 @import "./footer";
 
 
->>>>>>> 9876dbde4b08b3637d07ee43262bbec17868afca
 // @import "./artist/artistpage";
 //GLOBAL STYLING
 :root {
@@ -147,15 +144,6 @@ button {
 //   padding-top: 5rem;
 //   padding-bottom: 5rem;
 // }
-<<<<<<< HEAD
-.carrousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-=======
-
->>>>>>> 9876dbde4b08b3637d07ee43262bbec17868afca
 
 // .artistCard {
 //   background-image: var(--img);
