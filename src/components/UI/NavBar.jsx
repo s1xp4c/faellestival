@@ -13,7 +13,7 @@ function NavBar(props) {
     props.setShowLandPage(false);
   }
   function goToFestApp() {
-    setIsLogin(true);
+  props.setShowLogin(true);
   }
 
   function openBurger() {
@@ -28,7 +28,7 @@ function NavBar(props) {
     props.setShowLandPage(false);
     console.log("gototickets");
   }
-  const user = { name: "Melania" };
+  let user = props.guestName;
 
   return (
     <nav className={props.className}>
@@ -83,7 +83,7 @@ function NavBar(props) {
       {isLogin && (
         <BtnGrid
           btn1action={openBurger}
-          btn1content={user.name}
+          btn1content={user}
           btn1className="name"
           btn2content="☰"
           btn2action={openBurger}

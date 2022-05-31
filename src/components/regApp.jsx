@@ -12,6 +12,7 @@ import TicketsPage from "./TicketsPage";
 import Footer from "./Footer";
 import FaqPage from "./FaqPage";
 import BurgerMenu from "./UI/BurgerMenu";
+import LoginSection from "./sections/LoginSection";
 
 function RegApp(props) {
   const { isLogin, setIsLogin } = useContext(LoginContext);
@@ -23,11 +24,6 @@ function RegApp(props) {
   const [showFaqPage, setShowFaqPage] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
 
-  function handleClick() {
-    console.log("login");
-    setIsLogin(true);
-  }
-
   return (
     <>
       <NavBar
@@ -35,12 +31,13 @@ function RegApp(props) {
         setShowTicketsPage={setShowTicketsPage}
         setShowLineup={setShowLineup}
         setShowLandPage={setShowLandPage}
+        setShowLogin={setShowLogin}
         className="regNavBar"
         showLandPage={showLandPage}
         showTicketsPage={showTicketsPage}
         showLineup={showLineup}
       />
-      {/* const [showBurgerMenu, setShowBurgerMenu] = useState(false); */}
+      {showLogin && <LoginSection setShowLogin={setShowLogin} guestName={props.guestName} setGuestName={props.setGuestName} />}
       {props.showBurgerMenu && (
         <BurgerMenu
           {...props}
@@ -58,10 +55,7 @@ function RegApp(props) {
           setShowTicketsPage={setShowTicketsPage}
           setShowLineup={setShowLineup}
           setShowLandPage={setShowLandPage}
-          // {<<<<<<< who-is-playing-now
           setShowFaqPage={setShowFaqPage}
-          // =======}
-          //             {>>>>>>> main}
         />
       )}
       {showLineup && (
@@ -88,12 +82,12 @@ function RegApp(props) {
         />
       )}
 
-      <button onClick={handleClick}>Click LOGIN</button>
       <Footer
         setShowTicketsPage={setShowTicketsPage}
         setShowLineup={setShowLineup}
         setShowLandPage={setShowLandPage}
         setShowFaqPage={setShowFaqPage}
+        setShowLogin={setShowLogin}
       />
     </>
   );
