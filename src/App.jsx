@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BandsContext } from "./Contexts/BandsContext";
 import { LoginContext } from "./Contexts/LoginContext";
 import { TicketsContext } from "./Contexts/TicketsContext";
+import { AddOnContext } from "./Contexts/AddOnContext";
 import { ScheduleContext } from "./Contexts/ScheduleContext";
 import { AvailableContext } from "./Contexts/AvailableContext";
 import FestApp from "./components/FestApp";
@@ -22,10 +23,21 @@ function App() {
   const [isLogin, setIsLogin] = useState(false);
   const [scheduleData, setScheduleData] = useState([]);
   const [ticketsData, setTicketsData] = useState([]);
+  const [addOnData, setAddOnData] = useState([]);
   const [availableData, setAvailable] = useState([]);
   const [showBurgerMenu, setShowBurgerMenu] = useState(false);
 
   const ticketsJsonFile = "./content.json";
+  const addOnJson = "./addOnContent.json";
+
+  useEffect(() => {
+    fetch(addOnJson)
+      .then((res) => res.json())
+      .then((data) => {
+        setAddOnData(data);
+        console.log("xtradata", data);
+      });
+  }, []);
 
   useEffect(() => {
     fetch(ticketsJsonFile)
@@ -69,6 +81,7 @@ function App() {
         <ScheduleContext.Provider value={scheduleData}>
           <LoginContext.Provider value={{ isLogin, setIsLogin }}>
             <TicketsContext.Provider value={ticketsData}>
+              <AddOnContext.Provider value={addOnData}>
               <AvailableContext.Provider value={availableData}>
                 {isLogin ? (
                   <FestApp
@@ -82,6 +95,7 @@ function App() {
                   />
                 )}
               </AvailableContext.Provider>
+              </AddOnContext.Provider>
             </TicketsContext.Provider>
           </LoginContext.Provider>
         </ScheduleContext.Provider>
