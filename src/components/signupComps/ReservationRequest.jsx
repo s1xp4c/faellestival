@@ -2,12 +2,8 @@ import React, { useState, useEffect } from "react";
 
 // import React from 'react'
 
-const ReservationRequest = async ({ formData }) => {
+function ReservationRequest({ formData, setFormData }) {
   const [reserveRespons, setReserveRespons] = useState(0);
-
-  //   useEffect(() => {
-
-  //   }, []);
 
   const reservationData = {
     area: formData.campsite,
@@ -32,6 +28,8 @@ const ReservationRequest = async ({ formData }) => {
       .then((data) => setReserveRespons(data));
   }, []);
   console.log(reserveRespons);
-};
+  let userKey = reserveRespons[1];
+  setFormData({ ...formData, authKey: userKey });
+}
 
 export default ReservationRequest;

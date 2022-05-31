@@ -2,8 +2,43 @@ import React, { useState, useEffect } from "react";
 import ReservationRequest from "./ReservationRequest";
 
 function PersonalInfo({ formData, setFormData }) {
+  // const [reservationInfo, setReservationInfo] = useState({});
   const n = formData.ticketAmount;
-  ReservationRequest((formData = { formData }));
+  const [reserveRespons, setReserveRespons] = useState(0);
+
+  const reservationData = {
+    area: formData.campsite,
+    amount: formData.ticketAmount,
+  };
+
+  const putReservationData = JSON.stringify(reservationData);
+  console.log(putReservationData);
+  const ENDPOINT_URL = import.meta.env.VITE_FAELLESTIVAL_RESERVE_SPOT;
+
+  console.log("Putting area data", ENDPOINT_URL);
+
+  useEffect(() => {
+    // PUT request using fetch inside useEffect React hook
+    const requestOptions = {
+      method: "PUT",
+      headers: { "Content-Type": "application/json; charset=utf-8" },
+      body: putReservationData,
+    };
+    fetch(ENDPOINT_URL, requestOptions)
+      .then((response) => response.json())
+      .then((data) => setReserveRespons(data));
+  }, []);
+
+  console.log(reserveRespons.id);
+  let userKey = reserveRespons.id;
+  useEffect(() => {
+    setFormData({ ...formData, authKey: userKey });
+  }, []);
+
+  // ReservationRequest(
+  //   (formData = { formData }),
+  //   (setFormData = { setFormData })
+  // );
   // console.log(n);
   // console.log(formData);
 
@@ -42,6 +77,7 @@ function PersonalInfo({ formData, setFormData }) {
               setFormData({
                 ...formData,
                 extraGuests: nextGuests,
+                authKey: userKey,
               });
             }}
           ></input>

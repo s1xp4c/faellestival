@@ -28,7 +28,7 @@ function TicketForm(props) {
     agreeTerms: "",
     agreeSocial: "",
     ticketAmount: 0,
-    cardFee: 0,
+    cardFee: 99,
     campsite: "",
     tentSetup: 0,
     luxePack: 0,
