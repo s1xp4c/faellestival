@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import ReservationRequest from "./ReservationRequest";
 
 function PersonalInfo({ formData, setFormData }) {
   const n = formData.ticketAmount;
-
-  console.log(n);
-  console.log(formData);
+  ReservationRequest((formData = { formData }));
+  // console.log(n);
+  // console.log(formData);
 
   const [guestArray, setGuestArray] = useState([]);
 
