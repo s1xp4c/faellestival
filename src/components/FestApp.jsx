@@ -29,11 +29,13 @@ function FestApp(props) {
         setShowFestLandPage={setShowFestLandPage}
         setShowArtistPage={setShowArtistPage}
         setShowProgramPage={setShowProgramPage}
+        setShowMapPage={setShowMapPage}
         className="festNavBar"
         showFestLandPage={showFestLandPage}
         shoArtistdPage={showArtistPage}
         showProgramPage={showProgramPage}
-        setShowMapPage={setShowMapPage}
+        ShowMapPage={showMapPage}
+        
       />
       {props.showBurgerMenu && (
         <BurgerMenu
@@ -41,11 +43,12 @@ function FestApp(props) {
           setShowFestLandPage={setShowFestLandPage}
           setShoArtistdPage={setShowArtistPage}
           setShowProgramPage={setShowProgramPage}
+          setShowMapPage={setShowMapPage}
           className="burgerMenu"
           showFestLandPage={showFestLandPage}
           shoArtistdPage={showArtistPage}
           showProgramPage={showProgramPage}
-          setShowMapPage={setShowMapPage}
+          showMapPage={showMapPage}
         />
       )}
 
@@ -55,9 +58,10 @@ function FestApp(props) {
           setShowArtistPage={setShowArtistPage}
           setShowProgramPage={setShowProgramPage}
           setShowFCardPage={setShowFCardPage}
+          setShowMapPage={setShowMapPage}
           pickedId={pickedId}
           setPickedId={setPickedId}
-          setShowMapPage={setShowMapPage}
+          
         />
       )}
       {showArtistPage && (

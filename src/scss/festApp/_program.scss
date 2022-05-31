@@ -29,7 +29,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: $orange;
+  background-color: $yellow;
   color: white;
 }
 
@@ -51,5 +51,33 @@
   }
   .subTitle {
     margin-bottom: 2vw;
+  }
+}
+
+.only-map {
+  img {
+    max-width: 30%;
+    transform: rotate(50deg);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    // width: 40%;
+    margin-top: 5vw;
+    position: relative;
+  }
+}
+
+.mapSection {
+  .primBtn {
+    position: absolute;
+    z-index: 2;
+    left: 670px;
+    top: 1070px;
+  }
+}
+
+.artistSection {
+  .title {
+    margin-left: 2vw;
   }
 }
