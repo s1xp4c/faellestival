@@ -33,9 +33,9 @@ function FestLinks(props) {
   }
   return (
     <ul className={props.globalClassName}>
-      <Link className="link" content="Program" action={goToProgramPage} />
-      <Link className="link" content="Artists" action={goToArtistsPage} />
-      <Link className="link" content="Main Page" action={goTomainPage} />
+      <Link className="link gradientTxt" content="Program" action={goToProgramPage} />
+      <Link className="link gradientTxt" content="Artists" action={goToArtistsPage} />
+      <Link className="link gradientTxt" content="Main Page" action={goTomainPage} />
       <Link
         className="link"
         content="Your Faelles Card"

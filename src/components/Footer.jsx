@@ -13,13 +13,13 @@ function Footer(props) {
 
   return (
     <footer>
-      <ul>
+      <ul className="footerInfo">
         <BulletPoint content="faellestival@info.com" />
 
         <BulletPoint content="Stenbankevej 13, 5771 Stenstrup" />
       </ul>
 
-      <ul>
+      <ul className="footerLinks">
         {isLogin ? (
           <FestLinks {...props} globalClassName="footerLinks" />
         ) : (

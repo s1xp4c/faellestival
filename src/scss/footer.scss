@@ -1,0 +1,27 @@
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgb(9, 9, 9);
+  background-image: $grainy;
+
+  .footerInfo,
+  .footerLinks {
+    display: flex;
+    gap: 2rem;
+    font-family: $body-font;
+    list-style: none;
+  }
+}
+
+.footerLinks button {
+  background-color: rgba(250, 235, 215, 0);
+  color: $yellow;
+  border: none;
+
+  &:hover{
+      border-bottom: 2px solid $yellow;
+  }
+
+}

@@ -29,7 +29,7 @@ function RegApp(props) {
 
   return (
     <>
-      <NavBar
+    {showLandPage ?   <NavBar
         {...props}
         setShowTicketsPage={setShowTicketsPage}
         setShowLineup={setShowLineup}
@@ -38,7 +38,17 @@ function RegApp(props) {
         showLandPage={showLandPage}
         showTicketsPage={showTicketsPage}
         showLineup={showLineup}
-      />
+      /> :  <NavBar
+      {...props}
+      setShowTicketsPage={setShowTicketsPage}
+      setShowLineup={setShowLineup}
+      setShowLandPage={setShowLandPage}
+      className="regNav"
+      showLandPage={showLandPage}
+      showTicketsPage={showTicketsPage}
+      showLineup={showLineup}
+    />}
+
       {/* const [showBurgerMenu, setShowBurgerMenu] = useState(false); */}
       {props.showBurgerMenu && (
         <BurgerMenu

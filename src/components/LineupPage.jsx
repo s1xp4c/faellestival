@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { ScheduleContext } from "../Contexts/ScheduleContext";
 import Artist from "./UI/Artist";
 import CardTitle from "./UI/CardTitle"
+import MainSect from "./sections/MainSect";
 
 function LineupPage() {
   const scheduleData = useContext(ScheduleContext);
@@ -13,6 +14,12 @@ function LineupPage() {
 
   return (
     <>
+     {/* <MainSect
+        className="mainSect"
+        content="Lineup"
+        bcReg="Main"
+        {...props}
+      /> */}
     <div className="lineupGrid">
       {dayShort.map((day, index) => (
         <div className="lineupCard">

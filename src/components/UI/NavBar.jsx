@@ -31,7 +31,7 @@ function NavBar(props) {
   const user = { name: "Melania" };
 
   return (
-    <nav className={props.className}>
+    <nav className={props.className} id={props.id}>
       {props.showLandPage || props.showFestLandPage ? (
         []
       ) : (
@@ -40,6 +40,7 @@ function NavBar(props) {
           logoClassName="navLogo"
           className="navTitle"
           content="Faellestival"
+
         />
       )}
 
@@ -47,10 +48,10 @@ function NavBar(props) {
         <BtnGrid
           btn1action={goToLineup}
           btn1content="Line Up"
-          btn1className="SecBtn"
+          btn1className="secBtn"
           btn2action={goToFestApp}
           btn2content="Fest App"
-          btn2className="primBtn"
+          btn2className="secBtn"
           btn3content="☰"
           btn3action={openBurger}
           btn3className="burgerBtn"
@@ -60,10 +61,10 @@ function NavBar(props) {
         <BtnGrid
           btn1action={goToFestApp}
           btn1content="Fest App"
-          btn1className="SecBtn"
+          btn1className="secBtn"
           btn2action={goToTicketsPage}
           btn2content="Tickets"
-          btn2className="primBtn"
+          btn2className="secBtn"
           btn3content="☰"
           btn3action={openBurger}
           btn3className="burgerBtn"
