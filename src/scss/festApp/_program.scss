@@ -70,11 +70,14 @@
 .mapSection {
   .primBtn {
     position: absolute;
-    z-index: 2;
-    left: 670px;
-    top: 1020px;
+    z-index: 100;
+    top: 142%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
+//media queries for this button!!!
+
 
 .artistSection {
   .title {
