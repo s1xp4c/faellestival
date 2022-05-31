@@ -5,9 +5,13 @@ import PersonalInfo from "./PersonalInfo";
 import ExtrasInfo from "./ExtrasInfo";
 import CampInfo from "./CampInfo";
 import TimeCount from "./TimeCount";
+// import envData from "../../App";
+// import ReservationRequest from "./ReservationRequest";
 
 function TicketForm(props) {
   const [page, setPage] = useState(0);
+  //  const [reservationTime, setReservationTime] = useState();
+  const reservationTime = 300000;
 
   const [formData, setFormData] = useState({
     userEmail: "",
@@ -84,7 +88,18 @@ function TicketForm(props) {
         />
       );
     } else if (page === 2) {
-      return <PersonalInfo formData={formData} setFormData={setFormData} />;
+      return (
+        <PersonalInfo
+          formData={formData}
+          setFormData={setFormData}
+          // reservationTime={reservationTime}
+          // setReservationTime={setReservationTime}
+        />
+        // ReservationRequest(
+        //   (formData = { formData }),
+        //   (setReservationTime = { setReservationTime })
+        // )
+      );
     } else if (page === 3) {
       return <ExtrasInfo formData={formData} setFormData={setFormData} />;
     } else if (page === 4) {
@@ -121,7 +136,7 @@ function TicketForm(props) {
           }}
         ></div>
         <div className="countdown-timer">
-          <TimeCount />
+          <TimeCount reservationTime={reservationTime} />
         </div>
       </div>
       <div className="form-container ">
