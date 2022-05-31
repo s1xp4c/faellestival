@@ -48,7 +48,6 @@ function RegApp(props) {
     />}
 
       {/* const [showBurgerMenu, setShowBurgerMenu] = useState(false); */}
-      />
       {showLogin && <LoginSection setShowLogin={setShowLogin} guestName={props.guestName} setGuestName={props.setGuestName} />}
       {props.showBurgerMenu && (
         <BurgerMenu
