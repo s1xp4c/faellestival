@@ -8,7 +8,7 @@ function NavBrand(props) {
   }
   return (
     <>
-      <Logo className={props.logoClassName} />
+      <Logo className={props.logoClassName} id={props.id}/>
       <Link
         content={props.content}
         className={props.className}

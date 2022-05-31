@@ -31,6 +31,7 @@ function TicketsPage(props) {
         className="mainSect"
         content="Tickets"
         bcReg="Main"
+        action={goToMain}
         {...props}
       />
       <CardGrid

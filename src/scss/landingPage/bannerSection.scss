@@ -1,0 +1,53 @@
+
+.bannerSection {
+    background-color: black;
+    display: flex;
+    overflow-x: hidden;
+    height: 50vh;
+    width: 100vw;
+    margin-top: 3rem;
+}
+
+#b1 {
+    background-image: url("/faellestival1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+}
+
+#b2 {
+    background-image: url("/faellestival4.jpg");
+    background-position: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+}
+
+.bannerCon {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100vw;
+    flex-shrink: 0;
+    background-color: black;
+    .txt {
+        text-align: center;
+        font-size: clamp(1rem, 8vw, 3.5rem); 
+        font-weight: 600;
+    }
+
+.genre{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.genre span  {
+    font-size: clamp(1rem,5vw, 2rem); 
+      text-align: center;
+    }
+}
