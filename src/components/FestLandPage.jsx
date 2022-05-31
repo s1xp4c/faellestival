@@ -17,7 +17,7 @@ function FestLandPage(props) {
       <Header className="header" />
       <PlayingNow {...props} />
       <MapSection content="Find your Way" className="mapSection" btnClassName="primBtn" {...props} />
-      <Section className="section" content="Getting Hungry?" titleClassName="title" btnContent="Top Up Your Card" btnClassName="secBtn" action={goToFCardPage} />
+      {/* <Section className="section" content="Getting Hungry?" titleClassName="title" btnContent="Top Up Your Card" btnClassName="secBtn" action={goToFCardPage} /> */}
       <ArtistsSection className="artistSection" content="Meet the Artists" titleClassName="title" {...props} />
     </main>
   );

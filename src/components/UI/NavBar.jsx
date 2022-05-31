@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { LoginContext } from "../../Contexts/LoginContext";
 import Btn from "./Btn";
-import NavBrand from "./NavBrand";
-import BtnGrid from "../UI/BtnGrid";
+import NavBrand from "./NavBrand.jsx";
+import BtnGrid from "../UI/BtnGrid.jsx";
 
 function NavBar(props) {
   const { isLogin, setIsLogin } = useContext(LoginContext);
@@ -13,7 +13,7 @@ function NavBar(props) {
     props.setShowLandPage(false);
   }
   function goToFestApp() {
-    setIsLogin(true);
+  props.setShowLogin(true);
   }
 
   function openBurger() {
@@ -28,7 +28,7 @@ function NavBar(props) {
     props.setShowLandPage(false);
     console.log("gototickets");
   }
-  const user = { name: "Melania" };
+  let user = props.guestName;
 
   return (
     <nav className={props.className} id={props.id}>
@@ -84,7 +84,7 @@ function NavBar(props) {
       {isLogin && (
         <BtnGrid
           btn1action={openBurger}
-          btn1content={user.name}
+          btn1content={user}
           btn1className="name"
           id="userInfo"
           btn2content="☰"

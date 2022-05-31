@@ -3,14 +3,19 @@ import React, { useContext } from "react";
 import { ScheduleContext } from "../Contexts/ScheduleContext";
 import Artist from "./UI/Artist";
 import CardTitle from "./UI/CardTitle"
-import MainSect from "./sections/MainSect";
+import MainSect from "./sections/MainSect"
 
-function LineupPage() {
+function LineupPage(props) {
   const scheduleData = useContext(ScheduleContext);
 
   const week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   const date= ["25th of July", "26th of July", "27th of July", "28th of July", "29th of July", "30th of July", "31th of July"]
   const dayShort = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+
+  function goToMain() {
+    props.setShowLineup(false);
+    props.setShowLandPage(true);
+  }
 
   return (
     <>
@@ -20,6 +25,13 @@ function LineupPage() {
         bcReg="Main"
         {...props}
       /> */}
+          <MainSect
+        className="mainSect"
+        content="Line Up"
+        bcReg="Main"
+        {...props}
+        action={goToMain}
+      />
     <div className="lineupGrid">
       {dayShort.map((day, index) => (
         <div className="lineupCard">
