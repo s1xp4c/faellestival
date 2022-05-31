@@ -22,14 +22,7 @@ function RegApp(props) {
   const [showLandPage, setShowLandPage] = useState(true);
   const [showTicketsPage, setShowTicketsPage] = useState(false);
   const [showFaqPage, setShowFaqPage] = useState(false);
-  const [showLogin, setShowLogin] = useState(true);
-  const [guestName, setGuestName] = useState();
-
-
-  function handleClick() {
-    console.log("login");
-    setIsLogin(true);
-  }
+  const [showLogin, setShowLogin] = useState(false);
 
   return (
     <>
@@ -44,8 +37,7 @@ function RegApp(props) {
         showTicketsPage={showTicketsPage}
         showLineup={showLineup}
       />
-      {/* const [showBurgerMenu, setShowBurgerMenu] = useState(false); */}
-      {showLogin && <LoginSection setShowLogin={setShowLogin} guestName={guestName} setGuestName={setGuestName} />}
+      {showLogin && <LoginSection setShowLogin={setShowLogin} guestName={props.guestName} setGuestName={props.setGuestName} />}
       {props.showBurgerMenu && (
         <BurgerMenu
           {...props}

@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { ScheduleContext } from "../Contexts/ScheduleContext";
 import Artist from "./UI/Artist";
 import CardTitle from "./UI/CardTitle"
+import MainSect from "./sections/MainSect"
 
 function LineupPage(props) {
   const scheduleData = useContext(ScheduleContext);
