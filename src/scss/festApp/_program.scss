@@ -1,6 +1,55 @@
 .map {
-    img {
-        max-width: 50%;
-        transform: rotate(50deg);
-    }
+  img {
+    max-width: 50%;
+    transform: rotate(50deg);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+}
+.list {
+  border-collapse: collapse;
+  width: 100%;
+  width: calc(100vw - 20vw);
+  margin: 0 auto;
+}
+.list td,
+.list th {
+  //   border: 1px solid #ddd;
+  padding: 8px;
+}
+.list tr:nth-child(even) {
+  background-color: rgb(76, 71, 71);
+}
+.list tr:hover {
+  background-color: grey;
+}
+.list th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: $orange;
+  color: white;
+}
+
+.list {
+  .title,
+  .programControls,
+  .subTitle {
+    width: calc(100vw - 20vw);
+    text-align: center;
+    padding: 0.4vw;
+    font-family: $body-font;
+  }
+  .title {
+    font-size: 3vw;
+    margin-bottom: 1vw;
+  }
+  .programControls {
+    margin-bottom: 1vw;
+  }
+  .subTitle {
+    margin-bottom: 2vw;
+  }
 }

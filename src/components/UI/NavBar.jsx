@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { LoginContext } from "../../Contexts/LoginContext";
 import Btn from "./Btn";
-import NavBrand from "./NavBrand";
-import BtnGrid from "../UI/BtnGrid";
+import NavBrand from "./NavBrand.jsx";
+import BtnGrid from "../UI/BtnGrid.jsx";
 
 function NavBar(props) {
   const { isLogin, setIsLogin } = useContext(LoginContext);
