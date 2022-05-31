@@ -87,7 +87,7 @@ function NavBar(props) {
           btn1className="name"
           btn2content="☰"
           btn2action={openBurger}
-          btn2className="burgerBtn"
+          btn2className="festburgerBtn"
         />
       )}
     </nav>

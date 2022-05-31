@@ -1,90 +1,133 @@
-
 .primBtn {
-    border-radius: 50px;
-    padding: 1rem;
-    font-size: 1rem;
-    padding: 1rem 3rem;
-    color: white;
-    border: solid 3px transparent;
-    background-image: linear-gradient($dark-bg, $dark-bg), $orange-gradient;
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    box-shadow: 2px 1000px 1px $dark-poster inset;
-    transition: all 0.5s;
-  
-    &:hover {
-      background-image: linear-gradient($dark-bg, $dark-bg), $hover-gradient;
-      color: $yellow;
-    }
+  border-radius: 50px;
+  padding: 1rem;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  color: white;
+  border: solid 3px transparent;
+  background-image: linear-gradient($dark-bg, $dark-bg), $orange-gradient;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px $dark-poster inset;
+  transition: all 0.5s;
 
+  &:hover {
+    background-image: linear-gradient($dark-bg, $dark-bg), $hover-gradient;
+    color: $yellow;
+  }
+}
+
+.secBtn {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  background: none;
+  border: none;
+  color: white;
+
+  &::after {
+    max-width: 100%;
+    height: 0.5rem;
+    display: block;
+    content: "";
+    background: $orange-gradient;
+    opacity: 1;
+    margin-bottom: -6px;
+    margin-top: 1px;
   }
 
-  
-  .secBtn {
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    background: none;
+  &:hover::after {
+    background: $hover-gradient;
+  }
+}
+
+#festApp {
+  position: fixed;
+  z-index: 100;
+  top: 1vw;
+  right: 1vw;
+}
+
+.prev {
+  transform: rotate(90deg);
+}
+
+.next {
+  transform: rotate(-90deg);
+}
+
+.down {
+  display: flex;
+  justify-content: center;
+}
+
+.burgerBtn {
+  display: none;
+}
+
+.festNavBar {
+  position: absolute;
+  z-index: 100;
+  top: 1vw;
+  right: 1vw;
+}
+
+.festNavBar div {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+
+  .name,
+  .festburgerBtn {
+    background-color: rgba(240, 248, 255, 0);
     border: none;
     color: white;
-  
-    &::after {
-      max-width: 100%;
-      height: 0.5rem;
-      display: block;
-      content: "";
-      background: $orange-gradient;
-      opacity: 1;
-      margin-bottom: -6px;
-      margin-top: 1px;
-    }
-  
-    &:hover::after {
-      background: $hover-gradient;
+    font-weight: 700;
+    font-size: 1.7rem;
+  }
+}
+.festburgerBtn {
+  display: block;
+  z-index: 100;
+  top: 2vw;
+  right: 2vw;
+  width: 2rem;
+  height: 2rem;
+}
 
-    }
+.burgerLinks {
+  width: 100vw;
+  height: 100vh;
+  background-color: $grainy;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .link {
+    max-width: 50vw;
+    background-color: rgba(0, 0, 0, 0);
+    color: $yellow;
+    font-weight: $fontWeightHeading1;
+    border: none;
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .festNavBar .name {
+    display: none;
   }
 
-  #festApp{
-    position: fixed;
+  .burgerBtn {
+    display: block;
+    position: absolute;
     z-index: 100;
-    top: 1vw;
-    right: 1vw;
+    top: 2vw;
+    right: 2vw;
+    width: 2rem;
+    height: 2rem;
   }
 
-  .prev{
-    transform: rotate(90deg);
-  }
-
-  .next{
-    transform: rotate(-90deg);
-  }
-
-  .down{
-    display: flex;
-    justify-content: center;
-  }
-
-  .burgerBtn{
+  #festApp {
     display: none;
   }
-  
-
-  @media only screen and (max-width: 800px) {
-    .burgerBtn {
-      display: block;
-      position: absolute;
-      z-index: 100;
-      top: 2vw;
-      right: 2vw;
-      width: 2rem;
-      height: 2rem;
-
-     
-    }
-
-
-  #festApp{
-    display: none;
-  }
-  }
-  
+}
