@@ -41,6 +41,7 @@ function RegApp(props) {
         showLineup={showLineup}
       />
       {/* const [showBurgerMenu, setShowBurgerMenu] = useState(false); */}
+      {showLogin && <LoginSection />}
       {props.showBurgerMenu && (
         <BurgerMenu
           {...props}
