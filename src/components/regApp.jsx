@@ -21,6 +21,7 @@ function RegApp(props) {
   const [showLandPage, setShowLandPage] = useState(true);
   const [showTicketsPage, setShowTicketsPage] = useState(false);
   const [showFaqPage, setShowFaqPage] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
 
   function handleClick() {
     console.log("login");
