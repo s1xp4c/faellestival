@@ -6,6 +6,7 @@
   h1 {
     margin-top: 1vw;
     margin-bottom: 1vw;
+    font-family: $body-font;
   }
 }
 
@@ -148,9 +149,8 @@
   .day-body {
     display: flex;
     flex-direction: row;
-    margin-left: 1vw;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
+    justify-content: space-between;
+    margin: 1vw;
     div:first-child {
       div {
         margin-left: 0.5vw;
@@ -248,7 +248,8 @@
 }
 
 .form-container {
-  width: 60vw;
+  width: max-content;
+  padding-inline: 2rem;
   margin: 0 auto;
   .check-header {
     p {
@@ -310,6 +311,39 @@
     }
   }
 }
+.incr-decr-body {
+  .numberInput {
+    border: 3px solid grey;
+    border-radius: $card-border;
+    box-shadow: $card-shadow;
+    max-width: 10vw;
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .decrementBtn {
+    border: 2px solid grey;
+    border-radius: $card-border;
+  }
+  .incrementBtn {
+    border: 2px solid grey;
+    border-radius: $card-border;
+  }
+}
 
+// background-color: rgb(0, 0, 0);
+//   border: none;
+//   border-radius: $card-border;
+//   height: 40vh;
+//   min-width: 20vw;
+//   max-width: 20vw;
+//   // text-overflow: ellipsis;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   overflow: hidden;
+//   // justify-content: flex-end;
+//   box-shadow: $card-shadow;
+//   position: relative;
 
 // transform:scale(0.8)

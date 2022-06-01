@@ -37,6 +37,7 @@ function CampInfo({ formData, setFormData, checkboxLabels }) {
         <div className="check-body camp-check">
           {areaIsChecked.map((d, index) => (
             <div key={index}>
+              
               <input
                 type="checkbox"
                 id={d.id}
