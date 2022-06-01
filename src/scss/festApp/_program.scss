@@ -68,16 +68,26 @@
 }
 
 .mapSection {
-  .primBtn {
+  .only-map {
+    position: relative;
+  }
+  .mapBtn {
     position: absolute;
     z-index: 100;
-    top: 142%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 }
-//media queries for this button!!!
 
+@media screen and (max-width: 900px) {
+  .mapSection {
+    button {
+      transform: scale(80%);
+    }
+  }
+}
+//media queries for this button!!!
 
 .artistSection {
   .title {
