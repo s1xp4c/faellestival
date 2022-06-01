@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 const TimeCount = ({ reservationTime }) => {
   // const [timeToKill, setTimeToKill] = useState(0);
 
-  const timeToKill = 300000;
+  const timeToKill = 420000;
 
   // useEffect(() => {
   //    setTimeToKill(300000);
@@ -47,7 +47,7 @@ const TimeCount = ({ reservationTime }) => {
   };
 
   const clearTimer = (e) => {
-    setTimer("05:00");
+    setTimer("06:66");
 
     if (Ref.current) clearInterval(Ref.current);
     const id = setInterval(() => {

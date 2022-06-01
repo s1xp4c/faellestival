@@ -89,16 +89,14 @@ function TicketForm(props) {
       );
     } else if (page === 2) {
       return (
-        <PersonalInfo
-          formData={formData}
-          setFormData={setFormData}
-          // reservationTime={reservationTime}
-          // setReservationTime={setReservationTime}
-        />
-        // ReservationRequest(
-        //   (formData = { formData }),
-        //   (setReservationTime = { setReservationTime })
-        // )
+        <>
+          <PersonalInfo
+            formData={formData}
+            setFormData={setFormData}
+            // reservationTime={reservationTime}
+            // setReservationTime={setReservationTime}
+          />
+        </>
       );
     } else if (page === 3) {
       return <ExtrasInfo formData={formData} setFormData={setFormData} />;
@@ -135,13 +133,16 @@ function TicketForm(props) {
                 : "100%",
           }}
         ></div>
-        <div className="countdown-timer">
+        {/* <div className="countdown-timer">
           <TimeCount reservationTime={reservationTime} />
-        </div>
+        </div> */}
       </div>
       <div className="form-container ">
         <div className="header">
           <h1>{FormTitles[page]}</h1>
+        </div>
+        <div className="countdown-timer">
+          <TimeCount reservationTime={reservationTime} />
         </div>
         <div className="body ">{PageDisplay()}</div>
         <div className="footer">
