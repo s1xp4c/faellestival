@@ -38,7 +38,12 @@ function LineupPage(props) {
 
   return (
     <>
-      <Breadcrumbs bcReg="Main" {...props} action={goToMain} />
+      <Breadcrumbs
+        className="gobackLineup"
+        bcReg="Main"
+        {...props}
+        action={goToMain}
+      />
       <Title className="lineUpTitle gradientTxt" content="Line Up" />
       <div className="lineupGrid">
         {dayShort.map((day, index) => (

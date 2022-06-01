@@ -203,4 +203,14 @@
   font-family: $body-font;
   font-size: 5vw;
   margin-top: 2vw;
+  margin-bottom: 3vw;
+}
+
+.gobackLineup {
+  margin: 2vw;
+  text-decoration: underline 1px solid white;
+  cursor: pointer;
+  border: none;
+  background-color: #312f2f;
+  color: white;
 }

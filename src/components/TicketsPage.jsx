@@ -34,7 +34,12 @@ function TicketsPage(props) {
         []
       ) : (
         <>
-          <Breadcrumbs bcReg="Main" {...props} action={goToMain} />
+          <Breadcrumbs
+            className="gobackLineup"
+            bcReg="Main"
+            {...props}
+            action={goToMain}
+          />
           <Title className="lineUpTitle gradientTxt" content="Tickets" />
           <CardGrid
             className="cardGrid hidden"
