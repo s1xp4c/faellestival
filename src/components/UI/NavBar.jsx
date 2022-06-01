@@ -3,6 +3,7 @@ import { LoginContext } from "../../Contexts/LoginContext";
 import Btn from "./Btn";
 import NavBrand from "./NavBrand.jsx";
 import BtnGrid from "../UI/BtnGrid.jsx";
+import { stringify } from "uuid";
 
 function NavBar(props) {
   const { isLogin, setIsLogin } = useContext(LoginContext);
@@ -28,6 +29,7 @@ function NavBar(props) {
     props.setShowLandPage(false);
     console.log("gototickets");
   }
+
   const user = { name: "Melania" };
 
   return (
@@ -83,7 +85,7 @@ function NavBar(props) {
       {isLogin && (
         <BtnGrid
           btn1action={openBurger}
-          btn1content={user.name}
+          btn1content={user.name.charAt(0).toUpperCase() + user.name.slice(1)}
           btn1className="name"
           btn2content="☰"
           btn2action={openBurger}

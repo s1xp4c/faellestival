@@ -344,9 +344,11 @@
 }
 
 .incr-decr-header {
-  span {
-    font-style: italic;
-    color: grey;
+  .flex-input {
+    span {
+      font-style: italic;
+      color: grey;
+    }
   }
 }
 
