@@ -6,6 +6,7 @@ import ArtistHeader from "./sections/ArtistHeader";
 function ArtistPage(props) {
   // const bands = useContext(BandsContext);
   console.log("artist", props.pickedId);
+  window.location = "#";
 
   return (
     <>
