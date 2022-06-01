@@ -28,19 +28,26 @@ function TicketsPage(props) {
 
   return (
     <main>
-      <MainSect
-        className="mainSect"
-        content="Tickets"
-        bcReg="Main"
-        action={goToMain}
-        {...props}
-      />
-      <CardGrid
-        className="cardGrid hidden"
-        ticketsContent={ticketsContent}
-        setShowForm={setShowForm}
-        soldOut={soldOut}
-      />
+      {showForm ? (
+        []
+      ) : (
+        <>
+          <MainSect
+            className="mainSect"
+            content="Tickets"
+            bcReg="Main"
+            action={goToMain}
+            {...props}
+          />
+          <CardGrid
+            className="cardGrid hidden"
+            ticketsContent={ticketsContent}
+            setShowForm={setShowForm}
+            soldOut={soldOut}
+          />
+        </>
+      )}
+
       {showForm && <OrderForm setShowForm={setShowForm} />}
     </main>
   );

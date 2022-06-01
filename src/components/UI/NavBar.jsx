@@ -12,11 +12,11 @@ function NavBar(props) {
     props.setShowLineup(true);
     props.setShowTicketsPage(false);
     props.setShowLandPage(false);
-    window.location="#"
+    window.location = "#";
   }
   function goToFestApp() {
     props.setShowLogin(true);
-    window.location="#"
+    window.location = "#";
   }
 
   function openBurger() {
@@ -24,14 +24,14 @@ function NavBar(props) {
     props.showBurgerMenu
       ? props.setShowBurgerMenu(false)
       : props.setShowBurgerMenu(true);
-      window.location="#"
+    window.location = "#";
   }
   function goToTicketsPage() {
     props.setShowLineup(false);
     props.setShowTicketsPage(true);
     props.setShowLandPage(false);
     console.log("gototickets");
-    window.location="#"
+    window.location = "#";
   }
 
   const user = { name: "Melania" };
@@ -43,6 +43,7 @@ function NavBar(props) {
         []
       ) : (
         <NavBrand
+          setIsLogin={setIsLogin}
           {...props}
           logoClassName="navLogo"
           className="navTitle"

@@ -4,11 +4,21 @@ import Link from "./Link";
 
 function NavBrand(props) {
   function goToMain() {
+    props.setIsLogin(false);
+    props.setShowTicketsPage(false);
+    props.setShowLineup(false);
+    props.setShowLandPage(true);
+    props.setShowFaqPage(false);
+    props.setShowProgramPage(false);
+    props.setShowFestLandPage(false);
+    props.setShowMapPage(false);
+    window.location = "#";
     console.log("go to main");
   }
   return (
     <>
-      <Logo className={props.logoClassName} id={props.id}/>
+      <Logo className={props.logoClassName} id={props.id} />
+
       <Link
         content={props.content}
         className={props.className}

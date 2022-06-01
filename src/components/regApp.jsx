@@ -26,29 +26,41 @@ function RegApp(props) {
 
   return (
     <>
-    {showLandPage ?   <NavBar
-        {...props}
-        setShowTicketsPage={setShowTicketsPage}
-        setShowLineup={setShowLineup}
-        setShowLandPage={setShowLandPage}
-        setShowLogin={setShowLogin}
-        className="regNavBar"
-        showLandPage={showLandPage}
-        showTicketsPage={showTicketsPage}
-        showLineup={showLineup}
-      /> :  <NavBar
-      {...props}
-      setShowTicketsPage={setShowTicketsPage}
-      setShowLineup={setShowLineup}
-      setShowLandPage={setShowLandPage}
-      className="regNav"
-      showLandPage={showLandPage}
-      showTicketsPage={showTicketsPage}
-      showLineup={showLineup}
-    />}
+      {showLandPage ? (
+        <NavBar
+          {...props}
+          setShowTicketsPage={setShowTicketsPage}
+          setShowLineup={setShowLineup}
+          setShowLandPage={setShowLandPage}
+          setShowLogin={setShowLogin}
+          className="regNavBar"
+          showLandPage={showLandPage}
+          showTicketsPage={showTicketsPage}
+          showLineup={showLineup}
+        />
+      ) : (
+        <NavBar
+          {...props}
+          setShowTicketsPage={setShowTicketsPage}
+          setShowLineup={setShowLineup}
+          setShowLandPage={setShowLandPage}
+          setShowLogin={setShowLogin}
+          className="regNav"
+          showLandPage={showLandPage}
+          showTicketsPage={showTicketsPage}
+          showLineup={showLineup}
+          showLogin={showLogin}
+        />
+      )}
 
       {/* const [showBurgerMenu, setShowBurgerMenu] = useState(false); */}
-      {showLogin && <LoginSection setShowLogin={setShowLogin} guestName={props.guestName} setGuestName={props.setGuestName} />}
+      {showLogin && (
+        <LoginSection
+          setShowLogin={setShowLogin}
+          guestName={props.guestName}
+          setGuestName={props.setGuestName}
+        />
+      )}
       {props.showBurgerMenu && (
         <BurgerMenu
           {...props}
