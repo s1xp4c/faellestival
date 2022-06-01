@@ -62,6 +62,7 @@ function PersonalInfo({ formData, setFormData }) {
       {guestArray.map((d, index) => (
         <div key={index}>
           <input
+            required
             type="text"
             id={d.id}
             placeholder="Guest First Name..."
