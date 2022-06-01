@@ -14,10 +14,11 @@ function LoginSection(props) {
     function closeLogin() {
         props.setShowLogin(false);
     }
-    function openFestApp() {
+    function openFestApp(e) {
         // setIsLogin(true);
         // console.log(guestName);
         // console.log(bookNr);
+        e.preventDefault()
         if (bookNr == formAuthNr) {
 
             setIsLogin(true);
@@ -32,20 +33,20 @@ function LoginSection(props) {
         <section className="loginSection">
             <Btn className="closeBtn" content="&#10006;" action={closeLogin} />
             <div className="loginContainer">
-                <Title content="Log In to Access the Faellestival App" className="loginTitle" />
+                <Title content="Log In to Access the Faellestival App" className="loginTitle gradientTxt" />
                  <form action="">
-                     <label htmlFor="">
+                     <label htmlFor="" className='gradientTxt'>
                          Your Name:
                          <input type="text" name="guestName" onChange={(e) => props.setGuestName(e.target.value)}/>
                      </label>
-                     <label htmlFor="">
+                     <label htmlFor=""  className='gradientTxt'>
                          Booking Number:
                          <input type="text" name="bookNr" onChange={(e) => setBookNr(e.target.value)}/>
                          {wrongPass && <span className="wrongPass" >Booking Number Incorrect</span>}
                      </label>
+            <Btn className="primBtn" action={openFestApp} content="Log In" />
                  </form>
                  </div>
-            <Btn action={openFestApp} content="Log In" />
         </section>
     )
 }

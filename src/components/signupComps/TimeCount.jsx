@@ -1,9 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const TimeCount = ({ reservationTime }) => {
-  // const [timeToKill, setTimeToKill] = useState(0);
+const TimeCount = ({ reservationTime, setPage, PageDisplay }) => {
+  const [timeToAlert, setTimeToAlert] = useState();
 
   const timeToKill = 420000;
+  // const onResetOk = () => {
+  //   clearTimer(getDeadTime());
+  // };
 
   // useEffect(() => {
   //    setTimeToKill(300000);
@@ -67,6 +70,14 @@ const TimeCount = ({ reservationTime }) => {
     clearTimer(getDeadTime());
   }, []);
 
+  useEffect(() => {
+    if (timer === "00:01") {
+      console.log(timer);
+      alert("Sorry, your time ran out - Please Start over <3");
+      PageDisplay(setPage(0, (currPage) => (currPage = 0)));
+      clearTimer(getDeadTime());
+    }
+  }, [timer]);
   return (
     <div className="countdown">
       <h3>{timer}</h3>

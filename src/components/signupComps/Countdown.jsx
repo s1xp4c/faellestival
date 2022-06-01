@@ -22,7 +22,7 @@ const Countdown = ({ timerMinutes, timerSeconds }) => {
 };
 
 TimeCount.defaultProps = {
-  timerMinutes: 07,
+  timerMinutes: 06,
   timerSeconds: 06,
 };
 

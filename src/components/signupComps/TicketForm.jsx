@@ -142,7 +142,11 @@ function TicketForm(props) {
           <h1>{FormTitles[page]}</h1>
         </div>
         <div className="countdown-timer">
-          <TimeCount reservationTime={reservationTime} />
+          <TimeCount
+            reservationTime={reservationTime}
+            setPage={setPage}
+            PageDisplay={PageDisplay}
+          />
         </div>
         <div className="body ">{PageDisplay()}</div>
         <div className="footer">
