@@ -7,10 +7,15 @@ function TicketContent({ formData, setFormData, checkboxLabels }) {
   const [durationIsChecked, setDurationIsChecked] = useState([]);
   const [dayIsChecked, setDayIsChecked] = useState([]);
   const [showDays, setShowDays] = useState(false);
+  // const Prices = { standardTicket: 799, vipTicket: 1299 };
 
   useEffect(() => {
     let typeIsChecked = [
-      { id: 1, ticketType: checkboxLabels[0] },
+      {
+        id: 1,
+        ticketType: checkboxLabels[0],
+        ticketPrice: Prices.standardTicket,
+      },
       { id: 2, ticketType: checkboxLabels[1] },
     ];
 
@@ -21,6 +26,7 @@ function TicketContent({ formData, setFormData, checkboxLabels }) {
           ticketType: d.ticketType,
           id: d.id,
           value: d.ticketType,
+          ticketPrice: d.ticketPrice,
         };
       })
     );
@@ -83,6 +89,7 @@ function TicketContent({ formData, setFormData, checkboxLabels }) {
                 id={d.id}
                 value={d.value}
                 checked={d.select}
+                ticketPrice={d.ticketPrice}
                 onChange={(event) => {
                   let checked = event.target.checked;
 
@@ -96,7 +103,10 @@ function TicketContent({ formData, setFormData, checkboxLabels }) {
                       return data;
                     })
                   );
-                  setFormData({ ...formData, ticketType: event.target.value });
+                  setFormData({
+                    ...formData,
+                    ticketType: event.target.value,
+                  });
                 }}
               ></input>
               <div>
