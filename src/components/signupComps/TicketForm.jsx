@@ -51,7 +51,7 @@ function TicketForm(props) {
     "VIP Ticket",
     "One Day",
     "Weekend",
-    "Partout",
+    "Full Festival",
     "Monday",
     "Tuesday",
     "Wednesday",

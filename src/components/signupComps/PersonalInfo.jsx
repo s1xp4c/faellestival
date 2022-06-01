@@ -61,65 +61,66 @@ function PersonalInfo({ formData, setFormData }) {
     <div className="personal-info-container">
       {guestArray.map((d, index) => (
         <div key={index}>
-          <input
-            required
-            type="text"
-            id={d.id}
-            placeholder="Guest First Name..."
-            value={d.firstName}
-            onChange={(e) => {
-              const nextGuests = guestArray.map((guest) => {
-                if (d.id === guest.id) {
-                  return { ...guest, firstName: e.target.value };
-                }
-                return guest;
-              });
-              setGuestArray(nextGuests);
-              setFormData({
-                ...formData,
-                extraGuests: nextGuests,
-                authKey: userKey,
-              });
-            }}
-          ></input>
-          <input
-            type="text"
-            id={d.id}
-            placeholder="Guest Last Name..."
-            value={d.lastName}
-            onChange={(e) => {
-              const nextGuests = guestArray.map((guest) => {
-                if (d.id === guest.id) {
-                  return { ...guest, lastName: e.target.value };
-                }
-                return guest;
-              });
-              setGuestArray(nextGuests);
-              setFormData({
-                ...formData,
-                extraGuests: nextGuests,
-              });
-            }}
-          ></input>
-          <input
-            type="text"
-            id={d.id}
-            placeholder="Guest E-mail Name..."
-            value={d.email}
-            onChange={(e) => {
-              const nextGuests = guestArray.map((guest) => {
-                if (d.id === guest.id) {
-                  return { ...guest, email: e.target.value };
-                }
-                return guest;
-              });
-              setGuestArray(nextGuests);
-              setFormData({
-                ...formData,
-                extraGuests: nextGuests,
-              });
-            }}
-          ></input>
+          <label>Guest nr. {index + 1}</label>
+          <div>
+            <input
+              type="text"
+              id={d.id}
+              placeholder="First Name..."
+              value={d.firstName}
+              onChange={(e) => {
+                const nextGuests = guestArray.map((guest) => {
+                  if (d.id === guest.id) {
+                    return { ...guest, firstName: e.target.value };
+                  }
+                  return guest;
+                });
+                setGuestArray(nextGuests);
+                setFormData({
+                  ...formData,
+                  extraGuests: nextGuests,
+                });
+              }}
+            ></input>
+            <input
+              type="text"
+              id={d.id}
+              placeholder="Last Name..."
+              value={d.lastName}
+              onChange={(e) => {
+                const nextGuests = guestArray.map((guest) => {
+                  if (d.id === guest.id) {
+                    return { ...guest, lastName: e.target.value };
+                  }
+                  return guest;
+                });
+                setGuestArray(nextGuests);
+                setFormData({
+                  ...formData,
+                  extraGuests: nextGuests,
+                });
+              }}
+            ></input>
+            <input
+              type="text"
+              id={d.id}
+              placeholder="E-mail..."
+              value={d.email}
+              onChange={(e) => {
+                const nextGuests = guestArray.map((guest) => {
+                  if (d.id === guest.id) {
+                    return { ...guest, email: e.target.value };
+                  }
+                  return guest;
+                });
+                setGuestArray(nextGuests);
+                setFormData({
+                  ...formData,
+                  extraGuests: nextGuests,
+                });
+              }}
+            ></input>
+          </div>
         </div>
       ))}
     </div>

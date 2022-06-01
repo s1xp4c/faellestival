@@ -50,68 +50,74 @@ function OtherInfo({ formData, setFormData, index }) {
         className="formTitle"
         content="Get the Full Faellestival Experience"
       />
-      <div className="cardGrid">
-        <AddOnCard>
-          <CardTitle
-            key={index}
-            head={xtraData[0].title}
-            className="addOnCardTitle"
-          />
-          <CardContent key={index} content={xtraData[0].content} />
+      <div className="cardGrid extrasCardGrid">
+        <div>
+          <AddOnCard>
+            <CardTitle
+              key={index}
+              head={xtraData[0].title}
+              className="addOnCardTitle"
+            />
+            <CardContent key={index} content={xtraData[0].content} />
 
-          {guestQty % 2 == 0 && (
-            <AddOnCheckOut key={index}>
-              {guestQty / 2} x 2 people tent (299kr.)
-            </AddOnCheckOut>
-          )}
-          {guestQty == 1 && (
-            <AddOnCheckOut key={index}>
-              {guestQty} x 2 people tent (299kr.)
-            </AddOnCheckOut>
-          )}
-          {guestQty == 3 && (
-            <AddOnCheckOut key={index}>
-              1 x 3 people tent (399kr.)
-            </AddOnCheckOut>
-          )}
-          {guestQty == 5 && (
-            <AddOnCheckOut key={index}>
-              1 x 2 people tent (299kr.) <br></br> 1 x 3 people tent (399kr.){" "}
-            </AddOnCheckOut>
-          )}
+            {guestQty % 2 == 0 && (
+              <AddOnCheckOut key={index}>
+                {guestQty / 2} x 2 people tent (299kr.)
+              </AddOnCheckOut>
+            )}
+            {guestQty == 1 && (
+              <AddOnCheckOut key={index}>
+                {guestQty} x 2 people tent (299kr.)
+              </AddOnCheckOut>
+            )}
+            {guestQty == 3 && (
+              <AddOnCheckOut key={index}>
+                1 x 3 people tent (399kr.)
+              </AddOnCheckOut>
+            )}
+            {guestQty == 5 && (
+              <AddOnCheckOut key={index}>
+                1 x 2 people tent (299kr.) <br></br> 1 x 3 people tent (399kr.){" "}
+              </AddOnCheckOut>
+            )}
 
-          <Btn className="primBtn" action={addTentSet}>
-            {tentSetAdded ? "Added" : `Add ${tentValue}kr.`}
-          </Btn>
-        </AddOnCard>
-        <AddOnCard key={index}>
-          <CardTitle
-            key={index}
-            head={xtraData[1].title}
-            className="addOnCardTitle"
-          />
-          <CardContent key={index} content={xtraData[1].content} />
-          <AddOnCheckOut key={index}>
-            {guestQty} x Luxury Pack 120kr.
-          </AddOnCheckOut>
-          <Btn className="primBtn" action={addLuxe} key={index}>
-            {luxeAdded ? "Added" : `Add ${luxeValue}kr.`}
-          </Btn>
-        </AddOnCard>
-        <AddOnCard key={index}>
-          <CardTitle
-            key={index}
-            head={xtraData[2].title}
-            className="addOnCardTitle"
-          />
-          <CardContent key={index} content={xtraData[2].content} />
-          <AddOnCheckOut key={index}>
-            1 x Green Camping Spot {greenValue}kr.
-          </AddOnCheckOut>
-          <Btn key={index} className="primBtn" action={addGreenCamp}>
-            {greenCampAdded ? "Added" : `Add ${greenValue}kr.`}
-          </Btn>
-        </AddOnCard>
+            <Btn className="primBtn" action={addTentSet}>
+              {tentSetAdded ? "Added" : `Add ${tentValue}kr.`}
+            </Btn>
+          </AddOnCard>
+        </div>
+        <div>
+          <AddOnCard key={index}>
+            <CardTitle
+              key={index}
+              head={xtraData[1].title}
+              className="addOnCardTitle"
+            />
+            <CardContent key={index} content={xtraData[1].content} />
+            <AddOnCheckOut key={index}>
+              {guestQty} x Luxury Pack 120kr.
+            </AddOnCheckOut>
+            <Btn className="primBtn" action={addLuxe} key={index}>
+              {luxeAdded ? "Added" : `Add ${luxeValue}kr.`}
+            </Btn>
+          </AddOnCard>
+        </div>
+        <div>
+          <AddOnCard key={index}>
+            <CardTitle
+              key={index}
+              head={xtraData[2].title}
+              className="addOnCardTitle"
+            />
+            <CardContent key={index} content={xtraData[2].content} />
+            <AddOnCheckOut key={index}>
+              1 x Green Camping Spot {greenValue}kr.
+            </AddOnCheckOut>
+            <Btn key={index} className="primBtn" action={addGreenCamp}>
+              {greenCampAdded ? "Added" : `Add ${greenValue}kr.`}
+            </Btn>
+          </AddOnCard>
+        </div>
       </div>
     </section>
   );
