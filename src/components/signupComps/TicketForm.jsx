@@ -5,9 +5,13 @@ import PersonalInfo from "./PersonalInfo";
 import ExtrasInfo from "./ExtrasInfo";
 import CampInfo from "./CampInfo";
 import TimeCount from "./TimeCount";
+// import envData from "../../App";
+// import ReservationRequest from "./ReservationRequest";
 
 function TicketForm(props) {
   const [page, setPage] = useState(0);
+  //  const [reservationTime, setReservationTime] = useState();
+  const reservationTime = 300000;
 
   const [formData, setFormData] = useState({
     userEmail: "",
@@ -24,7 +28,7 @@ function TicketForm(props) {
     agreeTerms: "",
     agreeSocial: "",
     ticketAmount: 0,
-    cardFee: 0,
+    cardFee: 99,
     campsite: "",
     tentSetup: 0,
     luxePack: 0,
@@ -84,7 +88,16 @@ function TicketForm(props) {
         />
       );
     } else if (page === 2) {
-      return <PersonalInfo formData={formData} setFormData={setFormData} />;
+      return (
+        <>
+          <PersonalInfo
+            formData={formData}
+            setFormData={setFormData}
+            // reservationTime={reservationTime}
+            // setReservationTime={setReservationTime}
+          />
+        </>
+      );
     } else if (page === 3) {
       return <ExtrasInfo formData={formData} setFormData={setFormData} />;
     } else if (page === 4) {
@@ -120,13 +133,16 @@ function TicketForm(props) {
                 : "100%",
           }}
         ></div>
-        <div className="countdown-timer">
-          <TimeCount />
-        </div>
+        {/* <div className="countdown-timer">
+          <TimeCount reservationTime={reservationTime} />
+        </div> */}
       </div>
       <div className="form-container ">
         <div className="header">
           <h1>{FormTitles[page]}</h1>
+        </div>
+        <div className="countdown-timer">
+          <TimeCount reservationTime={reservationTime} />
         </div>
         <div className="body ">{PageDisplay()}</div>
         <div className="footer">

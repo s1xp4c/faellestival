@@ -1,0 +1,315 @@
+* {
+  accent-color: $orange;
+}
+
+.header {
+  h1 {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+  }
+}
+
+.ticket-container {
+  width: 60vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  .check-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    justify-items: center;
+    font-family: system-ui;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.548);
+    position: relative;
+    margin-top: 1rem;
+    // margin-left: 1rem;
+    cursor: pointer;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+    .check-body {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 1vw;
+
+      div:first-child {
+        div {
+          margin-left: 0.6vw;
+        }
+        display: flex;
+        flex-direction: row;
+        gap: 0.7vw;
+        padding-left: 0.5vw;
+        padding-bottom: 0.5vw;
+        margin-left: 1vw;
+      }
+      div:nth-child(2) {
+        div {
+          margin-left: 1vw;
+        }
+        display: flex;
+        flex-direction: row;
+        margin-left: 2vw;
+      }
+    }
+    p {
+      font-style: italic;
+      color: grey;
+    }
+    h3 {
+      text-align: center;
+    }
+  }
+  .duration-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    justify-items: center;
+    font-family: system-ui;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.548);
+    position: relative;
+    margin-top: 1rem;
+    // margin-left: 1rem;
+    cursor: pointer;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+  }
+  p {
+    font-style: italic;
+    color: grey;
+  }
+  h3 {
+    text-align: center;
+  }
+  .duration-body {
+    display: flex;
+    flex-direction: row;
+    div:first-child {
+      div {
+        margin-left: 0;
+      }
+      display: flex;
+      flex-direction: row;
+      gap: 0.7vw;
+      padding-left: 0.5vw;
+      padding-bottom: 0.5vw;
+      margin-left: 1vw;
+    }
+    div:nth-child(2) {
+      div {
+        margin-left: 0;
+      }
+      display: flex;
+      flex-direction: row;
+      gap: 0.7vw;
+      padding-left: 0.5vw;
+      padding-bottom: 0.5vw;
+      margin-left: 1vw;
+    }
+    div:nth-child(3) {
+      div {
+        margin-left: 0;
+      }
+      display: flex;
+      flex-direction: row;
+      gap: 0.7vw;
+      padding-left: 0.5vw;
+      padding-bottom: 0.5vw;
+      margin-left: 1vw;
+    }
+  }
+  .incr-decr-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    justify-items: center;
+    font-family: system-ui;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.548);
+    position: relative;
+    margin-top: 1rem;
+    // margin-left: 1rem;
+    cursor: pointer;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+    .incr-decr-body {
+      margin-left: 1.5vw;
+      margin-bottom: 1.5vw;
+    }
+  }
+  .day-body {
+    display: flex;
+    flex-direction: row;
+    margin-left: 1vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    div:first-child {
+      div {
+        margin-left: 0.5vw;
+      }
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 0.5vw;
+    }
+    div:nth-child(2) {
+      div {
+        margin-left: 0.5vw;
+      }
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 0.5vw;
+      margin-left: 1vw;
+    }
+    div:nth-child(3) {
+      div {
+        margin-left: 0.5vw;
+      }
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 0.5vw;
+      margin-left: 1vw;
+    }
+    div:nth-child(4) {
+      div {
+        margin-left: 0.5vw;
+      }
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 0.5vw;
+      margin-left: 1vw;
+    }
+    div:nth-child(5) {
+      div {
+        margin-left: 0.5vw;
+      }
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 0.5vw;
+      margin-left: 1vw;
+    }
+    div:nth-child(6) {
+      div {
+        margin-left: 0.5vw;
+      }
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 0.5vw;
+      margin-left: 1vw;
+    }
+    div:nth-child(7) {
+      div {
+        margin-left: 0.5vw;
+      }
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 0.5vw;
+      margin-left: 1vw;
+    }
+  }
+}
+
+.footer {
+  button:first-child {
+    margin-top: 1.5vw;
+    margin-bottom: 1vw;
+    font-family: system-ui;
+    border-radius: 50px;
+    color: #fff;
+    border: solid 3px transparent;
+    background-image: linear-gradient(#141313, #141313),
+      linear-gradient(93deg, rgb(232, 152, 50) 0%, rgb(220, 105, 64) 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #312f2f inset;
+    transition: all 0.5s;
+  }
+  button:nth-child(2) {
+    margin-top: 1.5vw;
+    margin-bottom: 1vw;
+    font-family: system-ui;
+    border-radius: 50px;
+    color: #fff;
+    border: solid 3px transparent;
+    background-image: linear-gradient(#141313, #141313),
+      linear-gradient(93deg, rgb(232, 152, 50) 0%, rgb(220, 105, 64) 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #312f2f inset;
+    transition: all 0.5s;
+  }
+}
+
+.form-container {
+  width: 60vw;
+  margin: 0 auto;
+  .check-header {
+    p {
+      font-style: italic;
+      color: grey;
+    }
+    h3 {
+      text-align: center;
+    }
+  }
+  .check-body {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1vw;
+    margin-right: 1vw;
+
+    div:first-child {
+      div {
+        margin-left: 0.6vw;
+      }
+      display: flex;
+      flex-direction: row;
+      gap: 0.7vw;
+      padding-left: 0.5vw;
+      padding-bottom: 0.5vw;
+      margin-left: 1vw;
+    }
+    div:nth-child(2) {
+      div {
+        margin-left: 1vw;
+      }
+      display: flex;
+      flex-direction: row;
+      margin-left: 2vw;
+    }
+    div:nth-child(3) {
+      div {
+        margin-left: 1vw;
+      }
+      display: flex;
+      flex-direction: row;
+      margin-left: 2vw;
+    }
+    div:nth-child(4) {
+      div {
+        margin-left: 1vw;
+      }
+      display: flex;
+      flex-direction: row;
+      margin-left: 2vw;
+    }
+    div:nth-child(5) {
+      div {
+        margin-left: 1vw;
+      }
+      display: flex;
+      flex-direction: row;
+      margin-left: 2vw;
+    }
+  }
+}
+
+
+// transform:scale(0.8)
