@@ -1,199 +1,216 @@
 .lineupGrid {
-    display: flex;
-    margin-inline: 2rem;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #312f2f;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+  display: flex;
+  margin-inline: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #312f2f;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.lineupCard {
+  text-align: center;
+  color: white;
+  font-family: $sec-font;
+  border-radius: $card-border;
+  box-shadow: $card-shadow;
+  position: relative;
+  background: $dark-poster;
+  margin-top: 1rem;
+  // padding-bottom: 1rem;
+
+  &:hover {
+    box-shadow: $hov-card-sh;
   }
-  
-  .lineupCard {
-    text-align: center;
-    color: white;
-    font-family: $sec-font;
-    border-radius: $card-border;
-    box-shadow: $card-shadow;
-    position: relative;
+
+  .lineupTitle {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.13), rgb(0, 0, 0)),
+      url("faellestival5.jpg");
+    clip-path: polygon(
+      100% 0%,
+      0% 0%,
+      0% 99.2%,
+      1% 99.18%,
+      2% 99.13%,
+      3% 99.04%,
+      4% 98.92%,
+      5% 98.76%,
+      6% 98.57%,
+      7% 98.35%,
+      8% 98.1%,
+      9% 97.82%,
+      10% 97.51%,
+      11% 97.17%,
+      12% 96.8%,
+      13% 96.42%,
+      14% 96.01%,
+      15% 95.58%,
+      16% 95.13%,
+      17% 94.66%,
+      18% 94.18%,
+      19% 93.69%,
+      20% 93.19%,
+      21% 92.68%,
+      22% 92.16%,
+      23% 91.65%,
+      24% 91.13%,
+      25% 90.61%,
+      26% 90.1%,
+      27% 89.6%,
+      28% 89.1%,
+      29% 88.62%,
+      30% 88.15%,
+      31% 87.69%,
+      32% 87.26%,
+      33% 86.84%,
+      34% 86.44%,
+      35% 86.07%,
+      36% 85.73%,
+      37% 85.41%,
+      38% 85.12%,
+      39% 84.85%,
+      40% 84.62%,
+      41% 84.43%,
+      42% 84.26%,
+      43% 84.13%,
+      44% 84.03%,
+      45% 83.97%,
+      46% 83.94%,
+      47% 83.94%,
+      48% 83.99%,
+      49% 84.06%,
+      50% 84.17%,
+      51% 84.32%,
+      52% 84.5%,
+      53% 84.71%,
+      54% 84.95%,
+      55% 85.22%,
+      56% 85.53%,
+      57% 85.86%,
+      58% 86.21%,
+      59% 86.59%,
+      60% 87%,
+      61% 87.42%,
+      62% 87.87%,
+      63% 88.33%,
+      64% 88.8%,
+      65% 89.29%,
+      66% 89.79%,
+      67% 90.3%,
+      68% 90.81%,
+      69% 91.33%,
+      70% 91.85%,
+      71% 92.36%,
+      72% 92.87%,
+      73% 93.38%,
+      74% 93.88%,
+      75% 94.37%,
+      76% 94.84%,
+      77% 95.3%,
+      78% 95.74%,
+      79% 96.17%,
+      80% 96.57%,
+      81% 96.95%,
+      82% 97.3%,
+      83% 97.63%,
+      84% 97.93%,
+      85% 98.2%,
+      86% 98.44%,
+      87% 98.65%,
+      88% 98.83%,
+      89% 98.97%,
+      90% 99.08%,
+      91% 99.15%,
+      92% 99.19%,
+      93% 99.19%,
+      94% 99.16%,
+      95% 99.1%,
+      96% 99%,
+      97% 98.86%,
+      98% 98.69%,
+      99% 98.49%,
+      100% 98.26%
+    );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: $card-border;
+    border-top-right-radius: $card-border;
+    height: 8rem;
+    padding-block: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.5em;
+    padding-bottom: 2rem;
+  }
+
+  .lineupCardContent {
+    border-bottom-left-radius: $card-border;
+    border-bottom-right-radius: $card-border;
     background: $dark-poster;
-    margin-top: 1rem;
-    // padding-bottom: 1rem;
-  
-    &:hover {
-      box-shadow: $hov-card-sh;
+    padding: 1rem;
+    max-width: 38ch;
+
+    span:nth-child(-n + 3) {
+      font-size: clamp(1rem, 5.5vw, 2rem);
     }
-  
-    .lineupTitle {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.13), rgb(0, 0, 0)), url("faellestival5.jpg");
-      clip-path: polygon(
-        100% 0%,
-        0% 0%,
-        0% 99.2%,
-        1% 99.18%,
-        2% 99.13%,
-        3% 99.04%,
-        4% 98.92%,
-        5% 98.76%,
-        6% 98.57%,
-        7% 98.35%,
-        8% 98.1%,
-        9% 97.82%,
-        10% 97.51%,
-        11% 97.17%,
-        12% 96.8%,
-        13% 96.42%,
-        14% 96.01%,
-        15% 95.58%,
-        16% 95.13%,
-        17% 94.66%,
-        18% 94.18%,
-        19% 93.69%,
-        20% 93.19%,
-        21% 92.68%,
-        22% 92.16%,
-        23% 91.65%,
-        24% 91.13%,
-        25% 90.61%,
-        26% 90.1%,
-        27% 89.6%,
-        28% 89.1%,
-        29% 88.62%,
-        30% 88.15%,
-        31% 87.69%,
-        32% 87.26%,
-        33% 86.84%,
-        34% 86.44%,
-        35% 86.07%,
-        36% 85.73%,
-        37% 85.41%,
-        38% 85.12%,
-        39% 84.85%,
-        40% 84.62%,
-        41% 84.43%,
-        42% 84.26%,
-        43% 84.13%,
-        44% 84.03%,
-        45% 83.97%,
-        46% 83.94%,
-        47% 83.94%,
-        48% 83.99%,
-        49% 84.06%,
-        50% 84.17%,
-        51% 84.32%,
-        52% 84.5%,
-        53% 84.71%,
-        54% 84.95%,
-        55% 85.22%,
-        56% 85.53%,
-        57% 85.86%,
-        58% 86.21%,
-        59% 86.59%,
-        60% 87%,
-        61% 87.42%,
-        62% 87.87%,
-        63% 88.33%,
-        64% 88.8%,
-        65% 89.29%,
-        66% 89.79%,
-        67% 90.3%,
-        68% 90.81%,
-        69% 91.33%,
-        70% 91.85%,
-        71% 92.36%,
-        72% 92.87%,
-        73% 93.38%,
-        74% 93.88%,
-        75% 94.37%,
-        76% 94.84%,
-        77% 95.3%,
-        78% 95.74%,
-        79% 96.17%,
-        80% 96.57%,
-        81% 96.95%,
-        82% 97.3%,
-        83% 97.63%,
-        84% 97.93%,
-        85% 98.2%,
-        86% 98.44%,
-        87% 98.65%,
-        88% 98.83%,
-        89% 98.97%,
-        90% 99.08%,
-        91% 99.15%,
-        92% 99.19%,
-        93% 99.19%,
-        94% 99.16%,
-        95% 99.1%,
-        96% 99%,
-        97% 98.86%,
-        98% 98.69%,
-        99% 98.49%,
-        100% 98.26%
-      );
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      border-top-left-radius: $card-border;
-      border-top-right-radius: $card-border;
-      height: 8rem;
-      padding-block: 0.5rem;
-      font-size: 1.5rem;
-      font-weight: 800;
-      line-height: 1.5em;
-      padding-bottom: 2rem;
-    }
-  
-    .lineupCardContent {
-      border-bottom-left-radius: $card-border;
-      border-bottom-right-radius: $card-border;
-      background: $dark-poster;
-      padding: 1rem;
-      max-width: 38ch;
-  
-      span:nth-child(-n + 3) {
-        font-size: clamp(1rem, 5.5vw, 2rem);
-      }
-      span:nth-child(3)::after {
-        content: "\a";
-        white-space: pre;
-      }
-    }
-  
-    span:nth-child(n + 4) {
-      font-size: clamp(1.1rem, 3.5vw, 1.3rem);
-    }
-  
-    span:nth-child(8)::after {
+    span:nth-child(3)::after {
       content: "\a";
       white-space: pre;
-    }
-  
-    span:nth-child(n + 9) {
-      font-size: clamp(0.8rem, 1.5vw, 1rem);
-      // &::after {
-      //     content: "\a";
-      //     white-space: pre;
-      //   }
-    }
-  
-    span:nth-child(29)::after {
-      content: "\a";
-      white-space: pre;
-    }
-  
-    span:nth-child(n + 30) {
-      font-size: 1rem;
-      // &::after {
-      //     content: "\a";
-      //     white-space: pre;
-      //   }
-    }
-    // }
-  
-    .lineupSection {
-      text-align: center;
-      padding: 3vw;
     }
   }
-  
+
+  span:nth-child(n + 4) {
+    font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+  }
+
+  span:nth-child(8)::after {
+    content: "\a";
+    white-space: pre;
+  }
+
+  span:nth-child(n + 9) {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    // &::after {
+    //     content: "\a";
+    //     white-space: pre;
+    //   }
+  }
+
+  span:nth-child(29)::after {
+    content: "\a";
+    white-space: pre;
+  }
+
+  span:nth-child(n + 30) {
+    font-size: 1rem;
+    // &::after {
+    //     content: "\a";
+    //     white-space: pre;
+    //   }
+  }
+  // }
+
+  .lineupSection {
+    text-align: center;
+    padding: 3vw;
+  }
+}
+
+.lineUpTitle {
+  text-align: center;
+  font-family: $body-font;
+  font-size: 5vw;
+  margin-top: 2vw;
+  margin-bottom: 3vw;
+}
+
+.gobackLineup {
+  margin: 2vw;
+  text-decoration: underline 1px solid white;
+  cursor: pointer;
+  border: none;
+  background-color: #312f2f;
+  color: white;
+}

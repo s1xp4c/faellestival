@@ -161,7 +161,8 @@
   .day-body {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    // justify-content: space-between;
+    flex-wrap: wrap;
     margin: 1vw;
     div:first-child {
       div {
@@ -214,7 +215,6 @@
       display: flex;
       flex-direction: row;
       padding-bottom: 0.5vw;
-      margin-left: 1vw;
     }
     div:nth-child(7) {
       div {
@@ -458,6 +458,18 @@
     width: 90%;
   }
 
+.formBase {
+  .closeFormBtn {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    z-index: 1000;
+  }
 }
 
+}
 // transform:scale(0.8)

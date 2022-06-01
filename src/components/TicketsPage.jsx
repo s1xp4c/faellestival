@@ -4,6 +4,8 @@ import { AvailableContext } from "../Contexts/AvailableContext";
 import MainSect from "./sections/MainSect";
 import CardGrid from "./UI/CardGrid";
 import OrderForm from "./sections/OrderForm";
+import Title from "./UI/Title";
+import Breadcrumbs from "./UI/Breadcrumbs";
 //  import ticketContent from "./content.json?raw";
 
 function TicketsPage(props) {
@@ -32,13 +34,13 @@ function TicketsPage(props) {
         []
       ) : (
         <>
-          <MainSect
-            className="mainSect"
-            content="Tickets"
+          <Breadcrumbs
+            className="gobackLineup"
             bcReg="Main"
-            action={goToMain}
             {...props}
+            action={goToMain}
           />
+          <Title className="lineUpTitle gradientTxt" content="Tickets" />
           <CardGrid
             className="cardGrid hidden"
             ticketsContent={ticketsContent}

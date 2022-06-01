@@ -8,7 +8,7 @@ function OrderForm(props) {
   }
   return (
     <div className="formBase">
-      <button onClick={closeForm}>✖</button>
+      <button className="closeFormBtn" onClick={closeForm}>✖</button>
       <TicketForm />
     </div>
   );

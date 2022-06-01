@@ -106,13 +106,7 @@ function TicketForm(props) {
     } else if (page === 4) {
       return <TicketCheckout formData={formData} setFormData={setFormData} />;
     } else if (page === 5) {
-      return (
-        <ConfirmInfo
-          formData={formData}
-          setFormData={setFormData}
-          checkboxLabels={checkboxLabels}
-        />
-      );
+      return <PushAllData formData={formData} setFormData={setFormData} />;
     }
   };
 
