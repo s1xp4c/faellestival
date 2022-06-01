@@ -23,6 +23,7 @@ function TicketsPage(props) {
   function goToMain() {
     props.setShowTicketsPage(false);
     props.setShowLandPage(true);
+    window.location = "#";
   }
 
   return (
@@ -35,7 +36,7 @@ function TicketsPage(props) {
         {...props}
       />
       <CardGrid
-        className="cardGrid"
+        className="cardGrid hidden"
         ticketsContent={ticketsContent}
         setShowForm={setShowForm}
         soldOut={soldOut}

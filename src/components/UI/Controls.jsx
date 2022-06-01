@@ -1,13 +1,14 @@
 import React from "react";
 
 function Controls(props) {
-    function getDay(event) {
-        props.setDay(event.target.value)
-    }
+  function getDay(event) {
+    props.setDay(event.target.value);
+    window.location = "#";
+  }
 
   return (
     <div className={props.className}>
-      <select onChange={getDay} >
+      <select onChange={getDay}>
         <option value="Monday">Monday</option>
         <option value="Tuesday">Tuesday</option>
         <option value="Wednesday">Wednesday</option>

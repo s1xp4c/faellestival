@@ -7,15 +7,13 @@ function TicketCard(props) {
   function openForm() {
     props.setShowForm(true);
     console.log("OPEN FORM");
+    window.location = "#";
   }
   return (
     <div className={props.cardClass}>
       <CardTitle className="ticketTitle" head={props.head} />
       <section className={props.contentClass}>
-        <CardContent
-          content={props.content}
-          price={props.price}
-        />
+        <CardContent content={props.content} price={props.price} />
         {props.soldOut ? (
           <Btn className="inactive out" content="Sold Out" />
         ) : (

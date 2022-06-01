@@ -11,10 +11,12 @@ function RegLinks(props) {
     props.setShowLandPage(false);
     props.setShowFaqPage(false);
     console.log("go to lineuppage");
+    window.location = "#";
   }
   function goTofestAppPage() {
     console.log("go to festAppPage");
     props.setShowLogin(true);
+    window.location = "#";
   }
   function goToTicketsPage() {
     props.setShowTicketsPage(true);
@@ -22,6 +24,7 @@ function RegLinks(props) {
     props.setShowLandPage(false);
     props.setShowFaqPage(false);
     console.log("tickets");
+    window.location = "#";
   }
   return (
     <ul className={props.globalClassName}>

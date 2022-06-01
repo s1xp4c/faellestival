@@ -4,6 +4,7 @@ import onlyMap from "/onlyMap.svg";
 
 function MapSection(props) {
   function goToMap() {
+    window.location = "#";
     props.setShowFestLandPage(false);
     props.setShowMapPage(true);
   }

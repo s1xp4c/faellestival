@@ -12,9 +12,11 @@ function NavBar(props) {
     props.setShowLineup(true);
     props.setShowTicketsPage(false);
     props.setShowLandPage(false);
+    window.location="#"
   }
   function goToFestApp() {
-  props.setShowLogin(true);
+    props.setShowLogin(true);
+    window.location="#"
   }
 
   function openBurger() {
@@ -22,16 +24,18 @@ function NavBar(props) {
     props.showBurgerMenu
       ? props.setShowBurgerMenu(false)
       : props.setShowBurgerMenu(true);
+      window.location="#"
   }
   function goToTicketsPage() {
     props.setShowLineup(false);
     props.setShowTicketsPage(true);
     props.setShowLandPage(false);
     console.log("gototickets");
+    window.location="#"
   }
 
   const user = { name: "Melania" };
-  // let user = props.guestName;
+  // let user = props.name;
 
   return (
     <nav className={props.className} id={props.id}>
@@ -43,7 +47,6 @@ function NavBar(props) {
           logoClassName="navLogo"
           className="navTitle"
           content="Faellestival"
-
         />
       )}
 
