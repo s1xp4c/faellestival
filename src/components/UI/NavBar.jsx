@@ -26,6 +26,7 @@ function NavBar(props) {
     props.setShowLineup(false);
     props.setShowTicketsPage(true);
     props.setShowLandPage(false);
+    props.setShowFaqPage(false);
     console.log("gototickets");
   }
   let user = props.guestName;
@@ -42,6 +43,14 @@ function NavBar(props) {
           content="Faellestival"
 
         />
+      )}
+
+{props.showFaqPage && (
+        <Btn
+        action={goToTicketsPage}
+        content="Tickets"
+        className="secBtn"
+      />
       )}
 
       {props.showTicketsPage && (

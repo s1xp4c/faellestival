@@ -41,8 +41,10 @@ function RegApp(props) {
       setShowTicketsPage={setShowTicketsPage}
       setShowLineup={setShowLineup}
       setShowLandPage={setShowLandPage}
+      setShowFaqPage={setShowFaqPage}
       className="regNav"
       showLandPage={showLandPage}
+      showFaqPage={showFaqPage}
       showTicketsPage={showTicketsPage}
       showLineup={showLineup}
     />}
