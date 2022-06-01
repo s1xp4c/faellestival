@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { AddOnContext } from "../../Contexts/AddOnContext";
 import SectionTitle from "../UI/SectionTitle";
 import AddOnCard from "../UI/AddOnCard";

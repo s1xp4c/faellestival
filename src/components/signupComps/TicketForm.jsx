@@ -6,12 +6,10 @@ import ExtrasInfo from "./ExtrasInfo";
 import CampInfo from "./CampInfo";
 import TimeCount from "./TimeCount";
 import TicketCheckout from "./TicketCheckout";
-// import envData from "../../App";
-// import ReservationRequest from "./ReservationRequest";
+import PushAllData from "./PushAllData";
 
 function TicketForm(props) {
   const [page, setPage] = useState(0);
-  //  const [reservationTime, setReservationTime] = useState();
   const reservationTime = 300000;
 
   const [formData, setFormData] = useState({
@@ -24,6 +22,7 @@ function TicketForm(props) {
     checkoutTotal: "",
     authKey: "",
     ticketType: "",
+    ticketState: "",
     ticketDuration: "",
     ticketDay: "",
     agreeTerms: "",
@@ -43,8 +42,8 @@ function TicketForm(props) {
     "Choose Campsite",
     "Personal Info",
     "Choose Extras",
-    "Confirm Your E-mail",
     "Checkout Cart",
+    "Congratulations!",
   ];
   const checkboxLabels = [
     "Standard Ticket",
@@ -91,28 +90,18 @@ function TicketForm(props) {
       );
     } else if (page === 2) {
       return (
-        <>
-          <PersonalInfo
-            className="transition-ease"
-            formData={formData}
-            setFormData={setFormData}
-            // reservationTime={reservationTime}
-            // setReservationTime={setReservationTime}
-          />
-        </>
+        <PersonalInfo
+          className="transition-ease"
+          formData={formData}
+          setFormData={setFormData}
+        />
       );
     } else if (page === 3) {
       return <ExtrasInfo formData={formData} setFormData={setFormData} />;
     } else if (page === 4) {
       return <TicketCheckout formData={formData} setFormData={setFormData} />;
     } else if (page === 5) {
-      return (
-        <ConfirmInfo
-          formData={formData}
-          setFormData={setFormData}
-          checkboxLabels={checkboxLabels}
-        />
-      );
+      return <PushAllData formData={formData} setFormData={setFormData} />;
     }
   };
 
@@ -171,7 +160,7 @@ function TicketForm(props) {
               }
             }}
           >
-            {page === FormTitles.length - 1 ? "Submit" : "Next"}
+            {page === FormTitles.length - 2 ? "Submit" : "Next"}
           </button>
         </div>
       </div>

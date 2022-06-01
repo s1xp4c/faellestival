@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ReservationRequest from "./ReservationRequest";
 
 function PersonalInfo({ formData, setFormData }) {
-  // const [reservationInfo, setReservationInfo] = useState({});
   const n = formData.ticketAmount;
   const [reserveRespons, setReserveRespons] = useState(0);
 
@@ -33,14 +31,9 @@ function PersonalInfo({ formData, setFormData }) {
   let userKey = reserveRespons.id;
   useEffect(() => {
     setFormData({ ...formData, authKey: userKey });
-  }, []);
 
-  // ReservationRequest(
-  //   (formData = { formData }),
-  //   (setFormData = { setFormData })
-  // );
-  // console.log(n);
-  // console.log(formData);
+    console.log("first", { userKey });
+  }, []);
 
   const [guestArray, setGuestArray] = useState([]);
 
