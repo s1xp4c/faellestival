@@ -4,6 +4,8 @@ import { ScheduleContext } from "../Contexts/ScheduleContext";
 import Artist from "./UI/Artist";
 import CardTitle from "./UI/CardTitle";
 import MainSect from "./sections/MainSect";
+import Breadcrumbs from "./UI/Breadcrumbs";
+import Title from "./UI/Title";
 
 function LineupPage(props) {
   const scheduleData = useContext(ScheduleContext);
@@ -36,19 +38,8 @@ function LineupPage(props) {
 
   return (
     <>
-      {/* <MainSect
-        className="mainSect"
-        content="Lineup"
-        bcReg="Main"
-        {...props}
-      /> */}
-      <MainSect
-        className="mainSect"
-        content="Line Up"
-        bcReg="Main"
-        {...props}
-        action={goToMain}
-      />
+      <Breadcrumbs bcReg="Main" {...props} action={goToMain} />
+      <Title className="lineUpTitle gradientTxt" content="Line Up" />
       <div className="lineupGrid">
         {dayShort.map((day, index) => (
           <div className="lineupCard">
