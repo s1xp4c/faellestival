@@ -6,6 +6,7 @@ import FullLineup from "./FullLineup";
 
 function LineupSection(props) {
   function goToLineup() {
+    window.location = "#";
     console.log("work");
     props.setShowLandPage(false);
     props.setShowLineup(true);

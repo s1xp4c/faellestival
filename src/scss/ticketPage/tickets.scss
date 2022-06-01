@@ -29,9 +29,10 @@
   flex-wrap: wrap;
   justify-content: center;
   background-color: #312f2f;
-
   padding-bottom: 5rem;
+  position: relative;
 }
+
 
 .ticketCard {
   display: flex;
@@ -60,7 +61,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.13), rgb(0, 0, 0)), url("https://faellestival.dk/wp/wp-content/uploads/2018/09/cropped-MG_8034-1.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.13), rgb(0, 0, 0)),
+    url("https://faellestival.dk/wp/wp-content/uploads/2018/09/cropped-MG_8034-1.jpg");
   clip-path: polygon(
     100% 0%,
     0% 0%,
@@ -209,3 +211,9 @@
   flex-direction: column;
   gap: 1rem;
 }
+
+// .mainSect {
+//   .hidden {
+//     background-clip: pink;
+//   }
+// }

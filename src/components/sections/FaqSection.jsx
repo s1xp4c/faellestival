@@ -4,11 +4,13 @@ import BtnGrid from "../UI/BtnGrid";
 
 function FaqSection(props) {
   function showFaq() {
+    window.location = "#";
     console.log("show faq");
     props.setShowFaqPage(true);
     props.setShowLandPage(false);
   }
   function showTickets() {
+    window.location = "#";
     props.setShowTicketsPage(true);
     props.setShowLandPage(false);
     console.log("showtickets");

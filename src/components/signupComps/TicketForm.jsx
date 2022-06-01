@@ -43,8 +43,8 @@ function TicketForm(props) {
     "Choose Campsite",
     "Personal Info",
     "Choose Extras",
-    "Confirm Your E-mail",
     "Checkout Cart",
+    "Congratulations!"
   ];
   const checkboxLabels = [
     "Standard Ticket",

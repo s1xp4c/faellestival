@@ -4,6 +4,8 @@ import { AvailableContext } from "../Contexts/AvailableContext";
 import MainSect from "./sections/MainSect";
 import CardGrid from "./UI/CardGrid";
 import OrderForm from "./sections/OrderForm";
+import Title from "./UI/Title";
+import Breadcrumbs from "./UI/Breadcrumbs";
 //  import ticketContent from "./content.json?raw";
 
 function TicketsPage(props) {
@@ -23,23 +25,26 @@ function TicketsPage(props) {
   function goToMain() {
     props.setShowTicketsPage(false);
     props.setShowLandPage(true);
+    window.location = "#";
   }
 
   return (
     <main>
-      <MainSect
-        className="mainSect"
-        content="Tickets"
-        bcReg="Main"
-        action={goToMain}
-        {...props}
-      />
-      <CardGrid
-        className="cardGrid"
-        ticketsContent={ticketsContent}
-        setShowForm={setShowForm}
-        soldOut={soldOut}
-      />
+      {showForm ? (
+        []
+      ) : (
+        <>
+          <Breadcrumbs bcReg="Main" {...props} action={goToMain} />
+          <Title className="lineUpTitle gradientTxt" content="Tickets" />
+          <CardGrid
+            className="cardGrid hidden"
+            ticketsContent={ticketsContent}
+            setShowForm={setShowForm}
+            soldOut={soldOut}
+          />
+        </>
+      )}
+
       {showForm && <OrderForm setShowForm={setShowForm} />}
     </main>
   );

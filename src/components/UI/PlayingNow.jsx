@@ -7,7 +7,7 @@ function PlayingNow(props) {
   const [nowJotunheim, setNowJotunheim] = useState([]);
   const [nowVanaheim, setNowVanaheim] = useState([]);
   const [nowMidgard, setNowMidgard] = useState([]);
-  
+
   let stages = Object.keys(schedule);
 
   let today = Date().split(" ");
@@ -24,7 +24,6 @@ function PlayingNow(props) {
   let distrTimeJ = [getDayJ[0][1]];
   let getTimeslotJ = [...distrTimeJ[0]];
 
-
   let stageVArr = Object.entries(schedule.Vanaheim);
   let getDayV = stageVArr.filter((day) => day[0] == currDay);
   let distrTimeV = [getDayV[0][1]];
@@ -35,7 +34,6 @@ function PlayingNow(props) {
   let distrTimeM = [getDayM[0][1]];
   let getTimeslotM = [...distrTimeM[0]];
 
-  
   useEffect(() => {
     for (let i = 0; i < getTimeslotJ.length; i++) {
       if (getTimeslotJ[i].start == newHour) {
@@ -54,24 +52,39 @@ function PlayingNow(props) {
         setNowMidgard(getTimeslotM[i]);
       }
     }
-    
   }, [newHour]);
 
-
-
-function goToProgram() {
-  props.setShowFestLandPage(false);
-  props.setShowProgramPage(true);
-}
+  function goToProgram() {
+    props.setShowFestLandPage(false);
+    props.setShowProgramPage(true);
+    window.location = "#";
+  }
 
   return (
     <div className="cardGrid">
-      <PlayingCard className="playCard" btnContent={stages[0]} btnClassName="primBtn" action={goToProgram} content={nowJotunheim} />
-      <PlayingCard className="playCard" btnContent={stages[1]} btnClassName="primBtn" action={goToProgram} content={nowVanaheim} />
-      <PlayingCard className="playCard" btnContent={stages[2]} btnClassName="primBtn" action={goToProgram} content={nowMidgard} />
+      <PlayingCard
+        className="playCard"
+        btnContent={stages[0]}
+        btnClassName="primBtn"
+        action={goToProgram}
+        content={nowJotunheim}
+      />
+      <PlayingCard
+        className="playCard"
+        btnContent={stages[1]}
+        btnClassName="primBtn"
+        action={goToProgram}
+        content={nowVanaheim}
+      />
+      <PlayingCard
+        className="playCard"
+        btnContent={stages[2]}
+        btnClassName="primBtn"
+        action={goToProgram}
+        content={nowMidgard}
+      />
     </div>
   );
 }
-
 
 export default PlayingNow;

@@ -7,11 +7,13 @@ import ScrollElm from "./ScrollElm";
 
 function HeroSection(props) {
   function showLineup() {
+    window.location = "#";
     console.log("showlineup");
     props.setShowLineup(true);
     props.setShowLandPage(false);
   }
   function showTickets() {
+    window.location = "#";
     props.setShowTicketsPage(true);
     props.setShowLandPage(false);
     console.log("showtickets");

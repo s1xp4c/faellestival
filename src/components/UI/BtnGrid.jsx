@@ -16,6 +16,13 @@ function BtnGrid(props) {
           className={props.btn2className}
         />
       )}
+      {props.btn3content && (
+        <Btn
+          content={props.btn3content}
+          action={props.btn3action}
+          className={props.btn3className}
+        />
+      )}
     </div>
   );
 }

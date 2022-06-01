@@ -4,6 +4,7 @@ import onlyMap from "/onlyMap.svg";
 
 function MapSection(props) {
   function goToMap() {
+    window.location = "#";
     props.setShowFestLandPage(false);
     props.setShowMapPage(true);
   }
@@ -11,12 +12,15 @@ function MapSection(props) {
     <section className={props.className}>
       <div className="only-map">
         <img src={onlyMap} alt="map" />
+
+        <div className="mapBtn">
+          <Btn
+            content={props.content}
+            className={props.btnClassName}
+            action={goToMap}
+          />
+        </div>
       </div>
-      <Btn
-        content={props.content}
-        className={props.btnClassName}
-        action={goToMap}
-      />
     </section>
   );
 }

@@ -3,6 +3,7 @@ import { LoginContext } from "../../Contexts/LoginContext";
 import Btn from "./Btn";
 import NavBrand from "./NavBrand.jsx";
 import BtnGrid from "../UI/BtnGrid.jsx";
+import { stringify } from "uuid";
 
 function NavBar(props) {
   const { isLogin, setIsLogin } = useContext(LoginContext);
@@ -11,9 +12,11 @@ function NavBar(props) {
     props.setShowLineup(true);
     props.setShowTicketsPage(false);
     props.setShowLandPage(false);
+    window.location = "#";
   }
   function goToFestApp() {
-  props.setShowLogin(true);
+    props.setShowLogin(true);
+    window.location = "#";
   }
 
   function openBurger() {
@@ -21,14 +24,18 @@ function NavBar(props) {
     props.showBurgerMenu
       ? props.setShowBurgerMenu(false)
       : props.setShowBurgerMenu(true);
+    window.location = "#";
   }
   function goToTicketsPage() {
     props.setShowLineup(false);
     props.setShowTicketsPage(true);
     props.setShowLandPage(false);
     console.log("gototickets");
+    window.location = "#";
   }
-  let user = props.guestName;
+
+  const user = { name: "Melania" };
+  // let user = props.name;
 
   return (
     <nav className={props.className} id={props.id}>
@@ -36,11 +43,11 @@ function NavBar(props) {
         []
       ) : (
         <NavBrand
+          setIsLogin={setIsLogin}
           {...props}
           logoClassName="navLogo"
           className="navTitle"
           content="Faellestival"
-
         />
       )}
 
@@ -84,7 +91,7 @@ function NavBar(props) {
       {isLogin && (
         <BtnGrid
           btn1action={openBurger}
-          btn1content={user}
+          btn1content={user.name.charAt(0).toUpperCase() + user.name.slice(1)}
           btn1className="name"
           id="userInfo"
           btn2content="☰"
