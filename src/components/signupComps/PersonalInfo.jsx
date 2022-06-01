@@ -31,9 +31,11 @@ function PersonalInfo({ formData, setFormData }) {
 
   console.log(reserveRespons.id);
   let userKey = reserveRespons.id;
-  useEffect(() => {
-    setFormData({ ...formData, authKey: userKey });
-  }, []);
+  // useEffect(() => {
+  //   setBookKey(userKey)
+  //   console.log("bookKey", bookKey)
+  //   // setFormData({ ...formData, authKey: userKey });
+  // }, []);
 
   // ReservationRequest(
   //   (formData = { formData }),
@@ -76,9 +78,11 @@ function PersonalInfo({ formData, setFormData }) {
                   return guest;
                 });
                 setGuestArray(nextGuests);
+                console.log("key from formdata", formData)
                 setFormData({
                   ...formData,
                   extraGuests: nextGuests,
+                  authKey: userKey,
                 });
               }}
             ></input>
