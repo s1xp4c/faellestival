@@ -14,7 +14,7 @@ function RegLinks(props) {
   }
   function goTofestAppPage() {
     console.log("go to festAppPage");
-    setIsLogin(true);
+    props.setShowLogin(true);
   }
   function goToTicketsPage() {
     props.setShowTicketsPage(true);

@@ -13,6 +13,7 @@ function LineupSection(props) {
   return (
     <section className={props.className}>
       <FullLineup className="gradientTxt" />
+
       <Btn className="secBtn" content="See Day by Day" action={goToLineup} />
     </section>
   );

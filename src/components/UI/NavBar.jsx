@@ -14,7 +14,7 @@ function NavBar(props) {
     props.setShowLandPage(false);
   }
   function goToFestApp() {
-    setIsLogin(true);
+  props.setShowLogin(true);
   }
 
   function openBurger() {
@@ -31,9 +31,10 @@ function NavBar(props) {
   }
 
   const user = { name: "Melania" };
+  // let user = props.guestName;
 
   return (
-    <nav className={props.className}>
+    <nav className={props.className} id={props.id}>
       {props.showLandPage || props.showFestLandPage ? (
         []
       ) : (
@@ -42,6 +43,7 @@ function NavBar(props) {
           logoClassName="navLogo"
           className="navTitle"
           content="Faellestival"
+
         />
       )}
 
@@ -49,10 +51,10 @@ function NavBar(props) {
         <BtnGrid
           btn1action={goToLineup}
           btn1content="Line Up"
-          btn1className="SecBtn"
+          btn1className="secBtn"
           btn2action={goToFestApp}
           btn2content="Fest App"
-          btn2className="primBtn"
+          btn2className="secBtn"
           btn3content="☰"
           btn3action={openBurger}
           btn3className="burgerBtn"
@@ -62,10 +64,10 @@ function NavBar(props) {
         <BtnGrid
           btn1action={goToFestApp}
           btn1content="Fest App"
-          btn1className="SecBtn"
+          btn1className="secBtn"
           btn2action={goToTicketsPage}
           btn2content="Tickets"
-          btn2className="primBtn"
+          btn2className="secBtn"
           btn3content="☰"
           btn3action={openBurger}
           btn3className="burgerBtn"
@@ -87,9 +89,10 @@ function NavBar(props) {
           btn1action={openBurger}
           btn1content={user.name.charAt(0).toUpperCase() + user.name.slice(1)}
           btn1className="name"
+          id="userInfo"
           btn2content="☰"
           btn2action={openBurger}
-          btn2className="burgerBtn"
+          btn2className="festburgerBtn"
         />
       )}
     </nav>

@@ -4,7 +4,6 @@ import HeaderBg from "../HeaderBg";
 import MainTitle from "../UI/MainTitle";
 
 function MainSect(props) {
-
   // function goToFestApp() {
   //   props.setShowArtistPage(false);
   //   props.setShowProgram(false);

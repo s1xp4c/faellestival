@@ -1,6 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const TimeCount = () => {
+const TimeCount = ({ reservationTime, setPage, PageDisplay }) => {
+  const [timeToAlert, setTimeToAlert] = useState();
+
+  const timeToKill = 420000;
+  // const onResetOk = () => {
+  //   clearTimer(getDeadTime());
+  // };
+
+  // useEffect(() => {
+  //    setTimeToKill(300000);
+  //   setTimeToKill(reservationTime);
+  // }, []);
   // We need ref in this, because we are dealing
   // with JS setInterval to keep track of it and
   // stop it when needed
@@ -39,7 +50,7 @@ const TimeCount = () => {
   };
 
   const clearTimer = (e) => {
-    setTimer("11:06");
+    setTimer("06:66");
 
     if (Ref.current) clearInterval(Ref.current);
     const id = setInterval(() => {
@@ -51,7 +62,7 @@ const TimeCount = () => {
   const getDeadTime = () => {
     let deadline = new Date();
 
-    deadline.setSeconds(deadline.getSeconds() + 666);
+    deadline.setSeconds(deadline.getSeconds() + timeToKill / 1000);
     return deadline;
   };
 
@@ -59,6 +70,14 @@ const TimeCount = () => {
     clearTimer(getDeadTime());
   }, []);
 
+  useEffect(() => {
+    if (timer === "00:01") {
+      console.log(timer);
+      alert("Sorry, your time ran out - Please Start over <3");
+      PageDisplay(setPage(0, (currPage) => (currPage = 0)));
+      clearTimer(getDeadTime());
+    }
+  }, [timer]);
   return (
     <div className="countdown">
       <h3>{timer}</h3>

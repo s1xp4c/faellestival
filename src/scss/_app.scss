@@ -32,7 +32,6 @@
 @import "./UI/buttons";
 @import "./ticketPage/tickets";
 @import "./artist/artistcard";
-@import "./grids/artistgrid";
 @import "./artist/artistpage";
 @import "./header/header";
 @import "./festApp/cards";
@@ -44,24 +43,29 @@
 @import "./landingPage/lineupSection";
 @import "./landingPage/faqSection";
 @import "./landingPage/faq-page";
-@import "./form.scss";
+@import "./form";
+@import "./lineupPage/lineupCard";
+@import "./landingPage/bannerSection";
+@import "./UI/countdownReservation";
+@import "./footer";
+@import "./UI/fest-login";
 // @import "./artist/artistpage";
 //GLOBAL STYLING
 :root {
-  --img: url("https://faellestival.dk/wp/wp-content/uploads/2018/09/cropped-MG_8034-1.jpg");
+    --img: url("https://faellestival.dk/wp/wp-content/uploads/2018/09/cropped-MG_8034-1.jpg");
 }
 
 body {
-  margin: 0;
-  box-sizing: border-box;
-  background-color: $dark-bg;
-  background-image: $grainy;
-  color: white;
-  font-family: $body-font;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: $dark-bg;
+    background-image: $grainy;
+    color: white;
+    font-family: $body-font;
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 // .primBtn {
@@ -123,10 +127,10 @@ button {
 //     height: 22vw;
 // }
 .gradientTxt {
-  color: white;
-  background: $orange-gradient;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    color: white;
+    background: $orange-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 // .artistGrid {
@@ -139,12 +143,6 @@ button {
 //   padding-top: 5rem;
 //   padding-bottom: 5rem;
 // }
-.carrousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 // .artistCard {
 //   background-image: var(--img);
 //   background-color: none;

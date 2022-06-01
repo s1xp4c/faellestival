@@ -1,0 +1,66 @@
+.countdown-timer {
+    background: radial-gradient(circle at -16% -16%, rgb(240, 167, 21), rgb(240, 116, 9));
+    display: grid;
+    height: 5vh;
+    width: 25vh;
+    color: #521a05;
+    place-items: center;
+    text-align: center;
+    display: flex;
+    border: 2px solid #dc6940;
+    justify-content: center;
+    border-radius: 70%;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    padding-right: 2px;
+    padding-bottom: 3px;
+    margin-bottom: 5%;
+    grid-gap: 25px;
+    &::before {
+        animation: anim 30s infinite;
+        background: radial-gradient(circle at 0% 0%, rgb(158, 232, 30), rgb(222, 147, 26));
+        border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
+        box-shadow: 0 -2vmin 4vmin rgb(237, 145, 17) inset, 0 1vmin 4vmin rgb(219, 118, 35) inset, 0 -2vmin 7vmin rgb(128, 49, 0) inset;
+        content: "";
+        filter: drop-shadow(0 0 3vmin rgb(216, 191, 207)) drop-shadow(0 5vmin 4vmin rgb(207, 94, 19)) drop-shadow(2vmin -2vmin 15vmin rgb(207, 238, 104)) drop-shadow(0 0 7vmin rgb(207, 211, 85));
+        height: 4vmin;
+        width: 10vmin;
+    }
+    @keyframes anim {
+        0%,
+        100% {
+            border-radius: 30% 70% 70% 30% / 30% 52% 48% 70%;
+            box-shadow: 0 -2vmin 4vmin rgb(237, 145, 17) inset, 0 -4vmin 4vmin rgb(216, 168, 112) inset, 0 -2vmin 7vmin rgb(128, 43, 0) inset;
+        }
+        10% {
+            border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+        }
+        20% {
+            border-radius: 67% 33% 47% 53% / 37% 20% 80% 63%;
+        }
+        30% {
+            border-radius: 39% 61% 47% 53% / 37% 40% 60% 63%;
+            box-shadow: 0 -4vmin 8vmin rgb(255, 188, 105) inset, -1vmin -2vmin 6vmin rgb(237, 145, 17) inset, -1vmin -2vmin 4vmin rgb(209, 181, 68) inset, 1vmin 4vmin 8vmin rgb(128, 38, 0) inset;
+        }
+        40% {
+            border-radius: 39% 61% 82% 18% / 74% 40% 60% 26%;
+        }
+        50% {
+            border-radius: 100%;
+            box-shadow: 0 4vmin 16vmin rgb(255, 105, 130) inset, 0 2vmin 5vmin rgb(237, 48, 15) inset, 0 4vmin 4vmin MediumPurple inset, 0 6vmin 8vmin rgb(128, 94, 0) inset;
+        }
+        60% {
+            border-radius: 50% 50% 53% 47% / 72% 69% 31% 28%;
+        }
+        70% {
+            border-radius: 50% 50% 53% 47% / 26% 22% 78% 74%;
+            box-shadow: 1vmin 1vmin 8vmin rgb(237, 145, 17) inset, 2vmin -1vmin 4vmin rgb(237, 48, 15) inset, -1vmin -1vmin 16vmin rgb(128, 41, 0) inset;
+        }
+        80% {
+            border-radius: 50% 50% 53% 47% / 26% 69% 31% 74%;
+        }
+        90% {
+            border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
+        }
+    }
+}

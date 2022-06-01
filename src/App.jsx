@@ -26,6 +26,8 @@ function App() {
   const [addOnData, setAddOnData] = useState([]);
   const [availableData, setAvailable] = useState([]);
   const [showBurgerMenu, setShowBurgerMenu] = useState(false);
+  const [guestName, setGuestName] = useState();
+
 
   const ticketsJsonFile = "./content.json";
   const addOnJson = "./addOnContent.json";
@@ -87,11 +89,14 @@ function App() {
                   <FestApp
                     setShowBurgerMenu={setShowBurgerMenu}
                     showBurgerMenu={showBurgerMenu}
-                  />
-                ) : (
-                  <RegApp
-                    setShowBurgerMenu={setShowBurgerMenu}
-                    showBurgerMenu={showBurgerMenu}
+                    guestName={guestName}
+                    />
+                    ) : (
+                      <RegApp
+                      setShowBurgerMenu={setShowBurgerMenu}
+                      showBurgerMenu={showBurgerMenu}
+                      guestName={guestName}
+                    setGuestName={setGuestName}
                   />
                 )}
               </AvailableContext.Provider>

@@ -31,6 +31,7 @@
 .Timer {
     display: flex;
     justify-content: center;
+    max-width: 80vw;
 }
 
 .heroTxt {
@@ -43,44 +44,4 @@
     display: flex;
     justify-content: center;
     gap: 15vw;
-}
-
-.bannerSection {
-    background-color: black;
-    display: flex;
-    overflow-x: hidden;
-    height: 50vh;
-    width: 100vw;
-}
-
-#b1 {
-    background-image: url("/faellestival1.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 50vh;
-}
-
-#b2 {
-    background-image: url("/faellestival4.jpg");
-    background-position: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 50vh;
-}
-
-.bannerCon {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    width: 100vw;
-    flex-shrink: 0;
-    background-color: black;
-    p {
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 600;
-    }
 }

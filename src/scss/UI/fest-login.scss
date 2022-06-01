@@ -1,0 +1,98 @@
+.loginSection {
+  display: grid;
+
+  grid-template-columns: repeat(1fr 3vw 50vw 1fr);
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  grid-gap: 0.8em 0.5em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $dark-bg;
+  background-image: $grainy;
+  box-shadow: $card-shadow;
+  border: 2.5px solid $yellow;
+  width: 85vw;
+  height: 50vw;
+  min-height: 60%;
+  z-index: 105;
+
+  .loginContainer {
+    display: grid;
+    grid-template-columns: 10vw [labels] 1fr 10vw;
+    grid-template-rows: 10vw 1fr 4fr 10vw;
+    justify-items: center;
+    align-items: center;
+
+    .loginTitle {
+      grid-column: 2;
+      grid-row: 2;
+      font-size: clamp(1rem, 2.5vw, 2.5rem);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+      grid-column: 2;
+      grid-row: 3;
+
+      .wrongPass {
+        padding: 1rem;
+        color: red;
+        font-style: italic;
+      }
+      input {
+        margin-left: 1rem;
+        background-color: rgba(255, 255, 255, 0.083);
+        border: 1px solid $yellow;
+        margin-top: 1rem;
+      }
+
+      label:nth-child(1) input {
+        width: 15rem;
+      }
+      button {
+        max-width: 10rem;
+      }
+    }
+  }
+
+  .loginContainer form > label {
+    grid-column: labels;
+    grid-row: auto;
+  }
+  .closeBtn {
+    position: absolute;
+
+    top: -20px;
+    right: -10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .loginSection {
+    width: 100vw;
+    .closeBtn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 1.5;
+    }
+  }
+
+  .loginSection .loginContainer form label:nth-child(1) input {
+    width: 70%;
+  }
+
+  form button {
+    transform: scale(70%);
+  }
+}

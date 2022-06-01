@@ -42,6 +42,7 @@ function OtherInfo({ formData, setFormData, index }) {
     setFormData({ ...formData, greenCamp: greenValue });
     console.log(formData);
   }
+  console.log(formData);
 
   return (
     <section className="addOnSection">
