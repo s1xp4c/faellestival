@@ -18,6 +18,8 @@ function TicketCheckout({ formData, setFormData }) {
 console.log("dayAmount", dayAmount, "tickettype", formData.ticketType, "ticketDuration", formData.ticketDuration);
 
 
+
+
   return (
     <div className="ticket-checkout-container">
       <div className="ticket-checkout-header">
