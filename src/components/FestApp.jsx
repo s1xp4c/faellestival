@@ -91,13 +91,26 @@ function FestApp(props) {
           setShowFCardPage={setShowFCardPage}
         />
       )}
+
+      {showMapPage ?
       <Footer
+      className="mapFooter"
         setShowFestLandPage={setShowFestLandPage}
         setShowArtistdPage={setShowArtistPage}
         setShowProgramPage={setShowProgramPage}
         setShowFCardPage={setShowFCardPage}
         setShowMapPage={setShowMapPage}
-      />
+      /> :  <Footer
+      setShowFestLandPage={setShowFestLandPage}
+      setShowArtistdPage={setShowArtistPage}
+      setShowProgramPage={setShowProgramPage}
+      setShowFCardPage={setShowFCardPage}
+      setShowMapPage={setShowMapPage}
+    />}
+
+
+
+
     </>
   );
 }

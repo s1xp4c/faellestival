@@ -136,7 +136,7 @@ function TicketContent({ formData, setFormData, checkboxLabels }) {
                       return data;
                     })
                   );
-                  setFormData({ ...formData, ticketType: event.target.value });
+                  setFormData({ ...formData, ticketDuration: event.target.value });
                 }}
               ></input>
               <div>

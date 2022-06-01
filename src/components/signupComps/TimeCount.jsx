@@ -73,7 +73,7 @@ const TimeCount = ({ reservationTime, setPage, PageDisplay }) => {
   useEffect(() => {
     if (timer === "00:01") {
       console.log(timer);
-      alert("Sorry, your time ran out - Please Start over <3");
+      alert("Sorry, your reservation timed out - Please try again <3");
       PageDisplay(setPage(0, (currPage) => (currPage = 0)));
       clearTimer(getDeadTime());
     }

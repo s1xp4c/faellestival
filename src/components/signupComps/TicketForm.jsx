@@ -5,6 +5,7 @@ import PersonalInfo from "./PersonalInfo";
 import ExtrasInfo from "./ExtrasInfo";
 import CampInfo from "./CampInfo";
 import TimeCount from "./TimeCount";
+import TicketCheckout from "./TicketCheckout";
 // import envData from "../../App";
 // import ReservationRequest from "./ReservationRequest";
 
@@ -42,8 +43,8 @@ function TicketForm(props) {
     "Choose Campsite",
     "Personal Info",
     "Choose Extras",
-    "Confirm Your E-mail",
     "Checkout Cart",
+    "Congratulations!"
   ];
   const checkboxLabels = [
     "Standard Ticket",
@@ -73,6 +74,7 @@ function TicketForm(props) {
     if (page === 0) {
       return (
         <TicketContent
+          className="transition-ease"
           ticketType={props.ticketType}
           checkboxLabels={checkboxLabels}
           formData={formData}
@@ -91,6 +93,7 @@ function TicketForm(props) {
       return (
         <>
           <PersonalInfo
+            className="transition-ease"
             formData={formData}
             setFormData={setFormData}
             // reservationTime={reservationTime}
@@ -101,6 +104,8 @@ function TicketForm(props) {
     } else if (page === 3) {
       return <ExtrasInfo formData={formData} setFormData={setFormData} />;
     } else if (page === 4) {
+      return <TicketCheckout formData={formData} setFormData={setFormData} />;
+    } else if (page === 5) {
       return (
         <ConfirmInfo
           formData={formData}
@@ -108,8 +113,6 @@ function TicketForm(props) {
           checkboxLabels={checkboxLabels}
         />
       );
-    } else if (page === 5) {
-      return <TicketCheckout formData={formData} setFormData={setFormData} />;
     }
   };
 

@@ -18,6 +18,12 @@ footer {
   }
 }
 
+.mapFooter{
+  position:fixed;
+  width: 100%;
+  bottom: 0;
+}
+
 .footerLinks button {
   background-color: rgba(250, 235, 215, 0);
   color: $yellow;
@@ -28,3 +34,4 @@ footer {
   }
 
 }
+
