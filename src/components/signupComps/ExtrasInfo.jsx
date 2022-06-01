@@ -20,6 +20,9 @@ function OtherInfo({ formData, setFormData, index }) {
   let luxeValue = luxePrice * guestQty;
   let greenValue = 245;
 
+  console.log(formData);
+
+
   guestQty % 2 == 0 ? (tentValue = (guestQty / 2) * 299) : [];
   guestQty == 1 ? (tentValue = 299) : [];
   guestQty == 3 ? (tentValue = 399) : [];
@@ -40,7 +43,6 @@ function OtherInfo({ formData, setFormData, index }) {
   function addGreenCamp() {
     setGreenCampAdded(true);
     setFormData({ ...formData, greenCamp: greenValue });
-    console.log(formData);
   }
   console.log(formData);
 
