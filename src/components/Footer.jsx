@@ -12,7 +12,7 @@ function Footer(props) {
   const { isLogin, setIsLogin } = useContext(LoginContext);
 
   return (
-    <footer>
+    <footer className={props.className}>
       <ul className="footerInfo">
         <BulletPoint content="faellestival@info.com" />
 
