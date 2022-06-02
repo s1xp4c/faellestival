@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-// import { BandsContext } from "../Contexts/BandsContext";
 import { ScheduleContext } from "../Contexts/ScheduleContext";
 import Artist from "./UI/Artist";
 import CardTitle from "./UI/CardTitle";
-import MainSect from "./sections/MainSect";
 import Breadcrumbs from "./UI/Breadcrumbs";
 import Title from "./UI/Title";
+import LineupCard from "./UI/LineupCard"
+
 
 function LineupPage(props) {
   const scheduleData = useContext(ScheduleContext);
@@ -47,7 +47,7 @@ function LineupPage(props) {
       <Title className="lineUpTitle gradientTxt" content="Line Up" />
       <div className="lineupGrid">
         {dayShort.map((day, index) => (
-          <div className="lineupCard">
+          <LineupCard key={index}>
             <CardTitle
               className="lineupTitle"
               head={week[index]}
@@ -64,7 +64,8 @@ function LineupPage(props) {
                 (day) => day.act !== "break" && <Artist content={day.act} />
               )}
             </p>
-          </div>
+
+          </LineupCard>
         ))}
       </div>
     </>
