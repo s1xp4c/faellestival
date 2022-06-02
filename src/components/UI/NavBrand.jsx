@@ -16,7 +16,8 @@ function NavBrand(props) {
     console.log("go to main");
   }
   return (
-    <>
+    
+    <div className={props.container}>
       <Logo className={props.logoClassName} id={props.id} />
 
       <Link
@@ -24,7 +25,7 @@ function NavBrand(props) {
         className={props.className}
         action={goToMain}
       />
-    </>
+    </div>
   );
 }
 
