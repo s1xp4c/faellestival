@@ -2,13 +2,23 @@ import React, { useContext } from "react";
 import ArtistBio from "./UI/ArtistBio";
 import ArtistsSection from "./sections/ArtistsSection";
 import ArtistHeader from "./sections/ArtistHeader";
+import Breadcrumbs from "./UI/Breadcrumbs";
 
 function ArtistPage(props) {
-  // const bands = useContext(BandsContext);
-  console.log("artist", props.pickedId);
+  function goToFestPage() {
+    props.setShowArtistPage(false);
+    props.setShowFestLandPage(true);
+    window.location = "#";
+  }
 
   return (
     <>
+      <Breadcrumbs
+        className="gobackProgram"
+        bcReg="Dest App"
+        {...props}
+        action={goToFestPage}
+      />
       <ArtistHeader {...props} />
       <ArtistBio {...props} />
       <ArtistsSection

@@ -13,7 +13,13 @@ function MainSect(props) {
           action={props.action}
         />
       )}
-      {/* {props.bcFest && <Breadcrumbs bc={props.bcFest} action={goToFestApp} />} */}
+      {props.bcFest && (
+        <Breadcrumbs
+          className="gobackProgram"
+          bc={props.bcFest}
+          action={props.action}
+        />
+      )}
       <HeaderBg className="heroBg" />
       <MainTitle className="mainTitle" content={props.content} />
     </section>
