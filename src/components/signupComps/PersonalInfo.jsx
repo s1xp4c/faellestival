@@ -83,6 +83,7 @@ function PersonalInfo({ formData, setFormData, setPage }) {
             <div>
               <input
                 type="text"
+                required
                 id={d.id}
                 placeholder="First Name..."
                 value={d.firstName}
