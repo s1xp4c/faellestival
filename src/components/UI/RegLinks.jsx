@@ -10,6 +10,7 @@ function RegLinks(props) {
     props.setShowLineup(true);
     props.setShowLandPage(false);
     props.setShowFaqPage(false);
+    props.setShowProgramPage(false);
     console.log("go to lineuppage");
     window.location = "#";
   }
@@ -24,6 +25,16 @@ function RegLinks(props) {
     props.setShowLandPage(false);
     props.setShowFaqPage(false);
     console.log("tickets");
+    props.setShowProgramPage(false);
+    window.location = "#";
+  }
+  function goToProgramPage() {
+    props.setShowTicketsPage(false);
+    props.setShowLineup(false);
+    props.setShowLandPage(false);
+    props.setShowFaqPage(false);
+    props.setShowProgramPage(true);
+    console.log("program");
     window.location = "#";
   }
   return (
@@ -31,6 +42,7 @@ function RegLinks(props) {
       <Link className="link" content="Tickets" action={goToTicketsPage} />
       <Link className="link" content="LineUp" action={goToLineupPage} />
       <Link className="link" content="Festival App" action={goTofestAppPage} />
+      <Link className="link" content="Program" action={goToProgramPage} />
     </ul>
   );
 }

@@ -8,7 +8,7 @@ function MainSect(props) {
     <section className={props.className}>
       {props.bcReg && (
         <Breadcrumbs
-          className="breadCrumbs"
+          className="breadCrumbs faqback"
           bc={props.bcReg}
           action={props.action}
         />
