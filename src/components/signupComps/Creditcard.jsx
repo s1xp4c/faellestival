@@ -104,9 +104,9 @@ function Creditcard() {
             </select>
           </div>
           <div class="form-group" id="credit_cards">
-            <img src="/visa.jpg" id="visa" />
-            <img src="/mastercard.jpg" id="mastercard" />
-            <img src="/amex.jpg" id="amex" />
+            <img src="/visa.jpg" id="visa" alt="visa" />
+            <img src="/mastercard.jpg" id="mastercard" alt="mastercard" />
+            <img src="/amex.jpg" id="amex" alt="amex" />
           </div>
           {/* <div class="form-group" id="pay-now">
             <button type="submit" class="btn btn-default" id="confirm-purchase">
