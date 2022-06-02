@@ -23,7 +23,7 @@ function FestLandPage(props) {
         {...props}
       />
       <Section
-        content="Check When Your Favourite Artists Are Playing"
+        content="Check When Your Favorite Artists Are Playing"
         titleClassName="gradientTxt"
         action={goToProgramPage}
         btnContent="Go To Program Page »"

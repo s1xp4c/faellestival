@@ -63,6 +63,7 @@ function Creditcard() {
 
   return (
     <div class="creditCardForm">
+      <h3 className="creditCardInfo">Fill your Credit Card Info</h3>
       <div class="payment">
         <form>
           <div class="form-group owner">
