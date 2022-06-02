@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 function PushAllData({ formData, setFormData }) {
   const [serverRespons, setServerRespons] = useState([]);
-  const [populateRestDB, setPopulateRestDB] = useState([]);
+  // const [populateRestDB, setPopulateRestDB] = useState([]);
 
   const fullfillID = {
     id: formData.authKey,
@@ -55,7 +55,7 @@ function PushAllData({ formData, setFormData }) {
   let ticketMessage = serverRespons.message;
   useEffect(() => {
     setFormData({ ...formData, ticketState: ticketMessage });
-    console.log(populateRestDB);
+    // console.log(populateRestDB);
   }, []);
 
   //////////////////////////////////////////////////////////////////////
@@ -80,7 +80,7 @@ function PushAllData({ formData, setFormData }) {
     fetch(FAELLESTIVAL_RESTDB_URL, pushAllDataRequestOptions)
       .then((response) => response.json())
       .then(
-        (data) => setPopulateRestDB(data),
+        // (data) => setPopulateRestDB(data),
         (data) => console.log(data)
       );
   }, []);
@@ -97,43 +97,43 @@ function PushAllData({ formData, setFormData }) {
         <div className="userName">
           <span>Username: </span>
         </div>
-        <div className="userName-db">{populateRestDB.userName}</div>
+        <div className="userName-db">{dataForRestDB.userName}</div>
         <div className="firstName">
           <span>Firstname: </span>
         </div>
-        <div className="firstName-db">{populateRestDB.firstName}</div>
+        <div className="firstName-db">{dataForRestDB.firstName}</div>
         <div className="lastName">
           <span>Lastname: </span>
         </div>
-        <div className="lastName-db">{populateRestDB.lastName}</div>
+        <div className="lastName-db">{dataForRestDB.lastName}</div>
         <div className="userEmail">
           <span>Email: </span>
         </div>
-        <div className="userEmail-db">{populateRestDB.userEmail}</div>
+        <div className="userEmail-db">{dataForRestDB.userEmail}</div>
         <div className="id">
           <span>Password</span>
         </div>
-        <div className="id-db">{populateRestDB.id}</div>
+        <div className="id-db">{dataForRestDB.id}</div>
         <div className="ticketType">
           <span>Ticket Type: </span>
         </div>
-        <div className="ticketType-db">{populateRestDB.ticketType}</div>
+        <div className="ticketType-db">{dataForRestDB.ticketType}</div>
         <div className="ticketDuration">
           <span>Duration: </span>
         </div>
-        <div className="ticketDuration-db">{populateRestDB.ticketDuration}</div>
+        <div className="ticketDuration-db">{dataForRestDB.ticketDuration}</div>
         <div className="ticketDay">
           <span>Attendance Day: </span>
         </div>
-        <div className="ticketDay-db">{populateRestDB.ticketDay}</div>
+        <div className="ticketDay-db">{dataForRestDB.ticketDay}</div>
         <div className="ticketAmount">
           <span>People Going: </span>
         </div>
-        <div className="ticketAmount-db">{populateRestDB.ticketAmount}</div>
+        <div className="ticketAmount-db">{dataForRestDB.ticketAmount}</div>
         <div className="campsite">
           <span>Camping Area: </span>
         </div>
-        <div className="campsite-db">{populateRestDB.campsite}</div>
+        <div className="campsite-db">{dataForRestDB.campsite}</div>
       </div>
     </div>
   );
