@@ -3,7 +3,6 @@ import TicketCheckout from "./TicketCheckout";
 
 function PushAllData({ formData, setFormData }) {
   const [serverRespons, setServerRespons] = useState([]);
-  // const [populateRestDB, setPopulateRestDB] = useState([]);
 
   const fullfillID = {
     id: formData.authKey,
@@ -96,6 +95,9 @@ function PushAllData({ formData, setFormData }) {
           <span>*This is your info</span>
         </div>
         <div className="user-info"></div>
+        <div>
+          <span>*Use this Password to login</span>
+        </div>
         <div>
           <span>Password: </span> <span>{dataForRestDB.id}</span>
         </div>

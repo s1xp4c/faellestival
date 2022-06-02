@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Btn from "../UI/Btn";
-import ReservationRequest from "./ReservationRequest";
 
 function PersonalInfo({ formData, setFormData, setPage }) {
   // const [reservationInfo, setReservationInfo] = useState({});

@@ -49,9 +49,9 @@ function TicketCheckout({ formData, setFormData, page }) {
   return (
     <div className="ticket-checkout-container">
       <div className="ticket-checkout-header">
-        { page == 5 ? <h2>Your Purchase</h2> : <h2>Checkout</h2>}
+        {page == 5 ? <h2>Your Purchase</h2> : <h2>Checkout</h2>}
       </div>
-      <Creditcard />
+      {page == 4 && <Creditcard />}
       <div className="ticket-checkout-body">
         <p className="subtotal">
           {formData.ticketAmount} x {formData.ticketDuration}{" "}
@@ -88,25 +88,3 @@ function TicketCheckout({ formData, setFormData, page }) {
 }
 
 export default TicketCheckout;
-
-// userEmail: "",
-// userPassword: "",
-// confirmPassword: false,
-// firstName: "",
-// lastName: "",
-// userName: "",
-// checkoutTotal: "",
-// authKey: "",
-// ticketType: "",
-// ticketDuration: "",
-// ticketDay: "",
-// agreeTerms: "",
-// agreeSocial: "",
-// ticketAmount: 0,
-// cardFee: 99,
-// campsite: "",
-// tentSetup: 0,
-// luxePack: 0,
-// greenCamp: 0,
-// faellesCard: 0,
-// extraGuests: [],
