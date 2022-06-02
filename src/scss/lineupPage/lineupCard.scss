@@ -26,7 +26,7 @@
 
   .lineupTitle {
     background-image: linear-gradient(rgba(0, 0, 0, 0.13), rgb(0, 0, 0)),
-      url("faellestival5.jpg");
+      url("/faellestival5.jpg");
     clip-path: polygon(
       100% 0%,
       0% 0%,
@@ -198,9 +198,10 @@
   }
 }
 
-.lineUpTitle {
+.headLine {
   text-align: center;
   font-family: $body-font;
+  font-size:clamp(2rem,3vw,5rem);
   margin-top: 2vw;
   margin-bottom: 3vw;
 }

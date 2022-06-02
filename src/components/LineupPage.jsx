@@ -44,7 +44,7 @@ function LineupPage(props) {
         {...props}
         action={goToMain}
       />
-      <Title className="lineUpTitle gradientTxt" content="Line Up" />
+      <Title className="headLine gradientTxt" content="Line Up" />
       <div className="lineupGrid">
         {dayShort.map((day, index) => (
           <div className="lineupCard">

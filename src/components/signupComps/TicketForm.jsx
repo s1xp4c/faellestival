@@ -35,7 +35,7 @@ function TicketForm(props) {
     greenCamp: 0,
     faellesCard: 0,
     extraGuests: [],
-    fulfilled: "",
+    ticketState: "",
   });
 
   const FormTitles = [
@@ -103,7 +103,13 @@ function TicketForm(props) {
     } else if (page === 3) {
       return <ExtrasInfo formData={formData} setFormData={setFormData} />;
     } else if (page === 4) {
-      return <TicketCheckout formData={formData} setFormData={setFormData} page={page} />;
+      return (
+        <TicketCheckout
+          formData={formData}
+          setFormData={setFormData}
+          page={page}
+        />
+      );
     } else if (page === 5) {
       return <PushAllData formData={formData} setFormData={setFormData} />;
     }
