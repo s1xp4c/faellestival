@@ -1,4 +1,5 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
+import Creditcard from "./Creditcard";
 
 function TicketCheckout({ formData, setFormData }) {
   console.log(" from ckecout", formData);
@@ -24,18 +25,17 @@ function TicketCheckout({ formData, setFormData }) {
     formData.greenCamp;
 
   useEffect(() => {
-    let checkoutTotal = subtotal +
-    formData.cardFee +
-    formData.tentSetup +
-    formData.luxePack +
-    formData.greenCamp;
+    let checkoutTotal =
+      subtotal +
+      formData.cardFee +
+      formData.tentSetup +
+      formData.luxePack +
+      formData.greenCamp;
     setFormData({
       ...formData,
       checkoutTotal: checkoutTotal,
-     }
-    );
-    }, []);
-
+    });
+  }, []);
 
   console.log(
     "dayAmount",
@@ -51,7 +51,7 @@ function TicketCheckout({ formData, setFormData }) {
       <div className="ticket-checkout-header">
         <h2>Checkout</h2>
       </div>
-      {/* <CreditCard /> */}
+      <Creditcard />
       <div className="ticket-checkout-body">
         <p className="subtotal">
           {formData.ticketAmount} x {formData.ticketDuration}{" "}
