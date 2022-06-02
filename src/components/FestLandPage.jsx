@@ -23,10 +23,10 @@ function FestLandPage(props) {
         {...props}
       />
       <Section
-        content="Check When your Favourite Artists Are Playing"
+        content="Check When Your Favourite Artists Are Playing"
         titleClassName="gradientTxt"
         action={goToProgramPage}
-        btnContent="Go To Program Page"
+        btnContent="Go To Program Page »"
         btnClassName="primBtn"
       />
       {/* <Section className="section" content="Getting Hungry?" titleClassName="title" btnContent="Top Up Your Card" btnClassName="secBtn" action={goToFCardPage} /> */}

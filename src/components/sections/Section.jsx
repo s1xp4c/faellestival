@@ -5,12 +5,16 @@ import Btn from "../UI/Btn";
 function Section(props) {
   return (
     <section className={props.className}>
-      <Title content={props.content} className={props.titleClassName} />
-      <Btn
-        className={props.btnClassName}
-        action={props.action}
-        content={props.btnContent}
-      />
+      <div className="sectionContainer">
+        <div>
+          <Title content={props.content} className={props.titleClassName} />
+          <Btn
+            className={props.btnClassName}
+            action={props.action}
+            content={props.btnContent}
+          />
+        </div>
+      </div>
     </section>
   );
 }
