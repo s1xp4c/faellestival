@@ -21,9 +21,7 @@ function NavBar(props) {
 
   function openBurger() {
     console.log("openburger");
-    props.showBurgerMenu
-      ? props.setShowBurgerMenu(false)
-      : props.setShowBurgerMenu(true);
+    props.showBurgerMenu ? props.setShowBurgerMenu(false) : props.setShowBurgerMenu(true);
     window.location = "#";
   }
   function goToTicketsPage() {
@@ -39,33 +37,19 @@ function NavBar(props) {
 
   return (
     <nav className={props.className} id={props.id}>
-      {props.showLandPage || props.showFestLandPage ? (
-        []
-      ) : (
-        <NavBrand
-          setIsLogin={setIsLogin}
-          {...props}
-          logoClassName="navLogo"
-          className="navTitle"
-          content="Faellestival"
-        />
-      )}
+      {props.showLandPage || props.showFestLandPage || props.showLineup || props.showTicketsPage || props.showArtistPage ? [] : <NavBrand setIsLogin={setIsLogin} {...props} logoClassName="navLogo" className="navTitle" content="Faellestival" container="regBrand"/>}
+
+      {props.showFestLandPage ? <NavBrand setIsLogin={setIsLogin} {...props} container="landingNav" logoClassName="navLogo" className="navTitle"  content="Faellestival" /> : []}
+
+      {props.showLineup || props.showTicketsPage || props.showArtistPage ? <NavBrand setIsLogin={setIsLogin} {...props} container="regBrand"  className="navTitle" logoClassName="navLogo" content="Faellestival" /> : []}
 
       {props.showTicketsPage && (
-        <BtnGrid
-          btn1action={goToLineup}
-          btn1content="Line Up"
-          btn1className="secBtn"
-          btn2action={goToFestApp}
-          btn2content="Fest App"
-          btn2className="secBtn"
-          btn3content="☰"
-          btn3action={openBurger}
-          btn3className="burgerBtn"
-        />
+        <BtnGrid className="regbtnGrid" btn1action={goToLineup} btn1content="Line Up" btn1className="secBtn" btn2action={goToFestApp} btn2content="Fest App" btn2className="secBtn" btn3content="☰" btn3action={openBurger} btn3className="burgerBtn" />
       )}
+
       {props.showLineup && (
         <BtnGrid
+          className="regbtnGrid"
           btn1action={goToFestApp}
           btn1content="Fest App"
           btn1className="secBtn"

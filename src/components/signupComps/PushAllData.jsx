@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import TicketCheckout from "./TicketCheckout";
 
 function PushAllData({ formData, setFormData }) {
   const [serverRespons, setServerRespons] = useState([]);
@@ -88,52 +89,17 @@ function PushAllData({ formData, setFormData }) {
   return (
     <div className="congratulations-container">
       <div className="congratulations-header">
-        <h3>CONGRATULATIONS!!</h3>
+        <h3>WuHuuuuuu {dataForRestDB.extraGuests[0].firstName}!! </h3>
       </div>
       <div className="congratulations-body">
         <div className="congratulations-info">
-          <span>*Here you see the info you submitted</span>
+          <span>*This is your info</span>
         </div>
-        <div className="userName">
-          <span>Username: </span>
+        <div className="user-info"></div>
+        <div>
+          <span>Password: </span> <span>{dataForRestDB.id}</span>
         </div>
-        <div className="userName-db">{dataForRestDB.userName}</div>
-        <div className="firstName">
-          <span>Firstname: </span>
-        </div>
-        <div className="firstName-db">{dataForRestDB.firstName}</div>
-        <div className="lastName">
-          <span>Lastname: </span>
-        </div>
-        <div className="lastName-db">{dataForRestDB.lastName}</div>
-        <div className="userEmail">
-          <span>Email: </span>
-        </div>
-        <div className="userEmail-db">{dataForRestDB.userEmail}</div>
-        <div className="id">
-          <span>Password</span>
-        </div>
-        <div className="id-db">{dataForRestDB.id}</div>
-        <div className="ticketType">
-          <span>Ticket Type: </span>
-        </div>
-        <div className="ticketType-db">{dataForRestDB.ticketType}</div>
-        <div className="ticketDuration">
-          <span>Duration: </span>
-        </div>
-        <div className="ticketDuration-db">{dataForRestDB.ticketDuration}</div>
-        <div className="ticketDay">
-          <span>Attendance Day: </span>
-        </div>
-        <div className="ticketDay-db">{dataForRestDB.ticketDay}</div>
-        <div className="ticketAmount">
-          <span>People Going: </span>
-        </div>
-        <div className="ticketAmount-db">{dataForRestDB.ticketAmount}</div>
-        <div className="campsite">
-          <span>Camping Area: </span>
-        </div>
-        <div className="campsite-db">{dataForRestDB.campsite}</div>
+        <TicketCheckout formData={formData} setFormData={setFormData} />
       </div>
     </div>
   );
