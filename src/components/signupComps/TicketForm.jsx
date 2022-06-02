@@ -10,7 +10,7 @@ import TicketCheckout from "./TicketCheckout";
 function TicketForm(props) {
   const [page, setPage] = useState(0);
   //  const [reservationTime, setReservationTime] = useState();
-  const [required, setRequired] = useState(true)
+  const [required, setRequired] = useState(true);
   const reservationTime = 42000;
 
   const [formData, setFormData] = useState({
@@ -103,7 +103,13 @@ function TicketForm(props) {
     } else if (page === 3) {
       return <ExtrasInfo formData={formData} setFormData={setFormData} />;
     } else if (page === 4) {
-      return <TicketCheckout formData={formData} setFormData={setFormData} page={page} />;
+      return (
+        <TicketCheckout
+          formData={formData}
+          setFormData={setFormData}
+          page={page}
+        />
+      );
     } else if (page === 5) {
       return <PushAllData formData={formData} setFormData={setFormData} />;
     }
@@ -143,42 +149,42 @@ function TicketForm(props) {
         </div>
         <div className="body ">{PageDisplay()}</div>
         <div className="footer">
-          {page >= 1 && <button
-            disabled={page == 0}
-            onClick={() => {
-              setPage((currPage) => currPage - 1);
-            }}
-          >
-            Prev
-          </button> }
-{ page == 4 ? <button onClick={() => setPage((currPage) => currPage + 1)}>PAY {formData.checkoutTotal}kr.</button> : <button
-            onClick={() => {
-              if (page === FormTitles.length - 1) {
-                alert("FORM SUBMITTED");
-                console.log(formData);
-              } else if (page === 2) {
-                console.log(formData);
-                if (formData.extraGuests[0].firstName) {
-               setPage((currPage) => currPage + 1); setRequired(false)} else { setRequired(true)}
-              } else {
-                setPage((currPage) => currPage + 1)
-              }
-            }}
+          {page >= 1 && (
+            <button
+              disabled={page == 0}
+              onClick={() => {
+                setPage((currPage) => currPage - 1);
+              }}
             >
-            {page === FormTitles.length - 1 ? "Submit" : "Next"}
-          </button>}
-          {/* <button
-            onClick={() => {
-              if (page === FormTitles.length - 1) {
-                alert("FORM SUBMITTED");
-                console.log(formData);
-              } else {
-                setPage((currPage) => currPage + 1);
-              }
-            }}
-          >
-            {page === FormTitles.length - 1 ? "Submit" : "Next"}
-          </button> */}
+              Prev
+            </button>
+          )}
+          {page == 4 ? (
+            <button onClick={() => setPage((currPage) => currPage + 1)}>
+              PAY {formData.checkoutTotal}kr.
+            </button>
+          ) : (
+            <button
+              onClick={() => {
+                if (page === FormTitles.length - 1) {
+                  alert("TICKET PURCHASE COMPLETE! :) ");
+                  console.log(formData);
+                } else if (page === 2) {
+                  console.log(formData);
+                  if (formData.extraGuests[0].firstName) {
+                    setPage((currPage) => currPage + 1);
+                    setRequired(false);
+                  } else {
+                    setRequired(true);
+                  }
+                } else {
+                  setPage((currPage) => currPage + 1);
+                }
+              }}
+            >
+              {page === FormTitles.length - 1 ? "Done" : "Next"}
+            </button>
+          )}
         </div>
       </div>
     </div>
