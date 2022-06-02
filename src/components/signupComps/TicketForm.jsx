@@ -10,7 +10,7 @@ import TicketCheckout from "./TicketCheckout";
 function TicketForm(props) {
   const [page, setPage] = useState(0);
   //  const [reservationTime, setReservationTime] = useState();
-  const [required, setRequired] = useState(false)
+  const [required, setRequired] = useState(true)
   const reservationTime = 42000;
 
   const [formData, setFormData] = useState({
@@ -157,12 +157,14 @@ function TicketForm(props) {
                 alert("FORM SUBMITTED");
                 console.log(formData);
               } else if (page === 2) {
-              formData.extraGuests[0].firstName ? setPage((currPage) => currPage + 1) : setRequired(true)
+                console.log(formData);
+                if (formData.extraGuests[0].firstName) {
+               setPage((currPage) => currPage + 1); setRequired(false)} else { setRequired(true)}
               } else {
                 setPage((currPage) => currPage + 1)
               }
             }}
-          >
+            >
             {page === FormTitles.length - 1 ? "Submit" : "Next"}
           </button>}
           {/* <button
