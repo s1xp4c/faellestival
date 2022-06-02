@@ -97,7 +97,7 @@ function PushAllData({ formData, setFormData }) {
           </div>
           <div className="user-info"></div>
           <div>
-            <span>*Use this Password to login</span>
+            <span>*Use this Password to login on the Fest App</span>
           </div>
           <div>
             <span>Password: </span> <span>{dataForRestDB.id}</span>

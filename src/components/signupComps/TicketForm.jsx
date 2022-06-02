@@ -10,11 +10,7 @@ import TicketCheckout from "./TicketCheckout";
 function TicketForm(props) {
   const [page, setPage] = useState(0);
   //  const [reservationTime, setReservationTime] = useState();
-<<<<<<< HEAD
-  const [required, setRequired] = useState(false);
-=======
   const [required, setRequired] = useState(true)
->>>>>>> ailin-required2
   const reservationTime = 42000;
 
   const [formData, setFormData] = useState({
