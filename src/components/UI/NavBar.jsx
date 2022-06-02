@@ -46,6 +46,7 @@ function NavBar(props) {
       {props.showTicketsPage && (
         <BtnGrid className="regbtnGrid" btn1action={goToLineup} btn1content="Line Up" btn1className="secBtn" btn2action={goToFestApp} btn2content="Fest App" btn2className="secBtn" btn3content="☰" btn3action={openBurger} btn3className="burgerBtn" />
       )}
+
       {props.showLineup && (
         <BtnGrid
           className="regbtnGrid"
@@ -74,7 +75,7 @@ function NavBar(props) {
       {isLogin && (
         <BtnGrid
           btn1action={openBurger}
-          btn1content={user.charAt(0).toUpperCase() + user.slice(1)}
+          // btn1content={user.charAt(0).toUpperCase() + user.slice(1)}
           btn1className="name"
           id="userInfo"
           btn2content="☰"
