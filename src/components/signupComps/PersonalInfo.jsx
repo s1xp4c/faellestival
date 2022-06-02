@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Btn from "../UI/Btn";
 
-function PersonalInfo({ formData, setFormData, setPage }) {
+function PersonalInfo({ formData, setFormData, setPage, required, setRequired }) {
   // const [reservationInfo, setReservationInfo] = useState({});
   const n = formData.ticketAmount;
   const [reserveRespons, setReserveRespons] = useState(0);
@@ -76,6 +76,7 @@ function PersonalInfo({ formData, setFormData, setPage }) {
           />
         </>
       )}
+      { required && <p>Please fill the required fields</p>}
       {reserveRespons.id &&
         guestArray.map((d, index) => (
           <div key={index}>
@@ -88,6 +89,7 @@ function PersonalInfo({ formData, setFormData, setPage }) {
                 placeholder="First Name..."
                 value={d.firstName}
                 onChange={(e) => {
+                  setRequired(false);
                   const nextGuests = guestArray.map((guest) => {
                     if (d.id === guest.id) {
                       return { ...guest, firstName: e.target.value };
@@ -100,6 +102,7 @@ function PersonalInfo({ formData, setFormData, setPage }) {
                     extraGuests: nextGuests,
                     authKey: userKey,
                   });
+                  console.log(formData)
                 }}
               ></input>
               <input
@@ -108,6 +111,7 @@ function PersonalInfo({ formData, setFormData, setPage }) {
                 placeholder="Last Name..."
                 value={d.lastName}
                 onChange={(e) => {
+                  setRequired(false);
                   const nextGuests = guestArray.map((guest) => {
                     if (d.id === guest.id) {
                       return { ...guest, lastName: e.target.value };
@@ -127,6 +131,7 @@ function PersonalInfo({ formData, setFormData, setPage }) {
                 placeholder="E-mail..."
                 value={d.email}
                 onChange={(e) => {
+                  setRequired(false);
                   const nextGuests = guestArray.map((guest) => {
                     if (d.id === guest.id) {
                       return { ...guest, userEmail: e.target.value };
