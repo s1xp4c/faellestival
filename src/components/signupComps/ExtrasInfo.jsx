@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { AddOnContext } from "../../Contexts/AddOnContext";
 import SectionTitle from "../UI/SectionTitle";
 import AddOnCard from "../UI/AddOnCard";
@@ -12,6 +12,18 @@ function OtherInfo({ formData, setFormData, index }) {
   const [luxeAdded, setLuxeAdded] = useState(false);
   const [greenCampAdded, setGreenCampAdded] = useState(false);
 
+  useEffect(() => {
+    setFormData({
+      ...formData,
+      firstName: formData.extraGuests[0].firstName,
+      lastName: formData.extraGuests[0].lastName,
+      userName: formData.extraGuests[0].lastName,
+      userEmail: formData.extraGuests[0].userEmail,
+    });
+    // setFormData({ ...formData, lastName: formData.extraGuests[0].lastName });
+    // setFormData({ ...formData, userName: formData.extraGuests[0].userName });
+  }, []);
+
   const xtraData = useContext(AddOnContext);
 
   let guestQty = formData.ticketAmount;
@@ -21,7 +33,6 @@ function OtherInfo({ formData, setFormData, index }) {
   let greenValue = 245;
 
   console.log(formData);
-
 
   guestQty % 2 == 0 ? (tentValue = (guestQty / 2) * 299) : [];
   guestQty == 1 ? (tentValue = 299) : [];
