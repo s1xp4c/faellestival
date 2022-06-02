@@ -34,7 +34,7 @@ function FestApp(props) {
         showFestLandPage={showFestLandPage}
         showArtistPage={showArtistPage}
         showProgramPage={showProgramPage}
-        ShowMapPage={showMapPage}
+        showMapPage={showMapPage}
         guestName={props.guestName}
       />
       {props.showBurgerMenu && (
