@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   justify-content: center;
   background-color: #312f2f;
-  padding-top: 5rem;
+  padding-top: 2rem;
   padding-bottom: 5rem;
 }
 
@@ -139,7 +139,7 @@
     border-top-right-radius: $card-border;
     height: 8rem;
     padding-block: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 800;
     line-height: 1.5em;
     padding-bottom: 2rem;
@@ -201,7 +201,6 @@
 .lineUpTitle {
   text-align: center;
   font-family: $body-font;
-  font-size: 5vw;
   margin-top: 2vw;
   margin-bottom: 3vw;
 }
