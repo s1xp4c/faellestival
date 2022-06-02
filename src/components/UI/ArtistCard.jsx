@@ -7,6 +7,7 @@ function ArtistCard(props) {
     ? (imgPath = props.img)
     : (imgPath = "https://a3m-festival.herokuapp.com/logos/" + img);
   console.log(imgPath);
+  window.location = "#";
 
   //         let root = document.documentElement;
   //   root.style.setProperty('--img', imgPath);
