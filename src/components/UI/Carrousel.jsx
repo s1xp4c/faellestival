@@ -8,7 +8,6 @@ function Carrousel(props) {
   const [pic2, setPick2] = useState(1);
   const [pic3, setPick3] = useState(2);
   const [pic4, setPick4] = useState(3);
-  
 
   const artists = useContext(BandsContext);
 
@@ -26,7 +25,6 @@ function Carrousel(props) {
     setPick2((old) => old - 4);
     setPick3((old) => old - 4);
     setPick4((old) => old - 4);
-
   }
 
   return (
