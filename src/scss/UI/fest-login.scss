@@ -50,6 +50,7 @@
         background-color: rgba(255, 255, 255, 0.083);
         border: 1px solid $yellow;
         margin-top: 1rem;
+        color: $yellow;
       }
 
       label:nth-child(1) input {
@@ -95,4 +96,8 @@
   form button {
     transform: scale(70%);
   }
+}
+
+#loginInput {
+  color: $yellow;
 }

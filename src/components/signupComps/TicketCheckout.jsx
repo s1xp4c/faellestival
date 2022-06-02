@@ -27,12 +27,12 @@ console.log("dayAmount", dayAmount, "tickettype", formData.ticketType, "ticketDu
       </div>
       {/* <CreditCard /> */}
       <div className="ticket-checkout-body">
-        <p className="subtotal">{formData.ticketAmount} x {formData.ticketDuration} {formData.ticketType}: <span className="checkoutSpan">{subtotal}</span> </p>
-        {formData.tentSetup > 1 && <p className="addOnsTotal">Tent Setup Service: <span className="checkoutSpan">{formData.tentSetup}</span> </p> }
-        {formData.luxePack > 1 && <p className="addOnsTotal">Luxury Pack: <span className="checkoutSpan">{formData.luxePack}</span> </p> }
-        {formData.greenCamp > 1 && <p className="addOnsTotal">Green Camping: <span className="checkoutSpan">{formData.greenCamp}</span> </p> }
-        <p className="fees">Card Fee: <span className="checkoutSpan">{formData.cardFee}</span></p>
-        <p className="total">Total: <span className="checkoutSpan">{total}</span></p>
+        <p className="subtotal">{formData.ticketAmount} x {formData.ticketDuration} {formData.ticketType}: <span className="checkoutSpan">{subtotal}kr.</span> </p>
+        {formData.tentSetup > 1 && <p className="addOnsTotal">Tent Setup Service: <span className="checkoutSpan">{formData.tentSetup}kr.</span> </p> }
+        {formData.luxePack > 1 && <p className="addOnsTotal">Luxury Pack: <span className="checkoutSpan">{formData.luxePack}kr.</span> </p> }
+        {formData.greenCamp > 1 && <p className="addOnsTotal">Green Camping: <span className="checkoutSpan">{formData.greenCamp}kr.</span> </p> }
+        <p className="fees">Card Fee: <span className="checkoutSpan">{formData.cardFee}kr.</span></p>
+        <p className="total">Total: <span className="totalSpan">{total}kr.</span></p>
         </div>
     </div>
   );
