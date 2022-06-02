@@ -164,28 +164,16 @@ function TicketForm(props) {
             <button
               onClick={() => {
                 if (page === FormTitles.length - 1) {
-                  alert("FORM SUBMITTED");
+                  alert("TICKET PURCHASE COMPLETED");
                   console.log(formData);
                 } else {
                   setPage((currPage) => currPage + 1);
                 }
               }}
             >
-              {page === FormTitles.length - 1 ? "Submit" : "Next"}
+              {page === FormTitles.length - 1 ? "Done" : "Next"}
             </button>
           )}
-          {/* <button
-            onClick={() => {
-              if (page === FormTitles.length - 1) {
-                alert("FORM SUBMITTED");
-                console.log(formData);
-              } else {
-                setPage((currPage) => currPage + 1);
-              }
-            }}
-          >
-            {page === FormTitles.length - 1 ? "Submit" : "Next"}
-          </button> */}
         </div>
       </div>
     </div>

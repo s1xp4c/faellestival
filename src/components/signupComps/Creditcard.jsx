@@ -2,9 +2,9 @@ import React from "react";
 
 function Creditcard() {
   return (
-    <div class="creditCardForm">
+    <div className="creditCardForm">
       <h3 className="creditCardInfo">Fill your Credit Card Info</h3>
-      <div class="payment">
+      <div className="payment">
         <form>
           <div className="form-group owner">
             <label htmlFor="owner">Owner</label>
@@ -51,7 +51,7 @@ function Creditcard() {
           <div className="form-group" id="credit_cards">
             <img src="/visa.jpg" id="visa" alt="visa" />
             <img src="/mastercard.jpg" id="mastercard" alt="mastercard" />
-            <img src="/amex.jpg" id="amex" alt="amex"/>
+            <img src="/amex.jpg" id="amex" alt="amex" />
           </div>
           {/* <div className="form-group" id="pay-now">
             <button type="submit" className="btn btn-default" id="confirm-purchase">

@@ -38,6 +38,9 @@ function TicketAmountHandler({ formData, setFormData }) {
             <input
               type="number"
               name="text"
+              min={0}
+              max={6}
+              required={true}
               className="numberInput"
               value={ticketCount}
               onChange={(e) => {
