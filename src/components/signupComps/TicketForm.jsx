@@ -94,6 +94,7 @@ function TicketForm(props) {
           className="transition-ease"
           formData={formData}
           setFormData={setFormData}
+          setPage={setPage}
         />
       );
     } else if (page === 3) {
