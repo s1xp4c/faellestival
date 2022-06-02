@@ -28,14 +28,14 @@ function FestLinks(props) {
     setIsLogin(false);
     window.location = "#";
   }
-  function goTofaellescardPage() {
-    props.setShowFestLandPage(false);
-    props.setShowProgramPage(false);
-    props.setShowFCardPage(true);
-    props.setShowMapPage(false);
-    console.log("go to mainpage");
-    window.location = "#";
-  }
+  // function goTofaellescardPage() {
+  //   props.setShowFestLandPage(false);
+  //   props.setShowProgramPage(false);
+  //   props.setShowFCardPage(true);
+  //   props.setShowMapPage(false);
+  //   console.log("go to mainpage");
+  //   window.location = "#";
+  // }
   return (
     <ul className={props.globalClassName}>
       <Link

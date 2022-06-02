@@ -6,9 +6,9 @@ import Section from "./sections/Section";
 import ArtistsSection from "./sections/ArtistsSection";
 
 function FestLandPage(props) {
-  function goToFCardPage() {
+  function goToProgramPage() {
+    props.setShowProgramPage(true);
     props.setShowFestLandPage(false);
-    props.setShowFCardPage(true);
     window.location = "#";
   }
 
@@ -21,6 +21,13 @@ function FestLandPage(props) {
         className="mapSection"
         btnClassName="primBtn"
         {...props}
+      />
+      <Section
+        content="Check When your Favourite Artists Are Playing"
+        titleClassName="gradientTxt"
+        action={goToProgramPage}
+        btnContent="Go To Program Page"
+        btnClassName="primBtn"
       />
       {/* <Section className="section" content="Getting Hungry?" titleClassName="title" btnContent="Top Up Your Card" btnClassName="secBtn" action={goToFCardPage} /> */}
       <ArtistsSection
