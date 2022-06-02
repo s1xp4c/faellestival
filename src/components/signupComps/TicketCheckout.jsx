@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
 
-function TicketCheckout({ formData }) {
+function TicketCheckout({ formData, setFormData }) {
   console.log(" from ckecout", formData);
 
   let subtotal = 0;
@@ -22,6 +22,21 @@ function TicketCheckout({ formData }) {
     formData.tentSetup +
     formData.luxePack +
     formData.greenCamp;
+
+  useEffect(() => {
+    let checkoutTotal = subtotal +
+    formData.cardFee +
+    formData.tentSetup +
+    formData.luxePack +
+    formData.greenCamp;
+    setFormData({
+      ...formData,
+      checkoutTotal: checkoutTotal,
+     }
+    );
+    }, []);
+
+
   console.log(
     "dayAmount",
     dayAmount,

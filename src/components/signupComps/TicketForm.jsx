@@ -140,14 +140,15 @@ function TicketForm(props) {
         </div>
         <div className="body ">{PageDisplay()}</div>
         <div className="footer">
-          <button
+          {page >= 1 && <button
             disabled={page == 0}
             onClick={() => {
               setPage((currPage) => currPage - 1);
             }}
           >
             Prev
-          </button>
+          </button> }
+
           <button
             onClick={() => {
               if (page === FormTitles.length - 1) {
