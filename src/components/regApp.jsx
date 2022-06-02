@@ -13,6 +13,7 @@ import Footer from "./Footer";
 import FaqPage from "./FaqPage";
 import BurgerMenu from "./UI/BurgerMenu";
 import LoginSection from "./sections/LoginSection";
+import ProgramPage from "./ProgramPage";
 
 function RegApp(props) {
   const { isLogin, setIsLogin } = useContext(LoginContext);
@@ -23,6 +24,7 @@ function RegApp(props) {
   const [showTicketsPage, setShowTicketsPage] = useState(false);
   const [showFaqPage, setShowFaqPage] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const [showProgramPage, setShowProgramPage] = useState(false);
 
   return (
     <>
@@ -57,8 +59,7 @@ function RegApp(props) {
       {showLogin && (
         <LoginSection
           setShowLogin={setShowLogin}
-          guestName={props.guestName}
-          setGuestName={props.setGuestName}
+          {...props}
         />
       )}
       {props.showBurgerMenu && (
@@ -104,6 +105,15 @@ function RegApp(props) {
           setShowFaqPage={setShowFaqPage}
         />
       )}
+      {showProgramPage && (
+        <ProgramPage
+          setShowTicketsPage={setShowTicketsPage}
+          setShowLineup={setShowLineup}
+          setShowLandPage={setShowLandPage}
+          setShowFaqPage={setShowFaqPage}
+          setShowProgramPage={setShowProgramPage}
+        />
+      )}
 
       <Footer
         setShowTicketsPage={setShowTicketsPage}
@@ -111,6 +121,7 @@ function RegApp(props) {
         setShowLandPage={setShowLandPage}
         setShowFaqPage={setShowFaqPage}
         setShowLogin={setShowLogin}
+        setShowProgramPage={setShowProgramPage}
       />
     </>
   );

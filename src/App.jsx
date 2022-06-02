@@ -95,8 +95,8 @@ function App() {
                       <RegApp
                       setShowBurgerMenu={setShowBurgerMenu}
                       showBurgerMenu={showBurgerMenu}
-                      guestName={guestName}
                     setGuestName={setGuestName}
+                    guestName={guestName}
                   />
                 )}
               </AvailableContext.Provider>

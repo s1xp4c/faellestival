@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import TicketCheckout from "./TicketCheckout";
 
 function PushAllData({ formData, setFormData }) {
   const [serverRespons, setServerRespons] = useState([]);
-  const [populateRestDB, setPopulateRestDB] = useState([]);
+  // const [populateRestDB, setPopulateRestDB] = useState([]);
 
   const fullfillID = {
     id: formData.authKey,
@@ -55,7 +56,7 @@ function PushAllData({ formData, setFormData }) {
   let ticketMessage = serverRespons.message;
   useEffect(() => {
     setFormData({ ...formData, ticketState: ticketMessage });
-    console.log(populateRestDB);
+    // console.log(populateRestDB);
   }, []);
 
   //////////////////////////////////////////////////////////////////////
@@ -80,7 +81,7 @@ function PushAllData({ formData, setFormData }) {
     fetch(FAELLESTIVAL_RESTDB_URL, pushAllDataRequestOptions)
       .then((response) => response.json())
       .then(
-        (data) => setPopulateRestDB(data),
+        // (data) => setPopulateRestDB(data),
         (data) => console.log(data)
       );
   }, []);
@@ -88,52 +89,17 @@ function PushAllData({ formData, setFormData }) {
   return (
     <div className="congratulations-container">
       <div className="congratulations-header">
-        <h3>CONGRATULATIONS!!</h3>
+        <h3>WuHuuuuuu {dataForRestDB.extraGuests[0].firstName}!! </h3>
       </div>
       <div className="congratulations-body">
         <div className="congratulations-info">
-          <span>*Here you see the info you submitted</span>
+          <span>*This is your info</span>
         </div>
-        <div className="userName">
-          <span>Username: </span>
+        <div className="user-info"></div>
+        <div>
+          <span>Password: </span> <span>{dataForRestDB.id}</span>
         </div>
-        <div className="userName-db">{populateRestDB.userName}</div>
-        <div className="firstName">
-          <span>Firstname: </span>
-        </div>
-        <div className="firstName-db">{populateRestDB.firstName}</div>
-        <div className="lastName">
-          <span>Lastname: </span>
-        </div>
-        <div className="lastName-db">{populateRestDB.lastName}</div>
-        <div className="userEmail">
-          <span>Email: </span>
-        </div>
-        <div className="userEmail-db">{populateRestDB.userEmail}</div>
-        <div className="id">
-          <span>Password</span>
-        </div>
-        <div className="id-db">{populateRestDB.id}</div>
-        <div className="ticketType">
-          <span>Ticket Type: </span>
-        </div>
-        <div className="ticketType-db">{populateRestDB.ticketType}</div>
-        <div className="ticketDuration">
-          <span>Duration: </span>
-        </div>
-        <div className="ticketDuration-db">{populateRestDB.ticketDuration}</div>
-        <div className="ticketDay">
-          <span>Attendance Day: </span>
-        </div>
-        <div className="ticketDay-db">{populateRestDB.ticketDay}</div>
-        <div className="ticketAmount">
-          <span>People Going: </span>
-        </div>
-        <div className="ticketAmount-db">{populateRestDB.ticketAmount}</div>
-        <div className="campsite">
-          <span>Camping Area: </span>
-        </div>
-        <div className="campsite-db">{populateRestDB.campsite}</div>
+        <TicketCheckout formData={formData} setFormData={setFormData} />
       </div>
     </div>
   );

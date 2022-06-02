@@ -31,13 +31,10 @@ function CampInfo({ formData, setFormData, checkboxLabels }) {
           <h3>Campsite</h3>
           <p>*Choose where to camp</p>
         </div>
-        <div className={"check-body camp-map"}>
-          <img className={"campMap"} src={campMap} alt="Campsite Map" />
-        </div>
+
         <div className="check-body camp-check">
           {areaIsChecked.map((d, index) => (
             <div key={index}>
-              
               <input
                 type="checkbox"
                 id={d.id}
@@ -64,6 +61,9 @@ function CampInfo({ formData, setFormData, checkboxLabels }) {
               </div>
             </div>
           ))}
+        </div>
+        <div className={"check-body camp-map"}>
+          <img className={"campMap"} src={campMap} alt="Campsite Map" />
         </div>
       </div>
     </div>

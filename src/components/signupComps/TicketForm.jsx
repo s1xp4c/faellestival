@@ -94,6 +94,7 @@ function TicketForm(props) {
           className="transition-ease"
           formData={formData}
           setFormData={setFormData}
+          setPage={setPage}
         />
       );
     } else if (page === 3) {
@@ -139,15 +140,15 @@ function TicketForm(props) {
         </div>
         <div className="body ">{PageDisplay()}</div>
         <div className="footer">
-          <button
+          {page >= 1 && <button
             disabled={page == 0}
             onClick={() => {
               setPage((currPage) => currPage - 1);
             }}
           >
             Prev
-          </button>
-          <button
+          </button> }
+{ page == 4 ? <button onClick={() => setPage((currPage) => currPage + 1)}>PAY {formData.checkoutTotal}kr.</button> :        <button
             onClick={() => {
               if (page === FormTitles.length - 1) {
                 alert("FORM SUBMITTED");
@@ -158,7 +159,19 @@ function TicketForm(props) {
             }}
           >
             {page === FormTitles.length - 1 ? "Submit" : "Next"}
-          </button>
+          </button>}
+          {/* <button
+            onClick={() => {
+              if (page === FormTitles.length - 1) {
+                alert("FORM SUBMITTED");
+                console.log(formData);
+              } else {
+                setPage((currPage) => currPage + 1);
+              }
+            }}
+          >
+            {page === FormTitles.length - 1 ? "Submit" : "Next"}
+          </button> */}
         </div>
       </div>
     </div>

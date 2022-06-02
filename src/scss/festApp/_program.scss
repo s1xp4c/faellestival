@@ -94,3 +94,15 @@
     margin-left: 2vw;
   }
 }
+
+.gobackProgram {
+  position: absolute;
+  z-index: 10000;
+  margin-top: 0.5vw;
+  margin-left: 2vw;
+  text-decoration: underline 1px solid white;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(49, 47, 47, 0);
+  color: white;
+}
