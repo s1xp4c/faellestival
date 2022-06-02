@@ -34,7 +34,7 @@ function TicketForm(props) {
     greenCamp: 0,
     faellesCard: 0,
     extraGuests: [],
-    fulfilled: "",
+    ticketState: "",
   });
 
   const FormTitles = [
@@ -100,7 +100,13 @@ function TicketForm(props) {
     } else if (page === 3) {
       return <ExtrasInfo formData={formData} setFormData={setFormData} />;
     } else if (page === 4) {
-      return <TicketCheckout formData={formData} setFormData={setFormData} page={page} />;
+      return (
+        <TicketCheckout
+          formData={formData}
+          setFormData={setFormData}
+          page={page}
+        />
+      );
     } else if (page === 5) {
       return <PushAllData formData={formData} setFormData={setFormData} />;
     }
@@ -140,26 +146,34 @@ function TicketForm(props) {
         </div>
         <div className="body ">{PageDisplay()}</div>
         <div className="footer">
-          {page >= 1 && <button
-            disabled={page == 0}
-            onClick={() => {
-              setPage((currPage) => currPage - 1);
-            }}
-          >
-            Prev
-          </button> }
-{ page == 4 ? <button onClick={() => setPage((currPage) => currPage + 1)}>PAY {formData.checkoutTotal}kr.</button> :        <button
-            onClick={() => {
-              if (page === FormTitles.length - 1) {
-                alert("FORM SUBMITTED");
-                console.log(formData);
-              } else {
-                setPage((currPage) => currPage + 1);
-              }
-            }}
-          >
-            {page === FormTitles.length - 1 ? "Submit" : "Next"}
-          </button>}
+          {page >= 1 && (
+            <button
+              disabled={page == 0}
+              onClick={() => {
+                setPage((currPage) => currPage - 1);
+              }}
+            >
+              Prev
+            </button>
+          )}
+          {page == 4 ? (
+            <button onClick={() => setPage((currPage) => currPage + 1)}>
+              PAY {formData.checkoutTotal}kr.
+            </button>
+          ) : (
+            <button
+              onClick={() => {
+                if (page === FormTitles.length - 1) {
+                  alert("FORM SUBMITTED");
+                  console.log(formData);
+                } else {
+                  setPage((currPage) => currPage + 1);
+                }
+              }}
+            >
+              {page === FormTitles.length - 1 ? "Submit" : "Next"}
+            </button>
+          )}
           {/* <button
             onClick={() => {
               if (page === FormTitles.length - 1) {
