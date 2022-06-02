@@ -10,7 +10,7 @@ import TicketCheckout from "./TicketCheckout";
 function TicketForm(props) {
   const [page, setPage] = useState(0);
   //  const [reservationTime, setReservationTime] = useState();
-  const [required, setRequired] = useState(true);
+  const [required, setRequired] = useState(true)
   const reservationTime = 42000;
 
   const [formData, setFormData] = useState({

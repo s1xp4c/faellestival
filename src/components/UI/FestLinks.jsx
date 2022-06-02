@@ -8,19 +8,19 @@ function FestLinks(props) {
   function goToProgramPage() {
     props.setShowProgramPage(true);
     props.showBurgerMenu ?   props.setShowBurgerMenu(false)  :  [] 
-    props.setShowFestLandPage(false);
-    props.setShowFCardPage(false);
-    props.setShowMapPage(false);
+    props.showFestLandPage ?   props.setShowFestLandPage(false)  :  [] 
+    props.showMapPage ?   props.setShowMapPage(false)  :  [] 
+    props.showArtistPage ?   props.setShowArtistPage(false)  :  [] 
     window.location = "#";
     console.log("go to programpage");
   }
 
   function goToMapPage() {
     props.setShowMapPage(true);
-    props.showBurgerMenu ?   props.setShowBurgerMenu(false)  :  [] 
-    props.setShowFestLandPage(false);
-    props.setShowProgramPage(false);
-    props.setShowFCardPage(false);
+    props.showBurgerMenu ?   props.setShowBurgerMenu(false)  :  [];
+    props.showFestLandPage ?   props.setShowFestLandPage(false)  :  [] 
+    props.showProgramPage ?   props.setShowProgramPage(false)  :  [] 
+    props.showArtistPage ?   props.setShowArtistPage(false)  :  [] 
     window.location = "#";
     console.log("go to artistprogrampage");
   }
