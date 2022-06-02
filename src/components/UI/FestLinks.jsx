@@ -25,6 +25,7 @@ function FestLinks(props) {
 
   function goTomainPage() {
     console.log("go to mainpage");
+    props.setShowBurgerMenu(false)
     setIsLogin(false);
     window.location = "#";
   }
