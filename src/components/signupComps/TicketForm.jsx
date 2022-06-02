@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
-import ConfirmInfo from "./ConfirmInfo";
+import PushAllData from "./PushAllData";
 import TicketContent from "./TicketContent";
 import PersonalInfo from "./PersonalInfo";
 import ExtrasInfo from "./ExtrasInfo";
 import CampInfo from "./CampInfo";
 import TimeCount from "./TimeCount";
 import TicketCheckout from "./TicketCheckout";
-// import envData from "../../App";
-// import ReservationRequest from "./ReservationRequest";
 
 function TicketForm(props) {
   const [page, setPage] = useState(0);
   //  const [reservationTime, setReservationTime] = useState();
-  const reservationTime = 300000;
+  const reservationTime = 42000;
 
   const [formData, setFormData] = useState({
     userEmail: "",
@@ -36,6 +34,7 @@ function TicketForm(props) {
     greenCamp: 0,
     faellesCard: 0,
     extraGuests: [],
+    fulfilled: "",
   });
 
   const FormTitles = [
@@ -44,7 +43,7 @@ function TicketForm(props) {
     "Personal Info",
     "Choose Extras",
     "Checkout Cart",
-    "Congratulations!"
+    "Congratulations!",
   ];
   const checkboxLabels = [
     "Standard Ticket",
@@ -91,15 +90,11 @@ function TicketForm(props) {
       );
     } else if (page === 2) {
       return (
-        <>
-          <PersonalInfo
-            className="transition-ease"
-            formData={formData}
-            setFormData={setFormData}
-            // reservationTime={reservationTime}
-            // setReservationTime={setReservationTime}
-          />
-        </>
+        <PersonalInfo
+          className="transition-ease"
+          formData={formData}
+          setFormData={setFormData}
+        />
       );
     } else if (page === 3) {
       return <ExtrasInfo formData={formData} setFormData={setFormData} />;
@@ -130,9 +125,6 @@ function TicketForm(props) {
                 : "100%",
           }}
         ></div>
-        {/* <div className="countdown-timer">
-          <TimeCount reservationTime={reservationTime} />
-        </div> */}
       </div>
       <div className="form-container ">
         <div className="header">
