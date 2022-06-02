@@ -6,6 +6,7 @@ function FestLinks(props) {
   const { setIsLogin } = useContext(LoginContext);
 
   function goToProgramPage() {
+    props.setShowBurgerMenu(false);
     props.setShowProgramPage(true);
     props.setShowFestLandPage(false);
     props.setShowFCardPage(false);
@@ -15,6 +16,7 @@ function FestLinks(props) {
   }
 
   function goToMapPage() {
+    props.setShowBurgerMenu(false);
     props.setShowMapPage(true);
     props.setShowFestLandPage(false);
     props.setShowProgramPage(false);
