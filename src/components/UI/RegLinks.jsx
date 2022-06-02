@@ -6,9 +6,10 @@ function RegLinks(props) {
   const { setIsLogin } = useContext(LoginContext);
 
   function goToLineupPage() {
-    props.setShowBurgerMenu(false);
-    props.setShowTicketsPage(false);
     props.setShowLineup(true);
+
+props.showBurgerMenu ?   props.setShowBurgerMenu(false)  :  [] 
+props.setShowTicketsPage(false)
     props.setShowLandPage(false);
     props.setShowFaqPage(false);
     props.setShowProgramPage(false);
@@ -17,13 +18,14 @@ function RegLinks(props) {
   }
   function goTofestAppPage() {
     console.log("go to festAppPage");
-    props.setShowBurgerMenu(false);
     props.setShowLogin(true);
+   props.showBurgerMenu ?   props.setShowBurgerMenu(false)  :  [] 
     window.location = "#";
   }
   function goToTicketsPage() {
-    props.setShowBurgerMenu(false)
     props.setShowTicketsPage(true);
+    props.showBurgerMenu ?   props.setShowBurgerMenu(false)  :  [] 
+
     props.setShowLineup(false);
     props.setShowLandPage(false);
     props.setShowFaqPage(false);
@@ -31,15 +33,7 @@ function RegLinks(props) {
     props.setShowProgramPage(false);
     window.location = "#";
   }
-  function goToProgramPage() {
-    props.setShowTicketsPage(false);
-    props.setShowLineup(false);
-    props.setShowLandPage(false);
-    props.setShowFaqPage(false);
-    props.setShowProgramPage(true);
-    console.log("program");
-    window.location = "#";
-  }
+
   return (
     <ul className={props.globalClassName}>
       <Link className="link" content="Tickets" action={goToTicketsPage} />
