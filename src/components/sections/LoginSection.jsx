@@ -1,32 +1,50 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Btn from "../UI/Btn";
 import Title from "../UI/Title";
 import { LoginContext } from "../../Contexts/LoginContext";
 
 function LoginSection(props) {
-  const { isLogin, setIsLogin } = useContext(LoginContext);
+  const { setIsLogin } = useContext(LoginContext);
   const [bookNr, setBookNr] = useState();
   const [wrongPass, setWrongPass] = useState(false);
+  const [ guestDb, setGuestDb] = useState([])
+  let defaultPassword = "login";
 
-  let formAuthNr = "login";
+  const FAELLESTIVAL_RESTDB_URL = import.meta.env.VITE_FAEL_SEC_RESTDB_URL;
+  const FAELLESTIVAL_RESTDB_KEY = import.meta.env.VITE_FAEL_SEC_RESTDB_KEY;
+
+
+
+  useEffect(() => {
+
+    fetch(FAELLESTIVAL_RESTDB_URL, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "x-apikey":  FAELLESTIVAL_RESTDB_KEY,
+      },
+    })
+    .then((e) => e.json())
+    .then((e) => setGuestDb(e));
+    }, []);
+
+
 
   function closeLogin() {
     props.setShowLogin(false);
   }
   function openFestApp(e) {
-    // setIsLogin(true);
-    // console.log(guestName);
-    // console.log(bookNr);
     e.preventDefault();
-    if (bookNr == formAuthNr) {
+    if (bookNr == defaultPassword) {
       setIsLogin(true);
       console.log(guestName);
       console.log(bookNr);
     } else {
-      console.log("passwordincorrect");
-      setWrongPass(true);
+    guestDb.map((booking) => bookNr == booking.id ?        setIsLogin(true) :   setWrongPass(true))
     }
   }
+
+
   return (
     <section className="loginSection">
       <Btn className="closeBtn" content="&#10006;" action={closeLogin} />

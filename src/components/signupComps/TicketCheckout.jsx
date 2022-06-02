@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 
-function TicketCheckout({ formData, setFormData }) {
+function TicketCheckout({ formData, setFormData, page }) {
   console.log(" from ckecout", formData);
 
   let subtotal = 0;
@@ -49,7 +49,7 @@ function TicketCheckout({ formData, setFormData }) {
   return (
     <div className="ticket-checkout-container">
       <div className="ticket-checkout-header">
-        <h2>Checkout</h2>
+        { page == 5 ? <h2>Your Purchase</h2> : <h2>Checkout</h2>}
       </div>
       {/* <CreditCard /> */}
       <div className="ticket-checkout-body">
