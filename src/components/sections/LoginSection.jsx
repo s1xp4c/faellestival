@@ -25,6 +25,8 @@ function LoginSection(props) {
     } else {
       console.log("passwordincorrect");
       setWrongPass(true);
+      console.log(props.guestName);
+
     }
   }
   return (

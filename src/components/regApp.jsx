@@ -59,8 +59,7 @@ function RegApp(props) {
       {showLogin && (
         <LoginSection
           setShowLogin={setShowLogin}
-          guestName={props.guestName}
-          setGuestName={props.setGuestName}
+          {...props}
         />
       )}
       {props.showBurgerMenu && (

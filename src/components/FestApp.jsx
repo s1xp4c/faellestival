@@ -35,6 +35,7 @@ function FestApp(props) {
         shoArtistdPage={showArtistPage}
         showProgramPage={showProgramPage}
         ShowMapPage={showMapPage}
+        guestName={props.guestName}
       />
       {props.showBurgerMenu && (
         <BurgerMenu

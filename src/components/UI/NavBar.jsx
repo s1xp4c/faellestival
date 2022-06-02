@@ -34,7 +34,7 @@ function NavBar(props) {
     window.location = "#";
   }
 
-  const user = { name: "Melania" };
+  const user = props.guestName;
   // let user = props.name;
 
   return (
@@ -91,7 +91,7 @@ function NavBar(props) {
       {isLogin && (
         <BtnGrid
           btn1action={openBurger}
-          btn1content={user.name.charAt(0).toUpperCase() + user.name.slice(1)}
+          btn1content={user.charAt(0).toUpperCase() + user.slice(1)}
           btn1className="name"
           id="userInfo"
           btn2content="☰"
