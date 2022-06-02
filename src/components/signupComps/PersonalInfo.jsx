@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import Btn from "../UI/Btn"
 import ReservationRequest from "./ReservationRequest";
 
-function PersonalInfo({ formData, setFormData }) {
+function PersonalInfo({ formData, setFormData, setPage }) {
   // const [reservationInfo, setReservationInfo] = useState({});
   const n = formData.ticketAmount;
   const [reserveRespons, setReserveRespons] = useState(0);
@@ -31,6 +32,7 @@ function PersonalInfo({ formData, setFormData }) {
 
   console.log(reserveRespons.id);
   let userKey = reserveRespons.id;
+
   // useEffect(() => {
   //   setFormData({ ...formData, authKey: userKey });
   // }, []);
@@ -57,9 +59,15 @@ function PersonalInfo({ formData, setFormData }) {
     );
   }, []);
 
+  function goToCamping() {
+    setPage((currPage) => currPage - 1); 
+ }
+
   return (
     <div className="personal-info-container">
-      {guestArray.map((d, index) => (
+
+      { !reserveRespons.id && <><p className="fullyBookedTxt" >{formData.campsite} Campsite is fully booked already.</p> <Btn content="Choose a Different one" action={goToCamping} className="secBtn" /></>}
+      {reserveRespons.id && guestArray.map((d, index) => (
         <div key={index}>
           <label>Guest nr. {index + 1}</label>
           <div>
