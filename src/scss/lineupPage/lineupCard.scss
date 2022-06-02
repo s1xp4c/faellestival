@@ -198,10 +198,10 @@
   }
 }
 
-.lineUpTitle {
+.headLine {
   text-align: center;
   font-family: $body-font;
-  font-size: 5vw;
+  font-size:clamp(2rem,3vw,5rem);
   margin-top: 2vw;
   margin-bottom: 3vw;
 }

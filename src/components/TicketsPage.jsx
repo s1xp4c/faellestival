@@ -40,7 +40,7 @@ function TicketsPage(props) {
             {...props}
             action={goToMain}
           />
-          <Title className="lineUpTitle gradientTxt" content="Tickets" />
+          <Title className="headLine gradientTxt" content="Tickets" />
           <CardGrid
             className="cardGrid hidden"
             ticketsContent={ticketsContent}
