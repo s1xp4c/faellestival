@@ -25,7 +25,7 @@ const Clock = ({ timerDays, timerHours, timerMinutes, timerSeconds }) => {
               <p>{timerSeconds}</p>
               <small>Seconds</small>
             </section>
-          </div>
+            </div>
         </section>
       </section>
     </Fragment>

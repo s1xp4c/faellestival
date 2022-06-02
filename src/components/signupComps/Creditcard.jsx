@@ -2,8 +2,9 @@ import React from "react";
 
 function Creditcard() {
   return (
-    <div className="creditCardForm">
-      <div className="payment">
+    <div class="creditCardForm">
+      <h3 className="creditCardInfo">Fill your Credit Card Info</h3>
+      <div class="payment">
         <form>
           <div className="form-group owner">
             <label htmlFor="owner">Owner</label>
@@ -48,9 +49,9 @@ function Creditcard() {
             </select>
           </div>
           <div className="form-group" id="credit_cards">
-            <img src="/visa.jpg" id="visa" />
-            <img src="/mastercard.jpg" id="mastercard" />
-            <img src="/amex.jpg" id="amex" />
+            <img src="/visa.jpg" id="visa" alt="visa" />
+            <img src="/mastercard.jpg" id="mastercard" alt="mastercard" />
+            <img src="/amex.jpg" id="amex" alt="amex"/>
           </div>
           {/* <div className="form-group" id="pay-now">
             <button type="submit" className="btn btn-default" id="confirm-purchase">
