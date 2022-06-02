@@ -5,9 +5,10 @@ import RegLinks from "./RegLinks";
 function BurgerMenu(props) {
   return (
     <div className={props.className} id={props.id}>
-      {props.isLogin || props.showFestLandPage || props.showArtistPage || props.showProgramPage? (
+      {props.isLogin || props.showFestLandPage || props.showArtistPage || props.showProgramPage || props.showMapPage ? (
         <FestLinks {...props} globalClassName="burgerLinks" />
       ) : []}
+
 
       {props.showLandPage || props.showTicketsPage ||props.showLineup  ?
         (
