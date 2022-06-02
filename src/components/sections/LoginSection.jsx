@@ -37,8 +37,8 @@ function LoginSection(props) {
     e.preventDefault();
     if (bookNr == defaultPassword) {
       setIsLogin(true);
-      console.log(guestName);
-      console.log(bookNr);
+      // console.log(guestName);
+      // console.log(bookNr);
     } else {
     guestDb.map((booking) => bookNr == booking.id ?        setIsLogin(true) :   setWrongPass(true))
     }

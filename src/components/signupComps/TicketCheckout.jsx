@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Creditcard from "./Creditcard";
 
 function TicketCheckout({ formData, setFormData, page }) {
-  console.log(" from ckecout", formData);
+  // console.log(" from ckecout", formData);
 
   let subtotal = 0;
   let dayAmount = 0;
@@ -37,14 +37,14 @@ function TicketCheckout({ formData, setFormData, page }) {
     });
   }, []);
 
-  console.log(
-    "dayAmount",
-    dayAmount,
-    "tickettype",
-    formData.ticketType,
-    "ticketDuration",
-    formData.ticketDuration
-  );
+  // console.log(
+  //   "dayAmount",
+  //   dayAmount,
+  //   "tickettype",
+  //   formData.ticketType,
+  //   "ticketDuration",
+  //   formData.ticketDuration
+  // );
 
   return (
     <>

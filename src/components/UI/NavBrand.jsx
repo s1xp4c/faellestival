@@ -13,7 +13,7 @@ function NavBrand(props) {
     props.setShowFestLandPage(false);
     props.setShowMapPage(false);
     window.location = "#";
-    console.log("go to main");
+    // console.log("go to main");
   }
   return (
     

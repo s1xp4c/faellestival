@@ -8,7 +8,7 @@ import ScrollElm from "./ScrollElm";
 function HeroSection(props) {
   function showLineup() {
     window.location = "#";
-    console.log("showlineup");
+    // console.log("showlineup");
     props.setShowLineup(true);
     props.setShowLandPage(false);
   }
@@ -16,7 +16,7 @@ function HeroSection(props) {
     window.location = "#";
     props.setShowTicketsPage(true);
     props.setShowLandPage(false);
-    console.log("showtickets");
+    // console.log("showtickets");
   }
   return (
     <section className={props.className}>

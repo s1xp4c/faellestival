@@ -44,7 +44,7 @@ function TicketAmountHandler({ formData, setFormData }) {
               className="numberInput"
               value={ticketCount}
               onChange={(e) => {
-                console.log(formData.ticketAmount);
+                // console.log(formData.ticketAmount);
                 setTicketCount(e.target.value);
                 setFormData({ ...formData, ticketAmount: e.target.value });
               }}

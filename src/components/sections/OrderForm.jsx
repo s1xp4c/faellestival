@@ -4,7 +4,7 @@ import TicketForm from "../signupComps/TicketForm";
 function OrderForm(props) {
   function closeForm() {
     props.setShowForm(false);
-    console.log("close form");
+    // console.log("close form");
   }
   return (
     <div className="formBase">

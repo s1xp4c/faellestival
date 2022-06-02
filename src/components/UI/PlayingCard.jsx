@@ -4,7 +4,7 @@ import CardContent from './CardContent';
 
 function PlayingCard(props) {
   // <PlayingCard className="playCard" btnContent={stages[0]} action={goToProgram} content={nowJotunheim} />
-console.log(props.content);
+// console.log(props.content);
 // act: "Parisian Inc"
 // end: "14:00"
 // start: "12:00"

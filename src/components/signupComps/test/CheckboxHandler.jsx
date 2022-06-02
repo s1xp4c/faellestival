@@ -33,7 +33,7 @@ function CheckboxHandler(props) {
     Object.keys(this.state.checkboxes)
       .filter((checkbox) => this.state.checkboxes[checkbox])
       .forEach((checkbox) => {
-        console.log(checkbox, "is selected.");
+        // console.log(checkbox, "is selected.");
       });
   };
 

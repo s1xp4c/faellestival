@@ -85,7 +85,7 @@ const TimeCount = ({ reservationTime, setPage, PageDisplay }) => {
   // When timer reaches 00:01 --> Alert user and reset form page to first page
   useEffect(() => {
     if (timer === "00:01") {
-      console.log(timer);
+      // console.log(timer);
       alert("Sorry, your reservation timed out - Please try again <3");
       PageDisplay(setPage(0, (currPage) => (currPage = 0)));
       clearTimer(getDeadTime());

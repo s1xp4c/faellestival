@@ -13,11 +13,11 @@ props.setShowTicketsPage(false)
     props.setShowLandPage(false);
     props.setShowFaqPage(false);
     props.setShowProgramPage(false);
-    console.log("go to lineuppage");
+    // console.log("go to lineuppage");
     window.location = "#";
   }
   function goTofestAppPage() {
-    console.log("go to festAppPage");
+    // console.log("go to festAppPage");
     props.setShowLogin(true);
    props.showBurgerMenu ?   props.setShowBurgerMenu(false)  :  [] 
     window.location = "#";
@@ -29,7 +29,7 @@ props.setShowTicketsPage(false)
     props.setShowLineup(false);
     props.setShowLandPage(false);
     props.setShowFaqPage(false);
-    console.log("tickets");
+    // console.log("tickets");
     props.setShowProgramPage(false);
     window.location = "#";
   }

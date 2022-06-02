@@ -20,7 +20,7 @@ function NavBar(props) {
   }
 
   function openBurger() {
-    console.log("openburger");
+    // console.log("openburger");
     props.showBurgerMenu ? props.setShowBurgerMenu(false) : props.setShowBurgerMenu(true);
     window.location = "#";
   }
@@ -28,7 +28,7 @@ function NavBar(props) {
     props.setShowLineup(false);
     props.setShowTicketsPage(true);
     props.setShowLandPage(false);
-    console.log("gototickets");
+    // console.log("gototickets");
     window.location = "#";
   }
 

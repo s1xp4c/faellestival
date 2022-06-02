@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 function PersonalInfo({ formData, setFormData }) {
   const n = formData.ticketAmount;
 
-  console.log(n);
-  console.log(formData);
+  // console.log(n);
+  // console.log(formData);
 
   const [guestArray, setGuestArray] = useState([]);
 
