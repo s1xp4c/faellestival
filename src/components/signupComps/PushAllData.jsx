@@ -87,19 +87,21 @@ function PushAllData({ formData, setFormData }) {
 
   return (
     <div className="congratulations-container">
-      <div className="congratulations-header">
-        <h3>WuHuuuuuu {dataForRestDB.extraGuests[0].firstName}!! </h3>
-      </div>
-      <div className="congratulations-body">
-        <div className="congratulations-info">
-          <span>*This is your info</span>
+      <div className="loginInfo">
+        <div className="congratulations-header">
+          <h3>WuHuuuuuu {dataForRestDB.extraGuests[0].firstName}!! </h3>
         </div>
-        <div className="user-info"></div>
-        <div>
-          <span>*Use this Password to login</span>
-        </div>
-        <div>
-          <span>Password: </span> <span>{dataForRestDB.id}</span>
+        <div className="congratulations-body">
+          <div className="congratulations-info">
+            <span>*This is your info</span>
+          </div>
+          <div className="user-info"></div>
+          <div>
+            <span>*Use this Password to login</span>
+          </div>
+          <div>
+            <span>Password: </span> <span>{dataForRestDB.id}</span>
+          </div>
         </div>
         <TicketCheckout formData={formData} setFormData={setFormData} />
       </div>

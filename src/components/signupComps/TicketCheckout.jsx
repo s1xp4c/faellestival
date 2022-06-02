@@ -47,11 +47,11 @@ function TicketCheckout({ formData, setFormData, page }) {
   );
 
   return (
+    <>
     <div className="ticket-checkout-container">
       <div className="ticket-checkout-header">
         {page == 5 ? <h2>Your Purchase</h2> : <h2>Checkout</h2>}
       </div>
-      {page == 4 && <Creditcard />}
       <div className="ticket-checkout-body">
         <p className="subtotal">
           {formData.ticketAmount} x {formData.ticketDuration}{" "}
@@ -84,6 +84,8 @@ function TicketCheckout({ formData, setFormData, page }) {
         </p>
       </div>
     </div>
+          {page == 4 && <Creditcard />}</>
+
   );
 }
 
