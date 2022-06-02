@@ -26,7 +26,7 @@ function App() {
   const [addOnData, setAddOnData] = useState([]);
   const [availableData, setAvailable] = useState([]);
   const [showBurgerMenu, setShowBurgerMenu] = useState(false);
-  const [guestName, setGuestName] = useState();
+  const [guestName, setGuestName] = useState("user");
 
 
   const ticketsJsonFile = "./content.json";

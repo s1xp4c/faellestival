@@ -32,7 +32,7 @@ function FestApp(props) {
         setShowMapPage={setShowMapPage}
         className="festNavBar"
         showFestLandPage={showFestLandPage}
-        shoArtistdPage={showArtistPage}
+        showArtistPage={showArtistPage}
         showProgramPage={showProgramPage}
         ShowMapPage={showMapPage}
         guestName={props.guestName}
@@ -41,12 +41,12 @@ function FestApp(props) {
         <BurgerMenu
           {...props}
           setShowFestLandPage={setShowFestLandPage}
-          setShoArtistdPage={setShowArtistPage}
+          setShowArtistPage={setShowArtistPage}
           setShowProgramPage={setShowProgramPage}
           setShowMapPage={setShowMapPage}
           className="burgerMenu"
           showFestLandPage={showFestLandPage}
-          shoArtistdPage={showArtistPage}
+          showArtistPage={showArtistPage}
           showProgramPage={showProgramPage}
           showMapPage={showMapPage}
         />
