@@ -6,6 +6,7 @@ function RegLinks(props) {
   const { setIsLogin } = useContext(LoginContext);
 
   function goToLineupPage() {
+    props.setShowBurgerMenu(false);
     props.setShowTicketsPage(false);
     props.setShowLineup(true);
     props.setShowLandPage(false);
@@ -16,10 +17,12 @@ function RegLinks(props) {
   }
   function goTofestAppPage() {
     console.log("go to festAppPage");
+    props.setShowBurgerMenu(false);
     props.setShowLogin(true);
     window.location = "#";
   }
   function goToTicketsPage() {
+    props.setShowBurgerMenu(false)
     props.setShowTicketsPage(true);
     props.setShowLineup(false);
     props.setShowLandPage(false);
@@ -42,7 +45,6 @@ function RegLinks(props) {
       <Link className="link" content="Tickets" action={goToTicketsPage} />
       <Link className="link" content="LineUp" action={goToLineupPage} />
       <Link className="link" content="Festival App" action={goTofestAppPage} />
-      <Link className="link" content="Program" action={goToProgramPage} />
     </ul>
   );
 }

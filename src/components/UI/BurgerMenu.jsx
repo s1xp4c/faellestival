@@ -5,11 +5,15 @@ import RegLinks from "./RegLinks";
 function BurgerMenu(props) {
   return (
     <div className={props.className} id={props.id}>
-      {props.isLogin ? (
+      {props.isLogin || props.showFestLandPage || props.showArtistPage || props.showProgramPage? (
         <FestLinks globalClassName="burgerLinks" />
-      ) : (
-        <RegLinks globalClassName="burgerLinks" />
-      )}
+      ) : []}
+
+      {props.showLandPage || props.showTicketsPage ||props.showLineup  ?
+        (
+          <RegLinks {...props} globalClassName="burgerLinks" />
+        ): [] }
+      
     </div>
   );
 }
