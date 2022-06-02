@@ -7,6 +7,7 @@ function FestLinks(props) {
 
   function goToProgramPage() {
     props.setShowProgramPage(true);
+    props.showBurgerMenu ?   props.setShowBurgerMenu(false)  :  [] 
     props.setShowFestLandPage(false);
     props.setShowFCardPage(false);
     props.setShowMapPage(false);
@@ -16,6 +17,7 @@ function FestLinks(props) {
 
   function goToMapPage() {
     props.setShowMapPage(true);
+    props.showBurgerMenu ?   props.setShowBurgerMenu(false)  :  [] 
     props.setShowFestLandPage(false);
     props.setShowProgramPage(false);
     props.setShowFCardPage(false);
@@ -26,6 +28,7 @@ function FestLinks(props) {
   function goTomainPage() {
     console.log("go to mainpage");
     setIsLogin(false);
+    props.showBurgerMenu ?   props.setShowBurgerMenu(false)  :  [] 
     window.location = "#";
   }
   // function goTofaellescardPage() {

@@ -72,6 +72,7 @@ function RegApp(props) {
           showLandPage={showLandPage}
           showTicketsPage={showTicketsPage}
           showLineup={showLineup}
+          setShowLogin={setShowLogin}
         />
       )}
       {showLandPage && (
