@@ -100,7 +100,7 @@ function TicketForm(props) {
     } else if (page === 3) {
       return <ExtrasInfo formData={formData} setFormData={setFormData} />;
     } else if (page === 4) {
-      return <TicketCheckout formData={formData} setFormData={setFormData} />;
+      return <TicketCheckout formData={formData} setFormData={setFormData} page={page} />;
     } else if (page === 5) {
       return <PushAllData formData={formData} setFormData={setFormData} />;
     }
