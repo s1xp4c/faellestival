@@ -10,6 +10,7 @@ import TicketCheckout from "./TicketCheckout";
 function TicketForm(props) {
   const [page, setPage] = useState(0);
   //  const [reservationTime, setReservationTime] = useState();
+  const [required, setRequired] = useState(false)
   const reservationTime = 42000;
 
   const [formData, setFormData] = useState({
@@ -91,6 +92,8 @@ function TicketForm(props) {
     } else if (page === 2) {
       return (
         <PersonalInfo
+        setRequired={setRequired}
+        required={required}
           className="transition-ease"
           formData={formData}
           setFormData={setFormData}
@@ -148,13 +151,15 @@ function TicketForm(props) {
           >
             Prev
           </button> }
-{ page == 4 ? <button onClick={() => setPage((currPage) => currPage + 1)}>PAY {formData.checkoutTotal}kr.</button> :        <button
+{ page == 4 ? <button onClick={() => setPage((currPage) => currPage + 1)}>PAY {formData.checkoutTotal}kr.</button> : <button
             onClick={() => {
               if (page === FormTitles.length - 1) {
                 alert("FORM SUBMITTED");
                 console.log(formData);
+              } else if (page === 2) {
+              formData.extraGuests[0].firstName ? setPage((currPage) => currPage + 1) : setRequired(true)
               } else {
-                setPage((currPage) => currPage + 1);
+                setPage((currPage) => currPage + 1)
               }
             }}
           >
