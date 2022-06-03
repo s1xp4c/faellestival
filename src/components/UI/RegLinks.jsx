@@ -8,29 +8,36 @@ function RegLinks(props) {
   function goToLineupPage() {
     props.setShowLineup(true);
 
-props.showBurgerMenu ?   props.setShowBurgerMenu(false)  :  [] 
-props.setShowTicketsPage(false)
-    props.setShowLandPage(false);
-    props.setShowFaqPage(false);
-    props.setShowProgramPage(false);
-    console.log("go to lineuppage");
+    props.showBurgerMenu ? props.setShowBurgerMenu(false) : [];
+    // props.setShowTicketsPage(false);
+    // props.setShowLandPage(false);
+    // props.setShowFaqPage(false);
+    // props.setShowProgramPage(false);
+    props.showLandPage ? props.setShowLandPage(false) : [];
+    props.showTicketsPage ? props.setShowTicketsPage(false) : [];
+    props.showFaqPage ? props.setShowFaqPage(false) : [];
+    props.showProgramPage ? props.setShowProgramPage(false) : [];
+    // console.log("go to lineuppage");
     window.location = "#";
   }
   function goTofestAppPage() {
-    console.log("go to festAppPage");
+    // console.log("go to festAppPage");
     props.setShowLogin(true);
-   props.showBurgerMenu ?   props.setShowBurgerMenu(false)  :  [] 
+    props.showBurgerMenu ? props.setShowBurgerMenu(false) : [];
     window.location = "#";
   }
   function goToTicketsPage() {
+    props.showBurgerMenu ? props.setShowBurgerMenu(false) : [];
     props.setShowTicketsPage(true);
-    props.showBurgerMenu ?   props.setShowBurgerMenu(false)  :  [] 
-
-    props.setShowLineup(false);
-    props.setShowLandPage(false);
-    props.setShowFaqPage(false);
-    console.log("tickets");
-    props.setShowProgramPage(false);
+    // props.setShowLineup(false);
+    // props.setShowLandPage(false);
+    // props.setShowFaqPage(false);
+    // props.setShowProgramPage(false);
+    props.showLineup ? props.setShowLineup(false) : [];
+    props.showLandPage ? props.setShowLandPage(false) : [];
+    props.showFaqPage ? props.setShowFaqPage(false) : [];
+    props.showProgramPage ? props.setShowProgramPage(false) : [];
+    // console.log("tickets");
     window.location = "#";
   }
 

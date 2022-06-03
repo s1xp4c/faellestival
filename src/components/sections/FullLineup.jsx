@@ -7,7 +7,7 @@ function FullLineup(props) {
     const artists = useContext(BandsContext);
 
 
-        console.log("artists", artists);
+        // console.log("artists", artists);
         // artists.map((artist) => <li>{}</li>)
 
 

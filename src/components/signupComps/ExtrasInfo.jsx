@@ -32,7 +32,7 @@ function OtherInfo({ formData, setFormData, index }) {
   let luxeValue = luxePrice * guestQty;
   let greenValue = 245;
 
-  console.log(formData);
+  // console.log(formData);
 
   guestQty % 2 == 0 ? (tentValue = (guestQty / 2) * 299) : [];
   guestQty == 1 ? (tentValue = 299) : [];
@@ -42,20 +42,20 @@ function OtherInfo({ formData, setFormData, index }) {
   function addTentSet() {
     setTentSetAdded(true);
     setFormData({ ...formData, tentSetup: tentValue });
-    console.log(formData.tentSetup);
-    console.log(tentSetAdded);
+    // console.log(formData.tentSetup);
+    // console.log(tentSetAdded);
   }
   function addLuxe() {
     setLuxeAdded(true);
     setFormData({ ...formData, luxePack: luxeValue });
-    console.log(luxeAdded);
-    console.log(luxeValue);
+    // console.log(luxeAdded);
+    // console.log(luxeValue);
   }
   function addGreenCamp() {
     setGreenCampAdded(true);
     setFormData({ ...formData, greenCamp: greenValue });
   }
-  console.log(formData);
+  // console.log(formData);
 
   return (
     <section className="addOnSection">

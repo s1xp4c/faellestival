@@ -12,7 +12,7 @@ function FestLinks(props) {
     props.showMapPage ?   props.setShowMapPage(false)  :  [] 
     props.showArtistPage ?   props.setShowArtistPage(false)  :  [] 
     window.location = "#";
-    console.log("go to programpage");
+    // console.log("go to programpage");
   }
 
   function goToMapPage() {
@@ -22,11 +22,11 @@ function FestLinks(props) {
     props.showProgramPage ?   props.setShowProgramPage(false)  :  [] 
     props.showArtistPage ?   props.setShowArtistPage(false)  :  [] 
     window.location = "#";
-    console.log("go to artistprogrampage");
+    // console.log("go to artistprogrampage");
   }
 
   function goTomainPage() {
-    console.log("go to mainpage");
+    // console.log("go to mainpage");
     setIsLogin(false);
     props.showBurgerMenu ?   props.setShowBurgerMenu(false)  :  [] 
     window.location = "#";

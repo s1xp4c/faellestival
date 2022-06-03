@@ -168,9 +168,9 @@ function TicketForm(props) {
               onClick={() => {
                 if (page === FormTitles.length - 1) {
                   alert("TICKET PURCHASE COMPLETE! :) ");
-                  console.log(formData);
+                  // console.log(formData);
                 } else if (page === 2) {
-                  console.log(formData);
+                  // console.log(formData);
                   if (formData.extraGuests[0].firstName) {
                     setPage((currPage) => currPage + 1);
                     setRequired(false);

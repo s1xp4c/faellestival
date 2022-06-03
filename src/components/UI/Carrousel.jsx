@@ -12,7 +12,7 @@ function Carrousel(props) {
   const artists = useContext(BandsContext);
 
   function showNext() {
-    console.log("showNext");
+    // console.log("showNext");
     setPick1((old) => old + 4);
     setPick2((old) => old + 4);
     setPick3((old) => old + 4);
@@ -20,7 +20,7 @@ function Carrousel(props) {
   }
 
   function showPrev() {
-    console.log("showPrev");
+    // console.log("showPrev");
     setPick1((old) => old - 4);
     setPick2((old) => old - 4);
     setPick3((old) => old - 4);
@@ -39,7 +39,7 @@ function Carrousel(props) {
           img={artists[pic1].logo}
           action={() => {
             props.setPickedId(artists[pic1]);
-            console.log("gotoArtist", props.pickedId);
+            // console.log("gotoArtist", props.pickedId);
             props.setShowFestLandPage(false);
             props.setShowArtistPage(true);
           }}
@@ -53,7 +53,7 @@ function Carrousel(props) {
           img={artists[pic2].logo}
           action={() => {
             props.setPickedId(artists[pic2]);
-            console.log("gotoArtist", props.pickedId);
+            // console.log("gotoArtist", props.pickedId);
             props.setShowFestLandPage(false);
             props.setShowArtistPage(true);
           }}
@@ -67,7 +67,7 @@ function Carrousel(props) {
           img={artists[pic3].logo}
           action={() => {
             props.setPickedId(artists[pic3]);
-            console.log("gotoArtist", props.pickedId);
+            // console.log("gotoArtist", props.pickedId);
             props.setShowFestLandPage(false);
             props.setShowArtistPage(true);
           }}
@@ -81,7 +81,7 @@ function Carrousel(props) {
           img={artists[pic4].logo}
           action={() => {
             props.setPickedId(artists[pic4]);
-            console.log("gotoArtist", props.pickedId);
+            // console.log("gotoArtist", props.pickedId);
             props.setShowFestLandPage(false);
             props.setShowArtistPage(true);
           }}

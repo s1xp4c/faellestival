@@ -23,7 +23,7 @@ function PushAllData({ formData, setFormData }) {
   };
 
   const postFullfillData = JSON.stringify(fullfillID);
-  console.log(postFullfillData);
+  // console.log(postFullfillData);
 
   const FAELLESTIVAL_FULFILL_URL = import.meta.env
     .VITE_FAELLESTIVAL_FULFILL_RESERVATION;
@@ -32,7 +32,7 @@ function PushAllData({ formData, setFormData }) {
 
   ////////////////////////////////////////////////////////////////////
 
-  console.log("Pushing ticket ID", FAELLESTIVAL_FULFILL_URL);
+  // console.log("Pushing ticket ID", FAELLESTIVAL_FULFILL_URL);
 
   useEffect(() => {
     // PUT request using fetch inside useEffect React hook
@@ -50,7 +50,7 @@ function PushAllData({ formData, setFormData }) {
       .catch(console.error());
   }, []);
 
-  console.log(serverRespons);
+  // console.log(serverRespons);
 
   let ticketMessage = serverRespons.message;
   useEffect(() => {
@@ -62,9 +62,9 @@ function PushAllData({ formData, setFormData }) {
 
   const postALLData = JSON.stringify(dataForRestDB);
   // const postALLData = { ...formData };
-  console.log(postALLData);
+  // console.log(postALLData);
 
-  console.log("Pushing ALL data to RestDB", FAELLESTIVAL_RESTDB_URL);
+  // console.log("Pushing ALL data to RestDB", FAELLESTIVAL_RESTDB_URL);
 
   useEffect(() => {
     // PUSH request using fetch inside useEffect React hook

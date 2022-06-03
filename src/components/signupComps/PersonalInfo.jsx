@@ -12,10 +12,10 @@ function PersonalInfo({ formData, setFormData, setPage, required, setRequired })
   };
 
   const putReservationData = JSON.stringify(reservationData);
-  console.log(putReservationData);
+  // console.log(putReservationData);
   const ENDPOINT_URL = import.meta.env.VITE_FAELLESTIVAL_RESERVE_SPOT;
 
-  console.log("Putting area data", ENDPOINT_URL);
+  // console.log("Putting area data", ENDPOINT_URL);
 
   useEffect(() => {
     // PUT request using fetch inside useEffect React hook
@@ -29,7 +29,7 @@ function PersonalInfo({ formData, setFormData, setPage, required, setRequired })
       .then((data) => setReserveRespons(data));
   }, []);
 
-  console.log(reserveRespons.id);
+  // console.log(reserveRespons.id);
   let userKey = reserveRespons.id;
 
   // useEffect(() => {
@@ -102,7 +102,7 @@ function PersonalInfo({ formData, setFormData, setPage, required, setRequired })
                     extraGuests: nextGuests,
                     authKey: userKey,
                   });
-                  console.log(formData)
+                  // console.log(formData)
                 }}
               ></input>
               <input
