@@ -46,7 +46,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         setTicketsData(data);
-        console.log(data);
+        // console.log(data);
       });
   }, []);
 
@@ -55,7 +55,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         setBandsData(data);
-        console.log(data);
+        // console.log(data);
       });
   }, []);
 
@@ -64,7 +64,7 @@ function App() {
       .then((res) => res.json())
       .then((sdata) => {
         setScheduleData(sdata);
-        console.log(sdata);
+        // console.log(sdata);
       });
   }, []);
 
@@ -73,7 +73,7 @@ function App() {
       .then((res) => res.json())
       .then((tdata) => {
         setAvailable(tdata);
-        console.log(tdata);
+        // console.log(tdata);
       });
   }, []);
 
