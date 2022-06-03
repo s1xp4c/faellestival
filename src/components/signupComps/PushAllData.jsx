@@ -67,7 +67,7 @@ function PushAllData({ formData, setFormData }) {
   console.log("Pushing ALL data to RestDB", FAELLESTIVAL_RESTDB_URL);
 
   useEffect(() => {
-    // PUT request using fetch inside useEffect React hook
+    // PUSH request using fetch inside useEffect React hook
     const pushAllDataRequestOptions = {
       method: "POST",
       headers: {
