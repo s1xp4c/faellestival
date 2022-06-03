@@ -5,7 +5,7 @@ import Breadcrumbs from "../UI/Breadcrumbs";
 function ArtistHeader(props) {
   function goToMain() {
     window.location = "#";
-    console.log("gotomain");
+    // console.log("gotomain");
     props.setShowArtistPage(false);
     props.setShowFestLandPage(true);
   }

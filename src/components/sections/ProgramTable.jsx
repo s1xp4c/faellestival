@@ -10,7 +10,7 @@ function ProgramTable() {
 const vStage = schedule.Vanaheim;
 const mStage = schedule.Midgard;
 let xday = day.toLowerCase().substring(0, 3);
-  console.log(xday);
+  // console.log(xday);
 
   return (
     <section>

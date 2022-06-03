@@ -11,7 +11,7 @@ function FaqGrid() {
           .then((res) => res.json())
           .then((data) => {
             setQuestionsData(data);
-            console.log("MY QUESIONS", data);
+            // console.log("MY QUESIONS", data);
           });
       }, []);
 
