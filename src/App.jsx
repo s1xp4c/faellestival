@@ -37,7 +37,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         setAddOnData(data);
-        console.log("xtradata", data);
+        // console.log("xtradata", data);
       });
   }, []);
 
