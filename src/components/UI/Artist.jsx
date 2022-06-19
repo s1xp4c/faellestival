@@ -1,8 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function Artist(props) {
-    return (
-    <span>{props.content} • </span>)
+function Artist(props, index) {
+  return <span key={index}>{props.content} • </span>;
 }
 
-export default Artist
+export default Artist;

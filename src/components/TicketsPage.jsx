@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { TicketsContext } from "../Contexts/TicketsContext";
 import { AvailableContext } from "../Contexts/AvailableContext";
-import MainSect from "./sections/MainSect";
+// import MainSect from "./sections/MainSect";
 import CardGrid from "./UI/CardGrid";
 import OrderForm from "./sections/OrderForm";
 import Title from "./UI/Title";

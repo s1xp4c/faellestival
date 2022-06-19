@@ -3,11 +3,11 @@ import React, { useContext } from "react";
 import { ScheduleContext } from "../Contexts/ScheduleContext";
 import Artist from "./UI/Artist";
 import CardTitle from "./UI/CardTitle";
-import MainSect from "./sections/MainSect";
+// import MainSect from "./sections/MainSect";
 import Breadcrumbs from "./UI/Breadcrumbs";
 import Title from "./UI/Title";
 
-function LineupPage(props) {
+function LineupPage(props, index) {
   const scheduleData = useContext(ScheduleContext);
 
   const week = [
@@ -44,24 +44,34 @@ function LineupPage(props) {
         {...props}
         action={goToMain}
       />
-      <Title className="headLine gradientTxt" content="Line Up" />
+      <Title className="headLine gradientTxt" content="Line Up" key={index} />
       <div className="lineupGrid">
         {dayShort.map((day, index) => (
-          <div className="lineupCard">
+          <div className="lineupCard" key={index}>
             <CardTitle
               className="lineupTitle"
               head={week[index]}
               subHead={date[index]}
+              key={index}
             />
             <p className="lineupCardContent">
               {scheduleData.Jotunheim[day].map(
-                (day) => day.act !== "break" && <Artist content={day.act} />
+                (day, index) =>
+                  day.act !== "break" && (
+                    <Artist content={day.act} key={index} />
+                  )
               )}
               {scheduleData.Vanaheim[day].map(
-                (day) => day.act !== "break" && <Artist content={day.act} />
+                (day, index) =>
+                  day.act !== "break" && (
+                    <Artist content={day.act} key={index} />
+                  )
               )}
               {scheduleData.Midgard[day].map(
-                (day) => day.act !== "break" && <Artist content={day.act} />
+                (day, index) =>
+                  day.act !== "break" && (
+                    <Artist content={day.act} key={index} />
+                  )
               )}
             </p>
           </div>
