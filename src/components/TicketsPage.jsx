@@ -50,7 +50,13 @@ function TicketsPage(props) {
         </>
       )}
 
-      {showForm && <OrderForm setShowForm={setShowForm} />}
+      {showForm && (
+        <OrderForm
+          setShowForm={setShowForm}
+          setShowLogin={props.setShowLogin}
+          showLogin={props.showLogin}
+        />
+      )}
     </main>
   );
 }

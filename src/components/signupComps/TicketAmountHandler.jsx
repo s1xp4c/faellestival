@@ -3,22 +3,22 @@ import React, { useState } from "react";
 function TicketAmountHandler({ formData, setFormData }) {
   const [ticketCount, setTicketCount] = useState(0);
 
-  function handleIncrement() {
+  const handleIncrement = async () => {
     if (ticketCount < 6) {
-      setFormData({ ...formData, ticketAmount: ticketCount + 1 });
+      await setFormData({ ...formData, ticketAmount: ticketCount + 1 });
       setTicketCount((prevCount) => prevCount + 1);
     } else {
       alert("You reached max amount of tickets");
     }
-  }
-  function handleDecrement() {
+  };
+  const handleDecrement = async () => {
     if (ticketCount > 0) {
-      setFormData({ ...formData, ticketAmount: ticketCount - 1 });
+      await setFormData({ ...formData, ticketAmount: ticketCount - 1 });
       setTicketCount((prevCount) => prevCount - 1);
     } else {
       return;
     }
-  }
+  };
 
   return (
     <div className="incr-decr-container">

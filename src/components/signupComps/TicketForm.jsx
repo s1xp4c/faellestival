@@ -6,11 +6,13 @@ import ExtrasInfo from "./ExtrasInfo";
 import CampInfo from "./CampInfo";
 import TimeCount from "./TimeCount";
 import TicketCheckout from "./TicketCheckout";
+// import LoginSection from "../sections/LoginSection";
 
 function TicketForm(props) {
   const [page, setPage] = useState(0);
+
   //  const [reservationTime, setReservationTime] = useState();
-  const [required, setRequired] = useState(true)
+  const [required, setRequired] = useState(true);
   const reservationTime = 42000;
 
   const [formData, setFormData] = useState({
@@ -168,7 +170,7 @@ function TicketForm(props) {
               onClick={() => {
                 if (page === FormTitles.length - 1) {
                   alert("TICKET PURCHASE COMPLETE! :) ");
-                  // console.log(formData);
+                  props.setShowLogin(true);
                 } else if (page === 2) {
                   // console.log(formData);
                   if (formData.extraGuests[0].firstName) {
@@ -182,7 +184,7 @@ function TicketForm(props) {
                 }
               }}
             >
-              {page === FormTitles.length - 1 ? "Done" : "Next"}
+              {page === FormTitles.length - 1 ? "GoTo Login" : "Next"}
             </button>
           )}
         </div>

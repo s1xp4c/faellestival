@@ -6,18 +6,18 @@ function TicketCheckout({ formData, setFormData, page }) {
 
   let subtotal = 0;
   let dayAmount = 0;
-  if (formData.ticketDuration == "Full Festival") {
+  if (formData.ticketDuration === "Full Festival") {
     dayAmount = 7;
-  } else if (formData.ticketDuration == "Weekend") {
+  } else if (formData.ticketDuration === "Weekend") {
     dayAmount = 3;
   } else {
     dayAmount = 1;
   }
-  formData.ticketType == "VIP"
+  formData.ticketType === "VIP"
     ? (subtotal = formData.ticketAmount * 1299 * dayAmount)
     : (subtotal = formData.ticketAmount * 799 * dayAmount);
 
-  let total =
+  const total =
     subtotal +
     formData.cardFee +
     formData.tentSetup +
@@ -25,7 +25,7 @@ function TicketCheckout({ formData, setFormData, page }) {
     formData.greenCamp;
 
   useEffect(() => {
-    let checkoutTotal =
+    const checkoutTotal =
       subtotal +
       formData.cardFee +
       formData.tentSetup +
@@ -48,44 +48,45 @@ function TicketCheckout({ formData, setFormData, page }) {
 
   return (
     <>
-    <div className="ticket-checkout-container">
-      <div className="ticket-checkout-header">
-        {page == 5 ? <h2>Your Purchase</h2> : <h2>Checkout</h2>}
+      <div className="ticket-checkout-container">
+        <div className="ticket-checkout-header">
+          {page == 5 ? <h2>Your Purchase</h2> : <h2>Checkout</h2>}
+        </div>
+        <div className="ticket-checkout-body">
+          <p className="subtotal">
+            {formData.ticketAmount} x {formData.ticketDuration}{" "}
+            {formData.ticketType}:{" "}
+            <span className="checkoutSpan">{subtotal}kr.</span>{" "}
+          </p>
+          {formData.tentSetup > 1 && (
+            <p className="addOnsTotal">
+              Tent Setup Service:{" "}
+              <span className="checkoutSpan">{formData.tentSetup}kr.</span>{" "}
+            </p>
+          )}
+          {formData.luxePack > 1 && (
+            <p className="addOnsTotal">
+              Luxury Pack:{" "}
+              <span className="checkoutSpan">{formData.luxePack}kr.</span>{" "}
+            </p>
+          )}
+          {formData.greenCamp > 1 && (
+            <p className="addOnsTotal">
+              Green Camping:{" "}
+              <span className="checkoutSpan">{formData.greenCamp}kr.</span>{" "}
+            </p>
+          )}
+          <p className="fees">
+            Card Fee:{" "}
+            <span className="checkoutSpan">{formData.cardFee}kr.</span>
+          </p>
+          <p className="total">
+            Total: <span className="totalSpan">{total}kr.</span>
+          </p>
+        </div>
       </div>
-      <div className="ticket-checkout-body">
-        <p className="subtotal">
-          {formData.ticketAmount} x {formData.ticketDuration}{" "}
-          {formData.ticketType}:{" "}
-          <span className="checkoutSpan">{subtotal}kr.</span>{" "}
-        </p>
-        {formData.tentSetup > 1 && (
-          <p className="addOnsTotal">
-            Tent Setup Service:{" "}
-            <span className="checkoutSpan">{formData.tentSetup}kr.</span>{" "}
-          </p>
-        )}
-        {formData.luxePack > 1 && (
-          <p className="addOnsTotal">
-            Luxury Pack:{" "}
-            <span className="checkoutSpan">{formData.luxePack}kr.</span>{" "}
-          </p>
-        )}
-        {formData.greenCamp > 1 && (
-          <p className="addOnsTotal">
-            Green Camping:{" "}
-            <span className="checkoutSpan">{formData.greenCamp}kr.</span>{" "}
-          </p>
-        )}
-        <p className="fees">
-          Card Fee: <span className="checkoutSpan">{formData.cardFee}kr.</span>
-        </p>
-        <p className="total">
-          Total: <span className="totalSpan">{total}kr.</span>
-        </p>
-      </div>
-    </div>
-          {page == 4 && <Creditcard />}</>
-
+      {page == 4 && <Creditcard />}
+    </>
   );
 }
 

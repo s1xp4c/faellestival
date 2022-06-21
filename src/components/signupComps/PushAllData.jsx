@@ -22,7 +22,7 @@ function PushAllData({ formData, setFormData }) {
     extraGuests: formData.extraGuests,
   };
 
-  const postFullfillData = JSON.stringify(fullfillID);
+  // const postFullfillData = JSON.stringify(fullfillID);
   // console.log(postFullfillData);
 
   const FAELLESTIVAL_FULFILL_URL = import.meta.env
@@ -35,19 +35,22 @@ function PushAllData({ formData, setFormData }) {
   console.log("Pushing ticket ID", FAELLESTIVAL_FULFILL_URL);
 
   useEffect(() => {
+    const postFullfillData = JSON.stringify(fullfillID);
     // POST request using fetch inside useEffect React hook
     const pushIdRequestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json; charset=utf-8" },
       body: postFullfillData,
     };
-    fetch(FAELLESTIVAL_FULFILL_URL, pushIdRequestOptions)
-      .then((response) => response.json())
-      .then(
-        (data) => setServerRespons(data),
-        (data) => console.log(data)
-      )
-      .catch(console.error());
+    const fullfillIt = async () => {
+      await fetch(FAELLESTIVAL_FULFILL_URL, pushIdRequestOptions)
+        .then((response) => response.json())
+        .then(
+          (data) => setServerRespons(data),
+          (data) => console.log(data)
+        );
+    };
+    fullfillIt().catch(console.error());
   }, []);
 
   // console.log(serverRespons);
@@ -59,12 +62,13 @@ function PushAllData({ formData, setFormData }) {
 
   //////////////////////////////////////////////////////////////////////
 
-  const postALLData = JSON.stringify(dataForRestDB);
+  // const postALLData = JSON.stringify(dataForRestDB);
 
   console.log("Pushing ALL data to RestDB", FAELLESTIVAL_RESTDB_URL);
 
   useEffect(() => {
     // POST request using fetch inside useEffect React hook
+    const postALLData = JSON.stringify(dataForRestDB);
     const pushAllDataRequestOptions = {
       method: "POST",
       headers: {
@@ -74,10 +78,13 @@ function PushAllData({ formData, setFormData }) {
       },
       body: postALLData,
     };
-    fetch(FAELLESTIVAL_RESTDB_URL, pushAllDataRequestOptions)
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch(console.error());
+
+    const postIt = async () => {
+      await fetch(FAELLESTIVAL_RESTDB_URL, pushAllDataRequestOptions)
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+    };
+    postIt().catch(console.error());
   }, []);
 
   return (

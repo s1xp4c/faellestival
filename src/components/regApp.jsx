@@ -56,12 +56,7 @@ function RegApp(props) {
       )}
 
       {/* const [showBurgerMenu, setShowBurgerMenu] = useState(false); */}
-      {showLogin && (
-        <LoginSection
-          setShowLogin={setShowLogin}
-          {...props}
-        />
-      )}
+      {showLogin && <LoginSection setShowLogin={setShowLogin} {...props} />}
       {props.showBurgerMenu && (
         <BurgerMenu
           {...props}
@@ -95,6 +90,8 @@ function RegApp(props) {
           setShowTicketsPage={setShowTicketsPage}
           setShowLineup={setShowLineup}
           setShowLandPage={setShowLandPage}
+          setShowLogin={setShowLogin}
+          showLogin={showLogin}
         />
       )}
       {/* {<<<<<<< who-is-playing-now} */}

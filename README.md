@@ -8,4 +8,6 @@
 
 # - Meta data generated for SoMe channels
 
-# - 
+# - Added async await to pushAllData useEffects
+
+# - Added await on amountHandler

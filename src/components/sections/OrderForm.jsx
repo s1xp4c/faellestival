@@ -8,8 +8,13 @@ function OrderForm(props) {
   }
   return (
     <div className="formBase">
-      <button className="closeFormBtn" onClick={closeForm}>✖</button>
-      <TicketForm />
+      <button className="closeFormBtn" onClick={closeForm}>
+        ✖
+      </button>
+      <TicketForm
+        setShowLogin={props.setShowLogin}
+        showLogin={props.showLogin}
+      />
     </div>
   );
 }
