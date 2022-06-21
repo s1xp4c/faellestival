@@ -32,10 +32,10 @@ function PushAllData({ formData, setFormData }) {
 
   ////////////////////////////////////////////////////////////////////
 
-  // console.log("Pushing ticket ID", FAELLESTIVAL_FULFILL_URL);
+  console.log("Pushing ticket ID", FAELLESTIVAL_FULFILL_URL);
 
   useEffect(() => {
-    // PUT request using fetch inside useEffect React hook
+    // POST request using fetch inside useEffect React hook
     const pushIdRequestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json; charset=utf-8" },
@@ -55,36 +55,29 @@ function PushAllData({ formData, setFormData }) {
   let ticketMessage = serverRespons.message;
   useEffect(() => {
     setFormData({ ...formData, ticketState: ticketMessage });
-    // console.log(populateRestDB);
   }, []);
 
   //////////////////////////////////////////////////////////////////////
 
   const postALLData = JSON.stringify(dataForRestDB);
-  // const postALLData = { ...formData };
-  // console.log(postALLData);
 
-  // console.log("Pushing ALL data to RestDB", FAELLESTIVAL_RESTDB_URL);
+  console.log("Pushing ALL data to RestDB", FAELLESTIVAL_RESTDB_URL);
 
   useEffect(() => {
-    // PUSH request using fetch inside useEffect React hook
+    // POST request using fetch inside useEffect React hook
     const pushAllDataRequestOptions = {
       method: "POST",
       headers: {
         "Content-Type": "application/json; charset=utf-8",
         "x-apikey": FAELLESTIVAL_RESTDB_KEY,
         "cache-control": "no-cache",
-        "Access-Control-Allow-Origin":
-          "https://faellestival202six.netlify.app/",
       },
       body: postALLData,
     };
     fetch(FAELLESTIVAL_RESTDB_URL, pushAllDataRequestOptions)
       .then((response) => response.json())
-      .then(
-        // (data) => setPopulateRestDB(data),
-        (data) => console.log(data)
-      );
+      .then((data) => console.log(data))
+      .catch(console.error());
   }, []);
 
   return (
