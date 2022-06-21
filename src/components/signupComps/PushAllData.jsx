@@ -74,6 +74,8 @@ function PushAllData({ formData, setFormData }) {
         "Content-Type": "application/json; charset=utf-8",
         "x-apikey": FAELLESTIVAL_RESTDB_KEY,
         "cache-control": "no-cache",
+        "Access-Control-Allow-Origin":
+          "https://faellestival202six.netlify.app/",
       },
       body: postALLData,
     };
