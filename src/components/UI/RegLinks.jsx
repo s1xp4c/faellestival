@@ -23,6 +23,7 @@ function RegLinks(props) {
   function goTofestAppPage() {
     // console.log("go to festAppPage");
     props.setShowLogin(true);
+
     props.showBurgerMenu ? props.setShowBurgerMenu(false) : [];
     window.location = "#";
   }

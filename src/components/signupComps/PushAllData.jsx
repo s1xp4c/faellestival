@@ -99,10 +99,14 @@ function PushAllData({ formData, setFormData }) {
           </div>
           <div className="user-info"></div>
           <div>
-            <span>*Use this Password to login on the Fest App</span>
+            <span>*Use this Booking number to login to the Fest App</span>
           </div>
           <div>
-            <span>Password: </span> <span>{dataForRestDB.id}</span>
+            <span>Booking number: </span>
+            {" --> "}
+            <span style={{ color: "green", fontWeight: "bold" }}>
+              {dataForRestDB.id}
+            </span>
           </div>
         </div>
         <TicketCheckout formData={formData} setFormData={setFormData} />

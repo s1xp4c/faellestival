@@ -4,19 +4,22 @@ import Link from "./Link";
 
 function NavBrand(props) {
   function goToMain() {
-    props.setIsLogin(false);
-    props.setShowTicketsPage(false);
-    props.setShowLineup(false);
     props.setShowLandPage(true);
-    props.setShowFaqPage(false);
-    props.setShowProgramPage(false);
-    props.setShowFestLandPage(false);
-    props.setShowMapPage(false);
+    props.setIsLogin(false);
+    if (props.showFestLandPage) {
+      props.setShowFestLandPage(false);
+      props.setShowLineup(false);
+      props.setShowProgramPage(false);
+      props.setShowMapPage(false);
+    } else if (props.showLandPage) {
+      props.setShowFaqPage(false);
+      props.setShowTicketsPage(false);
+    }
+
     window.location = "#";
     // console.log("go to main");
   }
   return (
-    
     <div className={props.container}>
       <Logo className={props.logoClassName} id={props.id} />
 

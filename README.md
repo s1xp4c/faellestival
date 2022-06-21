@@ -11,3 +11,9 @@
 # - Added async await to pushAllData useEffects
 
 # - Added await on amountHandler
+
+# - Changed Done on checkout to goTo Login
+
+# - Fixed key on FAQ children
+
+# - Fixed Back to Main bug on Logo-link

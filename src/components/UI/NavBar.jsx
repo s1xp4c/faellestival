@@ -49,6 +49,8 @@ function NavBar(props) {
         <NavBrand
           setIsLogin={setIsLogin}
           {...props}
+          setShowLandPage={props.setShowLandPage}
+          {...props}
           logoClassName="navLogo"
           className="navTitle"
           content="Faellestival"
@@ -59,6 +61,8 @@ function NavBar(props) {
       {props.showFestLandPage ? (
         <NavBrand
           setIsLogin={setIsLogin}
+          {...props}
+          setShowLandPage={props.setShowLandPage}
           {...props}
           container="landingNav"
           logoClassName="navLogo"
@@ -72,6 +76,8 @@ function NavBar(props) {
       {props.showLineup || props.showTicketsPage || props.showArtistPage ? (
         <NavBrand
           setIsLogin={setIsLogin}
+          {...props}
+          setShowLandPage={props.setShowLandPage}
           {...props}
           container="regBrand"
           className="navTitle"

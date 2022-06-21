@@ -16,6 +16,7 @@ function FestApp(props) {
   const { isLogin, setIsLogin } = useContext(LoginContext);
 
   const [showFestLandPage, setShowFestLandPage] = useState(true);
+  const [showLandPage, setShowLandPage] = useState(true);
   const [showArtistPage, setShowArtistPage] = useState(false);
   const [showProgramPage, setShowProgramPage] = useState(false);
   const [showFCardPage, setShowFCardPage] = useState(false);
@@ -27,6 +28,7 @@ function FestApp(props) {
       <NavBar
         {...props}
         setShowFestLandPage={setShowFestLandPage}
+        setShowLandPage={setShowLandPage}
         setShowArtistPage={setShowArtistPage}
         setShowProgramPage={setShowProgramPage}
         setShowMapPage={setShowMapPage}
@@ -55,6 +57,7 @@ function FestApp(props) {
       {showFestLandPage && (
         <FestLandPage
           setShowFestLandPage={setShowFestLandPage}
+          setShowLandPage={setShowLandPage}
           setShowArtistPage={setShowArtistPage}
           setShowProgramPage={setShowProgramPage}
           setShowFCardPage={setShowFCardPage}
@@ -66,6 +69,7 @@ function FestApp(props) {
       {showArtistPage && (
         <ArtistPage
           setShowFestLandPage={setShowFestLandPage}
+          setShowLandPage={setShowLandPage}
           setShowArtistPage={setShowArtistPage}
           setShowProgramPage={setShowProgramPage}
           pickedId={pickedId}
@@ -75,18 +79,21 @@ function FestApp(props) {
       {showProgramPage && (
         <ProgramPage
           setShowFestLandPage={setShowFestLandPage}
+          setShowLandPage={setShowLandPage}
           setShowProgramPage={setShowProgramPage}
         />
       )}
       {showMapPage && (
         <MapPage
           setShowFestLandPage={setShowFestLandPage}
+          setShowLandPage={setShowLandPage}
           setShowMapPage={setShowMapPage}
         />
       )}
       {showFCardPage && (
         <FaellesCardPage
           setShowFestLandPage={setShowFestLandPage}
+          setShowLandPage={setShowLandPage}
           setShowFCardPage={setShowFCardPage}
         />
       )}
@@ -95,6 +102,7 @@ function FestApp(props) {
         <Footer
           className="mapFooter"
           setShowFestLandPage={setShowFestLandPage}
+          setShowLandPage={setShowLandPage}
           setShowArtistdPage={setShowArtistPage}
           setShowProgramPage={setShowProgramPage}
           setShowFCardPage={setShowFCardPage}
@@ -103,6 +111,7 @@ function FestApp(props) {
       ) : (
         <Footer
           setShowFestLandPage={setShowFestLandPage}
+          setShowLandPage={setShowLandPage}
           setShowArtistdPage={setShowArtistPage}
           setShowProgramPage={setShowProgramPage}
           setShowFCardPage={setShowFCardPage}

@@ -169,7 +169,9 @@ function TicketForm(props) {
             <button
               onClick={() => {
                 if (page === FormTitles.length - 1) {
-                  alert("TICKET PURCHASE COMPLETE! :) ");
+                  alert(
+                    "TICKET PURCHASE COMPLETE! :) \n \n --> Login to FestApp using your Booking number."
+                  );
                   props.setShowLogin(true);
                 } else if (page === 2) {
                   // console.log(formData);
