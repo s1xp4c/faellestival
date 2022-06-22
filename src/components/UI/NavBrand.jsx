@@ -14,6 +14,8 @@ function NavBrand(props) {
     } else if (props.showLandPage) {
       props.setShowFaqPage(false);
       props.setShowTicketsPage(false);
+      props.setShowFestLandPage(false);
+      props.setShowLineup(false);
     }
 
     window.location = "#";

@@ -17,3 +17,7 @@
 # - Fixed key on FAQ children
 
 # - Fixed Back to Main bug on Logo-link
+
+# - Added SVG map integration (Under construction)
+
+# - Ekstra: Stripe Pay

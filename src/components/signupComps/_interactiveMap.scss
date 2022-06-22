@@ -1,0 +1,53 @@
+#svgNow .g_to_interact_with {
+    fill: blue;
+    z-index: 111;
+    &:hover {
+        fill: rgba(172, 255, 47, 0.425);
+    }
+}
+
+#shadow {
+    pointer-events: none;
+}
+
+// .bounce {
+//     animation: bounce 2s;
+// }
+// .bouncebox {
+//     height: 120px;
+// }
+// @keyframes bounce {
+//     0%,
+//     25%,
+//     50%,
+//     75%,
+//     100% {
+//         transform: translateY(0);
+//     }
+//     40% {
+//         transform: translateY(-20px);
+//     }
+//     60% {
+//         transform: translateY(-12px);
+//     }
+// }
+.boxShadowThis {
+    fill: rgba(229, 235, 136, 0.392);
+    -webkit-filter: drop-shadow(0 1px 5px rgba(113, 158, 206, 0.8));
+    filter: url(#drop-shadow);
+}
+
+.animatefill {
+    fill: url(#tempcolor);
+    animation-name: animatefill;
+    animation-duration: 2.5s;
+}
+
+@keyframes animatefill {
+    0% {
+        fill-opacity: 0;
+    }
+    100% {
+        fill-opacity: 1;
+    }
+}
