@@ -10,7 +10,7 @@
     "dependencies": {
         "react": "^18.0.0",
         "react-dom": "^18.0.0",
-        "react-svgmt": "^1.2.0"
+        "react-svgmt": "^2.0.2"
     },
     "devDependencies": {
         "@types/react": "^18.0.0",
